@@ -14,5 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.index');
 });
+
+Route::get('/profil/struktur-organisasi', function () {
+    return view('profil.struktur-organisasi');
+})->name('profil.struktur-organisasi');
+
+Route::get('/profil/maklumat-pelayanan', function () {
+    return view('profil.maklumat-pelayanan');
+})->name('profil.maklumat-pelayanan');
+
+Route::get('/profil/profil-penyelenggara', function () {
+    return view('profil.profil-penyelenggara');
+})->name('profil.profil-penyelenggara');
+
+Route::get('/profil/pelaksana-layanan', function () {
+    return view('profil.pelaksana-layanan');
+})->name('profil.pelaksana-layanan');
+
+Route::get('/profil/motto-visi-misi', function () {
+    return view('profil.mvm');
+})->name('profil.mvm');
