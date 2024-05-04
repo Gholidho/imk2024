@@ -2,9 +2,9 @@
 
 @section('styles')
     <style>
-        /* .col-lg-8.ps-lg-5 h3 {
-                                                    text-align: center;
-                                                } */
+        /* /* .col-lg-8.ps-lg-5 h3 {
+                                                                    text-align: center;
+                                                                } */
 
         .col-lg-8.ps-lg-5 p {
             text-align: justify;
