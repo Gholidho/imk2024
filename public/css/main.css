@@ -94,7 +94,8 @@ h6 {
 }
 
 .header .logo img {
-    max-height: 36px;
+    max-height: 50px;
+    max-width: 100px;
     margin-right: 8px;
 }
 

@@ -6,19 +6,18 @@
         <!-- Hero Section -->
         <section id="hero" class="hero section">
 
-            <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+            <img src="img/trenggalek-bg.jpeg" alt="" data-aos="fade-in">
 
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10">
-                        <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Our Website</h2>
-                        <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making websites with
-                            Bootstrap</p>
+                        <h2 data-aos="fade-up" data-aos-delay="100">Selamat Datang di Dukcapil Trenggalek</h2>
+                        <p data-aos="fade-up" data-aos-delay="200">Membahagiakan Masyarakat</p>
                     </div>
                     <div class="col-lg-5">
                         <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
-                            <input type="text" class="form-control" placeholder="Enter email address">
-                            <input type="submit" class="btn btn-primary" value="Sign up">
+                            <input type="text" class="form-control" placeholder="Cari Informasi">
+                            <input type="submit" class="btn btn-primary" value="Cari">
                         </form>
                     </div>
                 </div>
@@ -31,33 +30,7 @@
 
             <div class="container" data-aos="fade-up">
 
-                <div class="row gy-4">
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                </div>
+            </div>
 
             </div>
 
@@ -70,12 +43,13 @@
                 <div class="row align-items-xl-center gy-5">
 
                     <div class="col-xl-5 content">
-                        <h3>About Us</h3>
-                        <h2>Ducimus rerum libero reprehenderit cumque</h2>
-                        <p>Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor cumque alias maxime. Enim reiciendis
-                            minus et rerum hic non. Dicta quas cum quia maiores iure. Quidem nulla qui assumenda incidunt
-                            voluptatem tempora deleniti soluta.</p>
-                        <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                        <h3>Tentang Dukcapil</h3>
+                        <h2>Dukcapil Trenggalek</h2>
+                        <p>Lembaga pemerintah yang bertanggung jawab atas administrasi kependudukan di Kabupaten Trenggalek,
+                            Jawa Timur. Melalui layanannya, Dukcapil memfasilitasi pendaftaran dan penerbitan dokumen
+                            kependudukan bagi penduduk setempat.</p>
+                        <a href="#" class="read-more"><span>Baca Selengkapnya</span><i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
 
                     <div class="col-xl-7">
@@ -128,7 +102,7 @@
         <!-- Stats Section -->
         <section id="stats" class="stats section">
 
-            <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+            <img src="img/statistik-bg.png" alt="" data-aos="fade-in">
 
             <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
@@ -136,33 +110,33 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="756109" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Clients</p>
+                            <p>Jumlah Penduduk</p>
                         </div>
                     </div><!-- End Stats Item -->
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="379864" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Projects</p>
+                            <p>Laki-Laki</p>
                         </div>
                     </div><!-- End Stats Item -->
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="376245" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Hours Of Support</p>
+                            <p>Perempuan</p>
                         </div>
                     </div><!-- End Stats Item -->
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="280350" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Workers</p>
+                            <p>Jumlah KK</p>
                         </div>
                     </div><!-- End Stats Item -->
 

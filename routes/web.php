@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('home.index');
 });
 
+#routes profile
 Route::get('/profil/struktur-organisasi', function () {
     return view('profil.struktur-organisasi');
 })->name('profil.struktur-organisasi');
@@ -36,3 +37,8 @@ Route::get('/profil/pelaksana-layanan', function () {
 Route::get('/profil/motto-visi-misi', function () {
     return view('profil.mvm');
 })->name('profil.mvm');
+
+#route berita
+Route::get('/berita', function () {
+    return view('berita.berita');
+})->name('berita.berita');
