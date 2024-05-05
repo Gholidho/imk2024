@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
+use App\Models\Berita;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,12 +44,12 @@ Route::prefix('/profil')->group(function () {
 });
 
 
-#routes berita
-Route::prefix('/berita')->group(function () {
-    Route::get('/', function () {
-    return view('berita.berita');
-})->name('berita');
-});
+// #routes berita
+// Route::prefix('/berita')->group(function () {
+//     Route::get('/', function () {
+//     return view('berita.berita');
+// })->name('berita');
+// });
 
 
 #routes layanan
@@ -96,3 +98,8 @@ Route::prefix('/kontak')->group(function () {
         return view('kontak.index');
     })->name('kontak');
 });
+
+#route berita
+Route::get('/berita', [NewsController::class, 'index'])->name('berita.index');
+Route::get('/berita/detail/{id}', [NewsController::class, 'detail'])->name('berita.detail');
+
