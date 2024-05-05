@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
+use App\Models\Berita;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +41,5 @@ Route::get('/profil/motto-visi-misi', function () {
 })->name('profil.mvm');
 
 #route berita
-Route::get('/berita', function () {
-    return view('berita.berita');
-})->name('berita.berita');
+Route::get('/berita', [NewsController::class, 'index'])->name('berita.index');
+Route::get('/berita/detail/{id}', [NewsController::class, 'detail'])->name('berita.detail');

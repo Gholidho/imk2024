@@ -34,6 +34,7 @@
 
     <!-- Main CSS File -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     @yield('styles')
 
 
@@ -55,7 +56,7 @@
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
-                <img src="img/logo_trenggalek.png" alt="logo trenggalek">
+                <img src="{{ asset('img/logo_trenggalek.png') }}" alt="logo trenggalek">
                 <h1 class="sitename">Dukcapil Trenggalek</h1><span>.</span>
             </a>
 

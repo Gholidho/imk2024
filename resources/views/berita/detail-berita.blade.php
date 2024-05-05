@@ -1,50 +1,39 @@
 <!-- resources/views/dashboard/pubdok/berita/detail-berita.blade.php -->
 
-<x-home.partials.main>
-    <x-slot name="css">
-        <!-- Include your additional stylesheets here -->
-    </x-slot>
-
+@extends('layout.main')
+@section('container')
     <main id="main">
         <section id="portfolio" class="portfolio section-bg">
-            <div data-aos="fade-up">
-
-                <div class="breadcrumbs mb-5" data-aos="zoom-out" data-aos-delay="200">
-                    <nav class="nav-breadcrumbs">
-                        <div class="container">
-                            <ol>
-                                <li><a href="{{ route('pubdok.berita.index') }}">Berita</a></li>
-                                <li>Detail berita</li>
-                            </ol>
-                        </div>
-                    </nav>
-                </div>
-
-                <!-- Blog Section -->
-                <div id="blogs" class="blog">
+            <div class="page-title" data-aos="fade">
+                <nav class="breadcrumbs">
                     <div class="container">
-                        <div class="row">
+                        <ol>
+                            <li class="upper"><a href="/">Home</a></li>
+                            <li class="upper"><a href="/berita">Berita</a></li>
+                            <li class="current">Detail</li>
+                        </ol>
+                    </div>
+                </nav>
+            </div> <br>
+            <!-- Blog Section -->
+            <div id="blogs" class="blog">
+                <div class="container">
+                    <div class="row">
 
-                            <!-- Berita Details -->
-                            <div class="col-lg-8">
-                                <x-home.partials.berita.detail :berita="$berita" />
-                            </div>
+                        <!-- Berita Details -->
+                        <div class="col-lg-8">
+                            <x-detail :berita="$berita" />
+                        </div>
 
-                            <!-- Berita Populer -->
-                            <div class="col-lg-4">
-                                <x-card.card judul='Berita Populer'>
-                                    <x-home.partials.berita.item-pop :berita="$populer" />
-                                </x-card.card>
-                            </div>
+                        <!-- Berita Populer -->
+                        <div class="col-lg-4">
+                            <x-card judul='Berita Populer'>
+                                <x-item-pop :berita="$populer" />
+                            </x-card>
                         </div>
                     </div>
-                </div><!-- End Blog Section -->
-
-            </div>
+                </div>
+            </div><!-- End Blog Section -->
         </section>
     </main><!-- End #main -->
-
-    <x-slot name="js">
-        <!-- Include your additional scripts here -->
-    </x-slot>
-</x-home.partials.main>
+@endsection
