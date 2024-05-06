@@ -646,11 +646,11 @@ h6 {
     color: rgba(var(--default-color-rgb), 0.3);
 }
 
-.page-title .container .upper a{
+.page-title .container .upper a {
     color: #e84545;
 }
 
-.page-title .container .upper a:hover{
+.page-title .container .upper a:hover {
     color: black;
 }
 
