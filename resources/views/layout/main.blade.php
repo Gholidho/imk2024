@@ -38,6 +38,7 @@
     @yield('styles')
 
 
+
     <!-- =======================================================
   * Template Name: Append
   * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
@@ -72,6 +73,9 @@
 
 
     @include('layout.partials.footer')
+
+    @include('layout.partials.floating-button')
+
     @include('layout.partials.scrolltop')
 
     <!-- Preloader -->
