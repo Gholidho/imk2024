@@ -1,5 +1,11 @@
 @extends('layout.main')
 
+@section('styles')
+    <style>
+
+    </style>
+@endsection
+
 @section('container')
     <main id="main">
         <section id="portfolio" class="portfolio section-bg">
