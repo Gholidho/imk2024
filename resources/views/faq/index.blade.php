@@ -33,35 +33,38 @@
                                     <div class="service-box">
                                         <h4>FAQ List</h4>
                                         <div class="services-list">
-                                            <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Product Management</span></a>
-                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Graphic Design</span></a>
-                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Marketing</span></a>
+                                            <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Akta Kelahiran</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Akta Kematian</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Akta Perkawinan</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Akta Perceraian</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Pindah Datang</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Orang Terlantar</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>KTP-EL</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Perubahan Biodata</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Kartu Keluarga</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Pindah Keluar</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Tambah Jiwa WNI yang Belum Memiliki NIK</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Pindah Dalam Kota</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>WNI yang Datang dari Luar Negeri Karena Pindah</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Kartu Identitas Anak (KIA)</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Buka Blokir</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Pengangkatan Anak</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Pembatalan Akta Pencatatan Sipil</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Pembatalan Dokumen Pendaftaran Penduduk</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Hapus Data Ganda</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Anak Memiliki Kewarganegaraan Ganda</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Pencatatan Biodata Penduduk Orang Asing yang Memiliki Izin Tinggal Tetap</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Kartu Tanda Penduduk Orang Asing</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Perubahan Peristiwa Penting pada Akta Pencatatan Sipil</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Tanda Bukti Pendataan Penduduk Non Permanen</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Pembetulan Akta Pencatatan Sipil</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Pencatatan Pelaporan Lahir Mati</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>WNI Menjadi WNA, WNA Menjadi WNI</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Surat Keterangan Tempat Tinggal Orang Asing</span></a>
+                                            <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Surat Keterangan Pengganti Tanda Identitas (SKPTI)</span></a>
                                         </div>
                                     </div>
                                     <!-- End Services List -->
-
-                                    <div class="service-box">
-                                        <h4>Download Catalog</h4>
-                                        <div class="download-catalog">
-                                            <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
-                                            <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
-                                        </div>
-                                    </div>
-                                    <!-- End Download Catalog -->
-
-                                    <div class="help-box d-flex flex-column justify-content-center align-items-center">
-                                        <i class="bi bi-headset help-icon"></i>
-                                        <h4>Have a Question?</h4>
-                                        <p class="d-flex align-items-center mt-2 mb-0">
-                                            <i class="bi bi-telephone me-2"></i>
-                                            <span>+1 5589 55488 55</span>
-                                        </p>
-                                        <p class="d-flex align-items-center mt-1 mb-0">
-                                            <i class="bi bi-envelope me-2"></i>
-                                            <a href="mailto:contact@example.com">contact@example.com</a>
-                                        </p>
-                                    </div>
                                 </div>
                             </div>
 
