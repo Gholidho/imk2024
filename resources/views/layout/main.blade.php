@@ -56,10 +56,7 @@
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" style="margin-left: 5%">
                 <img src="{{ asset('img/logo_trenggalek.png') }}" alt="logo trenggalek">
                 <h1 class="sitename">Dukcapil Trenggalek</h1><span>.</span>
             </a>
@@ -68,6 +65,22 @@
 
             <div class="btn-getstarted" style="color: white; background-color: white" href="index.html#about"></div>
 
+            <style>
+                .clickable-div {
+                    cursor: pointer;
+                }
+
+                .artikel-berita {
+                    transform: translateY(0);
+                    transition: ease-in-out 0.5s;
+                }
+
+                .artikel-berita:hover {
+                    transition: ease-in-out 0.5s;
+                    border: solid 3px black;
+                    transform: translateY(-5%);
+                }
+            </style>
         </div>
     </header>
 
@@ -96,7 +109,6 @@
 
     <!-- Main JS File -->
     <script src="{{ asset('js/main.js') }}"></script>
-
 </body>
 
 </html>
