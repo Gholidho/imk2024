@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Services Details - Append Bootstrap Template</title>
+    <title>Dukcapil Trenggalek</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('img/logo_trenggalek.png') }}" rel="icon">
+    <link href="{{ asset('img/logo_trenggalek.png') }}" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -58,7 +58,7 @@
 
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" style="margin-left: 5%">
                 <img src="{{ asset('img/logo_trenggalek.png') }}" alt="logo trenggalek">
-                <h1 class="sitename">Dukcapil Trenggalek</h1><span>.</span>
+                <h1 class="sitename">Dukcapil Trenggalek</h1>
             </a>
 
             @include('layout.partials.navbar')

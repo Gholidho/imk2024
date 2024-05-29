@@ -99,24 +99,26 @@
         </section><!-- /About Section -->
 
         <!-- Stats Section -->
+        <div class="section-title-stats"></div>
+        <div class="section-title-stats">
+            <h2>Statistik Kependudukan</h2>
+        </div>
         <section id="stats" class="stats section">
-
-            <img src="img/statistik-bg.png" alt="" data-aos="fade-in">
-
-            <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gy-4">
-
+            <img src="img/stats-bg.jpg" alt="">
+            <div class="container position-relative" data-aos-delay="100">
+                <div class="row gy-1">
                     <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center w-100 h-100">
+                        <div class="stats-item text-center w-100 h-75">
+                            <i class="bi bi-people-fill"></i>
                             <span data-purecounter-start="0" data-purecounter-end="756109" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>Jumlah Penduduk</p>
                         </div>
                     </div><!-- End Stats Item -->
 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center w-100 h-100">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="stats-item text-center w-100 h-50">
+                            <i class="bi bi-person-standing"></i>
                             <span data-purecounter-start="0" data-purecounter-end="379864" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>Laki-Laki</p>
@@ -124,7 +126,8 @@
                     </div><!-- End Stats Item -->
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center w-100 h-100">
+                        <div class="stats-item text-center w-100 h-50">
+                            <i class="bi bi-person-standing-dress"></i>
                             <span data-purecounter-start="0" data-purecounter-end="376245" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>Perempuan</p>
@@ -132,17 +135,15 @@
                     </div><!-- End Stats Item -->
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center w-100 h-100">
+                        <div class="stats-item text-center w-100 h-50">
+                            <i class="bi bi-person-lines-fill"></i>
                             <span data-purecounter-start="0" data-purecounter-end="280350" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>Jumlah KK</p>
                         </div>
                     </div><!-- End Stats Item -->
-
                 </div>
-
             </div>
-
         </section><!-- /Stats Section -->
 
         <!-- Services Section -->
@@ -657,200 +658,6 @@
 
         </section><!-- /Team Section -->
 
-        <!-- Call To Action Section -->
-        <section id="call-to-action" class="call-to-action section">
-
-            <img src="assets/img/cta-bg.jpg" alt="">
-
-            <div class="container">
-                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="col-xl-10">
-                        <div class="text-center">
-                            <h3>Call To Action</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                mollit anim id est laborum.</p>
-                            <a class="cta-btn" href="#">Call To Action</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section><!-- /Call To Action Section -->
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials section">
-
-            <div class="container">
-
-                <div class="row align-items-center">
-
-                    <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Testimonials</h3>
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                            in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-
-                        <div class="swiper">
-                            <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-                            <div class="swiper-wrapper">
-
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="d-flex">
-                                            <img src="assets/img/testimonials/testimonials-1.jpg"
-                                                class="testimonial-img flex-shrink-0" alt="">
-                                            <div>
-                                                <h3>Saul Goodman</h3>
-                                                <h4>Ceo &amp; Founder</h4>
-                                                <div class="stars">
-                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                        class="bi bi-star-fill"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>
-                                            <i class="bi bi-quote quote-icon-left"></i>
-                                            <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
-                                                suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et.
-                                                Maecen aliquam, risus at semper.</span>
-                                            <i class="bi bi-quote quote-icon-right"></i>
-                                        </p>
-                                    </div>
-                                </div><!-- End testimonial item -->
-
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="d-flex">
-                                            <img src="assets/img/testimonials/testimonials-2.jpg"
-                                                class="testimonial-img flex-shrink-0" alt="">
-                                            <div>
-                                                <h3>Sara Wilsson</h3>
-                                                <h4>Designer</h4>
-                                                <div class="stars">
-                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                        class="bi bi-star-fill"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>
-                                            <i class="bi bi-quote quote-icon-left"></i>
-                                            <span>Export tempor illum tamen malis malis eram quae irure esse labore quem
-                                                cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua
-                                                noster fugiat irure amet legam anim culpa.</span>
-                                            <i class="bi bi-quote quote-icon-right"></i>
-                                        </p>
-                                    </div>
-                                </div><!-- End testimonial item -->
-
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="d-flex">
-                                            <img src="assets/img/testimonials/testimonials-3.jpg"
-                                                class="testimonial-img flex-shrink-0" alt="">
-                                            <div>
-                                                <h3>Jena Karlis</h3>
-                                                <h4>Store Owner</h4>
-                                                <div class="stars">
-                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                        class="bi bi-star-fill"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>
-                                            <i class="bi bi-quote quote-icon-left"></i>
-                                            <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla
-                                                quem veniam duis minim tempor labore quem eram duis noster aute amet eram
-                                                fore quis sint minim.</span>
-                                            <i class="bi bi-quote quote-icon-right"></i>
-                                        </p>
-                                    </div>
-                                </div><!-- End testimonial item -->
-
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="d-flex">
-                                            <img src="assets/img/testimonials/testimonials-4.jpg"
-                                                class="testimonial-img flex-shrink-0" alt="">
-                                            <div>
-                                                <h3>Matt Brandon</h3>
-                                                <h4>Freelancer</h4>
-                                                <div class="stars">
-                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                        class="bi bi-star-fill"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>
-                                            <i class="bi bi-quote quote-icon-left"></i>
-                                            <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export
-                                                minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt
-                                                elit fore quem dolore labore illum veniam.</span>
-                                            <i class="bi bi-quote quote-icon-right"></i>
-                                        </p>
-                                    </div>
-                                </div><!-- End testimonial item -->
-
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="d-flex">
-                                            <img src="assets/img/testimonials/testimonials-5.jpg"
-                                                class="testimonial-img flex-shrink-0" alt="">
-                                            <div>
-                                                <h3>John Larson</h3>
-                                                <h4>Entrepreneur</h4>
-                                                <div class="stars">
-                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                        class="bi bi-star-fill"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>
-                                            <i class="bi bi-quote quote-icon-left"></i>
-                                            <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam
-                                                tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum
-                                                fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                                            <i class="bi bi-quote quote-icon-right"></i>
-                                        </p>
-                                    </div>
-                                </div><!-- End testimonial item -->
-
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- /Testimonials Section -->
 
         <!-- Recent Posts Section -->
         <section id="recent-posts" class="recent-posts section">
