@@ -3,15 +3,24 @@
 @section('styles')
 <style>
     .services-list {
-        display: flex;
+        display: block;
         flex-wrap: wrap;
         justify-content: flex-start;
     }
 
     .services-list a {
-        width: 100%;
         display: flex;
         align-items: center;
+        text-align: left;
+        padding-left: 0;
+        /* Menghapus padding kiri */
+    }
+
+    .services-list a .num {
+        width: 30px;
+        /* Menentukan lebar nomor */
+        margin-right: 10px;
+        /* Menambahkan jarak antara nomor dan teks */
     }
 
     .services-list a i {
@@ -22,16 +31,49 @@
         text-align: left;
     }
 
-    .faq-item {
-        display: none;
+    .faq-item .faq-question {
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .faq-item.active {
+    .faq-item .faq-answer {
+        display: none;
+        width: 95%;
+        text-align: left;
+        /* Mengatur teks jawaban menjadi rata kiri */
+        margin-left: 30px;
+        margin-top: 20px;
+        /* Menambahkan jarak kiri untuk jawaban */
+
+    }
+
+    .faq-item.active .faq-answer {
         display: block;
     }
 
     .services-list a.active {
         color: red;
+    }
+
+    .faq-toggle {
+        transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-toggle {
+        transform: rotate(90deg);
+    }
+
+    .faq-item .faq-question {
+        text-align: left;
+        /* Menghapus padding kiri pada pertanyaan */
+    }
+
+    .faq-question span.num {
+        margin-right: 10px;
+        /* Menyesuaikan jarak antara nomor dan pertanyaan */
     }
 </style>
 <!-- Vendor CSS Files -->
@@ -61,7 +103,8 @@
                                         <h4>FAQ List</h4>
                                         <div class="services-list">
                                             @foreach($layananFaq as $layanan)
-                                            <a href="#" onclick="showFaq('{{ $layanan->id }}')" @if($loop->first) class="active" @endif>
+                                            <a href="#" onclick="showFaq('{{ $layanan->id }}'); return false;" @if($loop->first) class="active" @endif>
+                                                <!-- <span class="num">{{ $loop->index + 1 }}</span> Menampilkan nomor FAQ -->
                                                 <i class="bi bi-arrow-right-circle"></i>
                                                 <span>{{ $layanan->layanan }}</span>
                                             </a>
@@ -78,15 +121,19 @@
                                     @endphp
 
                                     @foreach($faqsGroupedByLayanan as $id_layanan => $faqs)
-                                    @foreach($faqs as $key => $faq)
-                                    <div class="faq-item" id="faq{{ $faq->id_layanan }}">
-                                        <h3><span class="num">{{ $key + 1 }}.</span> <span>{{ $faq->pertanyaan }}</span></h3>
-                                        <div class="faq-content">
-                                            <p>{{ $faq->jawaban }}</p>
+                                    <div class="faq-group" id="faqGroup{{ $id_layanan }}" style="display: none;">
+                                        @foreach($faqs as $faq)
+                                        <div class="faq-item" id="faqItem{{ $faq->id }}">
+                                            <div class="faq-question" onclick="toggleFaq('{{ $faq->id }}')">
+                                                <h3><span class="num">{{ $loop->index + 1 }}.</span> <span>{{ $faq->pertanyaan }}</span></h3>
+                                                <i class="faq-toggle bi bi-chevron-right"></i>
+                                            </div>
+                                            <div class="faq-answer" id="faqAnswer{{ $faq->id }}">
+                                                <p>{!! htmlspecialchars_decode($faq->jawaban) !!}</p>
+                                            </div>
                                         </div>
-                                        <i class="faq-toggle bi bi-chevron-right"></i>
+                                        @endforeach
                                     </div>
-                                    @endforeach
                                     @endforeach
                                 </div>
                             </div>
@@ -100,32 +147,39 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Tampilkan faq-item pertama kali halaman dimuat
         var firstLayananId = '{{ $layananFaq->first()->id }}';
         showFaq(firstLayananId);
     });
 
     function showFaq(faqNumber) {
-        // Sembunyikan semua faq-item
-        var faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(function(item) {
-            item.classList.remove('active');
+        var faqGroups = document.querySelectorAll('.faq-group');
+        faqGroups.forEach(function(group) {
+            group.style.display = 'none';
         });
-        // Hilangkan kelas active dari semua link FAQ
+
         var faqLinks = document.querySelectorAll('.services-list a');
         faqLinks.forEach(function(link) {
             link.classList.remove('active');
         });
-        // Tampilkan faq-item yang sesuai
-        var faqItemsToShow = document.querySelectorAll('[id="faq' + faqNumber + '"]');
-        faqItemsToShow.forEach(function(item) {
-            item.classList.add('active');
-        });
-        // Tambahkan kelas active ke link yang diklik
+
+        var faqGroupToShow = document.getElementById('faqGroup' + faqNumber);
+        if (faqGroupToShow) {
+            faqGroupToShow.style.display = 'block';
+        }
+
         var clickedFaqLink = document.querySelector('.services-list a[onclick="showFaq(\'' + faqNumber + '\')"]');
         if (clickedFaqLink) {
             clickedFaqLink.classList.add('active');
         }
+    }
+
+    function toggleFaq(faqId) {
+        var faqItem = document.getElementById('faqItem' + faqId);
+        var faqAnswer = document.getElementById('faqAnswer' + faqId);
+        if (faqAnswer) {
+            faqAnswer.style.display = faqAnswer.style.display === 'block' ? 'none' : 'block';
+        }
+        faqItem.classList.toggle('active');
     }
 </script>
 @endsection

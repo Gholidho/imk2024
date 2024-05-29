@@ -14,11 +14,39 @@ class FaqSeeder extends Seeder
      */
     public function run()
     {
+        // Mengosongkan tabel sebelum menambahkan data baru
+        Faq::truncate();
+
         Faq::insert([
             [
                 'id_layanan' => 1, // Sesuaikan dengan id layanan yang sesuai
                 'pertanyaan' => 'Apakah nama di akta kelahiran dapat dibetulkan?',
-                'jawaban' => 'Dapat, dengan mengajukan Perubahan Nama pada Akta Kelahiran secara online (mandiri) melalui website klampid di klampid-dispendukcapil.surabaya.go.id atau di kelurahan / kecamatan sesuai domisili dengan melampirkan persyaratan yang diminta',
+                'jawaban' => 'Dapat, dengan mengajukan Perubahan Nama pada Akta Kelahiran secara mandiri di kelurahan / kecamatan sesuai domisili dengan melampirkan persyaratan yang diminta',
+            ],
+
+            [
+                'id_layanan' => 1, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Bisakah membuat akta kelahiran jika orang tua tidak memiliki surat nikah / akta kawin atau ibu masih di bawah umur?',
+                'jawaban' => 'Bisa, dengan melampirkan
+    <ol>
+        <li>Surat kelahiran asli dari dokter / bidan / Rumah Sakit / penolong kelahiran</li>
+        <li>KK dan KTP-el ibu kandung</li>
+        <li>Surat Pertanggungjawaban Mutlak Pasangan Suami dan Istri</li>
+        <li>Surat Keterangan Anak Seorang Ibu</li>
+        <li>KTP Elektronik 2 orang saksi</li>
+    </ol>',
+            ],
+
+            [
+                'id_layanan' => 1, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Bisakah mengurus akta kelahiran jika tidak memiliki surat keterangan lahir dan keberadaan orang tua tidak jelas ?',
+                'jawaban' => 'Bisa diterbitkan akta kelahiran anak tanpa asal usul dengan persyaratan antara lain berita acara kepolisian / surat pernyataan dari pemohon.',
+            ],
+
+            [
+                'id_layanan' => 1, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Bagaimana mekanisme penerbitan akta kelahiran untuk anak adopsi ?',
+                'jawaban' => 'Syarat mengadopsi anak adalah anak tersebut harus memiliki akta kelahiran terlebih dahulu. Kemudian wajib memiliki penetapan pengadlan terkait hak adopsi. Setelah mendapatkan penetapan pengadilan, Dispendukcapil akan menerbitkan catatan pinggir terkait adopsi anak. Jika anak belum memiliki akta kelahiran, maka berdasarkan penetapan pengadilan anak tersebut akan dibuatkan akta kelahiran dengan nama ayah dan ibu kandung di dalam akta kelahiran, dan diberikan catatan pinggir bahwa anak tersebut diadopsi oleh orang tua yang baru.',
             ],
 
             [
@@ -174,24 +202,20 @@ class FaqSeeder extends Seeder
             ],
 
             [
-                'id_layanan' => 13, // Sesuaikan dengan id layanan yang sesuai
-                'pertanyaan' => 'Apa saja syarat pengurusan untuk SKTT?',
-                'jawaban' => 'Berdasarkan Peraturan Daerah No.6 Tahun 2019 tentang Adminduk:
-<ul>
-    <li>Foto Passport</li>
-    <li>Foto cap limited stay / tinggal terbatas yang terbaru di buku passport</li>
-    <li>Foto ITAS</li>
-    <li>Foto Bukti pembayaran (yg ada stempel pick up passport)</li>
-    <li>Foto Notifikasi penggunaan Tenaga Kerja Asing (IMTA), RPTKA untuk yang bekerja / Surat Keputusan dari KEMENKUMHAM untuk INVESTMENT</li>
-    <li>Foto STM / SKJ dari Kepolisian</li>
-    <li>Surat Keterangan dari Sponsor (Perusahaan penjamin) yang mendatangkan Orang Asing / dari suami WNI/ istri WNI yang kawin secara tercatat dengan Orang Asing, Foto Akta Kawin, KK / KTP (Bagi OA yang bersuami / beristri WNI)</li>
-    <li>Surat Pernyataan tidak keberatan penggunaan alamat dalam dokumen kependudukan dari pemilik rumah mengetahui RT, RW / Manajemen Apartemen</li>
-    <li>Foto Orang Asing dengan memegang passport halaman depan yang ada fotonya dengan menggunakan aplikasi Geotag photo.</li>
-    <li>Pas Foto background Merah (untuk tahun kelahiran ganjil) atau Biru (Untuk tahun kelahiran genap)</li>
-    <li>SKTT lama bagi yang perpanjangan</li>
-    <li>Upload semua dokumen yang sudah dijadikan 1 dalam format pdf</li>
-</ul>',
+                'id_layanan' => 4,
+                'pertanyaan' => 'Apa saja Berkas Persyaratan Mengurus Akta Perceraian',
+                'jawaban' => 'Berkas Persyaratan pengajuan Akta Perceraian :
+    <ol>
+        <li>Keputusan Pengadilan tentang penetapan perceraian yang mempunyai kekuatan hukum yang tetap (asli);</li>
+        <li>Fotocopy KK dan KTP dengan menunjukkan aslinya;</li>
+        <li>Fotocopy Kutipan Akta Kelahiran dengan menunjukkan aslinya (catatan pinggir bagi yang sudah berganti nama dan atau berubah kewarganegaraan);</li>
+        <li>Kutipan Akta Perkawinan (asli);</li>
+        <li>Fotocopy Surat Bukti Ganti Nama (bagi WNI keturunan yang sudah ganti nama) dengan menunjukkan aslinya;</li>
+        <li>Fotocopy Dokumen Imigrasi dan STLD (bagi Orang Asing) dengan menunjukkan aslinya;</li>
+        <li>Pas foto 3 x 4 cm sebanyak 3 lembar.</li>
+    </ol>',
             ],
+
 
 
             [
