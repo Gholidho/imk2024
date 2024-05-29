@@ -5,11 +5,10 @@
                     <li><a href="{{ '/berita' }}">Berita</a></li>
                     <li><a href="{{ route('layanan') }}">Layanan</a></li>
                     <li><a href="{{ route('publikasi') }}">Publikasi</a></li>
-                    <li class="dropdown"><a href=""><span>Informasi</span> <i
-                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <li class="dropdown"><a href=""><span>Informasi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="{{ route('statistik') }}">Statistik</a></li>
-                            <li><a href="{{ route('faq') }}">FAQ</a></li>
+                            <li><a href="{{ '/faq' }}">FAQ</a></li>
                             <li><a href="{{ route('pengaduan') }}">Pengaduan</a></li>
                         </ul>
                     </li>

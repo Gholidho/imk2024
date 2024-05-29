@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\FaqController;
 use App\Models\Berita;
 
 /*
@@ -77,11 +78,10 @@ Route::prefix('/statistik')->group(function () {
 
 
 #routes FAQ
-Route::prefix('/faq')->group(function () {
-    Route::get('/', function () {
-        return view('faq.index');
-    })->name('faq');
-});
+Route::get(
+    '/faq',
+    [FaqController::class, 'index']
+);
 
 
 #routes pengaduan
@@ -102,4 +102,3 @@ Route::prefix('/kontak')->group(function () {
 #route berita
 Route::get('/berita', [NewsController::class, 'index'])->name('berita.index');
 Route::get('/berita/detail/{id}', [NewsController::class, 'detail'])->name('berita.detail');
-

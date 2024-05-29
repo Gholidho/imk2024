@@ -15,6 +15,11 @@
         width: auto;
         height: 38px;
     }
+
+    .social-icon a,
+    .info-item a {
+        color: #E84545;
+    }
 </style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 @endsection
@@ -33,7 +38,7 @@
                             <!-- Section Title -->
                             <div class="container section-title" data-aos="fade-up">
                                 <h2>Pengaduan</h2>
-                                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                                <p>Layanan Aspirasi dan Pengaduan Online Rakyat</p>
                             </div><!-- End Section Title -->
 
                             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -88,7 +93,7 @@
                                                 <div class="info-item" data-aos="fade" data-aos-delay="400">
                                                     <img src="img/lapor.png" alt="Alternative text for the image">
                                                     <h3>Laporan Pengaduan</h3>
-                                                    <p><a href="https://www.lapor.go.id/">Lapor.id</a></p>
+                                                    <p><a href="https://www.lapor.go.id/">Lapor.id</a></p><br>
                                                 </div>
                                             </div><!-- End Info Item -->
 
