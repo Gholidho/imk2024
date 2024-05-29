@@ -62,6 +62,18 @@ class FaqSeeder extends Seeder
             ],
 
             [
+                'id_layanan' => 2, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Bisa kah akta kematian dilegalisir ?',
+                'jawaban' => 'Jika akta kematian yang belum bertandatangan elektronik, dapat dilegalisir secara online (mandiri) melalui website klampid pada alamat klampid- dispendukcapil.surabaya.go.id atau di kelurahan / kecamatan sesuai domisili.<br> <br>Sesuai Peraturan Menteri Dalam Negeri Republik Indonesia No. 104 Tahun 2019 pasal 19 ayat (6) bahwa dokumen kependudukan dengan format digital dan sudah ditandatangani secara elektronik dan KTP-el tidak memerlukan legalisir.',
+            ],
+
+            [
+                'id_layanan' => 2,
+                'pertanyaan' => 'Bagaimana jika yang meninggal tidak memiliki keluarga / tunggal di dalam Kartu Keluarga ?',
+                'jawaban' => 'Pelapornya adalah Ketua RT dengan melampirkan SK pengangkatan RT dan persyaratan lain sesuai ketentuan.',
+            ],
+
+            [
                 'id_layanan' => 3, // Akta Perkawinan
                 'pertanyaan' => 'Bagaimana proses pencatatan perkawinan di Dispendukcapil?',
                 'jawaban' => 'Pemohon mengajukan pencatatan perkawinan dapat dilakukan secara online (mandiri) dengan melampirkan persyaratan yang telah ditentukan paling lambat 14 hari sebelum tanggal pencatatan perkawinan. Pemohon akan dihubungi oleh Dispendukcapil untuk pencatatan yang dilakukan melalui zoom.',
@@ -70,13 +82,25 @@ class FaqSeeder extends Seeder
             [
                 'id_layanan' => 3, // Sesuaikan dengan id layanan yang sesuai
                 'pertanyaan' => 'Siapakah yang dapat mengajukan permohonan pencatatan perkawinan atau pelaporan perkawinan luar negeri di Dispendukcapil?',
-                'jawaban' => 'Penduduk Surabaya yang beragama non muslim yang sudah melaksanakan perkawinan dihadapan pemuka agama atau penghayat kepercayaan.',
+                'jawaban' => 'Penduduk Trenggalek yang beragama non muslim yang sudah melaksanakan perkawinan dihadapan pemuka agama atau penghayat kepercayaan.',
+            ],
+
+            [
+                'id_layanan' => 3, //Perceraian
+                'pertanyaan' => 'Berapa lama pemohon dapat menerima akta perkawinan ?',
+                'jawaban' => 'Maksimal 7 hari kerja sejak pelaksanaan pencatatan perkawinan.',
+            ],
+
+            [
+                'id_layanan' => 3, //Perceraian
+                'pertanyaan' => 'Apakah pencatatan perjanjian perkawinan dapat dilakukan tidak bersamaan dengan proses pencatatan perkawinan ?',
+                'jawaban' => 'Dapat.',
             ],
 
             [
                 'id_layanan' => 4, //Perceraian
                 'pertanyaan' => 'Bagaimana proses pencatatan perceraian di Dispendukcapil?',
-                'jawaban' => 'Pemohon mengajukan pencatatan perceraian dapat dilakukan secara online (mandiri) melalui website klampid pada alamat klampid- dispendukcapil.surabaya.go.id atau di kelurahan / kecamatan dengan melampirkan persyaratan yang telah ditentukan. Pemohon akan dihubungi oleh Dispendukcapil untuk hadir ke Dispendukcapil menandatangani register akta perceraian, sehingga dapat diterbitkan akta perceraian.',
+                'jawaban' => 'Pemohon mengajukan pencatatan perceraian dapat dilakukan secara mandiri di kelurahan / kecamatan dengan melampirkan persyaratan yang telah ditentukan. Pemohon akan dihubungi oleh Dispendukcapil untuk hadir ke Dispendukcapil menandatangani register akta perceraian, sehingga dapat diterbitkan akta perceraian.',
             ],
 
             [
@@ -112,9 +136,21 @@ class FaqSeeder extends Seeder
             ],
 
             [
+                'id_layanan' => 5, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Apakah boleh dalam 1 KK 1 alamat, anak dan orang tua dipecah KK nya?',
+                'jawaban' => 'Boleh, selama anak umurnya sudah lebih dari 17 Tahun dan atas seizin pemilik rumah, kecuali untuk KK yang beralamat di rusun yang dikelola oleh Pemerintah.',
+            ],
+
+            [
                 'id_layanan' => 6, // ktp
                 'pertanyaan' => 'Dimana warga dapat mendapatkan KTP-el baru ?',
                 'jawaban' => 'Perekaman KTP-el bagi warga usia 17 tahun keatas atau sudah menikah dapat dilakukan di semua kantor kecamatan atau di Siola (Mall Pelayanan Publik), dicetak oleh Dinas Kependudukan dan Pencatatan Sipil dan dikirim ke kelurahan.',
+            ],
+
+            [
+                'id_layanan' => 6, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Apakah KTP-el dapat dilegalisir ?',
+                'jawaban' => 'Sesuai Peraturan Menteri Dalam Negeri Republik Indonesia No. 104 Tahun 2019 pasal 19 ayat (6) bahwa dokumen kependudukan dengan format digital dan sudah ditandatangani secara elektronik dan KTP-el tidak memerlukan legalisir.',
             ],
 
             [
@@ -148,6 +184,24 @@ class FaqSeeder extends Seeder
             ],
 
             [
+                'id_layanan' => 8, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Apabila di SKPWNI nya pindah terdapat 3 orang yang pindah, tetapi pemohon hanyaingin 1 orang saja yang pindah datang apakah dapat diproses?',
+                'jawaban' => 'Tidak bisa, harus pembatalan dulu dari daerah asal, lalu di pindahkan ulang',
+            ],
+
+            [
+                'id_layanan' => 8, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Bagaimana cara mengaktifkan NIK yang terblokir?',
+                'jawaban' => 'Jika NIK terblokir karena belum melakukan perekaman KTP-el dapat mengajukan permohonan buka blokir dengan melampirkan formulir buka blokir diketahui oleh RT dan RW. Jika NIK terblokir karena ganda, diarahkan untuk mengajukan proses pindah NIK yang diakui.',
+            ],
+
+            [
+                'id_layanan' => 8, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Bagaimana jika NIK di KTP-el tidak sama dengan NIK di KK?',
+                'jawaban' => 'Pemohon dapat mengajukan pengaduan ke kelurahan/kecamatan dengan melampirkan KTP-el dan KK untuk dilakukan pengecekan oleh Dispendukcapil. Pemohon akan dihubungi terkait solusi penyelesaiannya.',
+            ],
+
+            [
                 'id_layanan' => 9, // pindah datang penduduk dari luar kota
                 'pertanyaan' => 'Apa saja persyaratan untuk Pindah Datang?',
                 'jawaban' => 'Untuk pemohon SKPWNI, SPTJM (form dari kelurahan), Berita Acara verifikasi tempat tinggal yang di ketahui RT dan di TTd oleh petugas Kelurahan (form dari kelurahan)',
@@ -157,6 +211,18 @@ class FaqSeeder extends Seeder
                 'id_layanan' => 9, // Sesuaikan dengan id layanan yang sesuai
                 'pertanyaan' => 'Apa pengurusuan Pindah Datang bisa datang langsung ke Dispendukcapil?',
                 'jawaban' => 'Untuk saat ini pengurusan Pindah Datang hanya melalui Kelurahan, karena akan di online kan oleh petugas kelurahan, dan petugas kelurahan akan outreach ke rumah pemohon dan menemui pak RT, hasil berupa Berita Acara Verifikasi Tempat tinggal',
+            ],
+
+            [
+                'id_layanan' => 9, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Apabila di SKPWNI nya pindah terdapat 3 orang yang pindah, tetapi pemohon hanyaingin 1 orang saja yang pindah datang apakah dapat diproses?',
+                'jawaban' => 'Tidak bisa, harus pembatalan dulu dari daerah asal, lalu di pindahkan ulang',
+            ],
+
+            [
+                'id_layanan' => 9, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Apabila pemohon menumpang dialamat yang bukan rumah miliknya sendiri sepertirumah kontrak, apa permohonan dapat diproses?',
+                'jawaban' => 'Bisa, selama pemilik rumah mengijinkan dan TTD di form SPTJM nya, serta melampirkanKK dari pemilik rumah tersebut',
             ],
 
             [
@@ -172,6 +238,12 @@ class FaqSeeder extends Seeder
             ],
 
             [
+                'id_layanan' => 10, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Bagaimana syarat pindah keluar karena cerai dan mengajak anak yang masih dibawah umur?',
+                'jawaban' => 'Jika cerai harap melampirkan akta cerai, penetapan hak asuh anak (di foto bagian mengadili) atau surat pernyataan kesepakatan dari kedua belah pihak anak ikut siapa, kk trenggalek dan ktp yang pindah pilih jenis kepindahan anggota keluarga dan jika pindah semua mohon menyebutkan siapa saja yang pindah dengan jenis kepindahan kepala keluarga dan seluruh anggota keluarga dengan melampirkan kk trenggalek dan ktp yang pindah.',
+            ],
+
+            [
                 'id_layanan' => 11, //pindah dalam kota
                 'pertanyaan' => 'Apa saja syarat mengurus pindah dalam kota ?',
                 'jawaban' => 'Kartu Keluarga Pemohon, KTP, dan formulir SPTJM tentang tempat tinggal kemudian kelurahan melengkapi Berita Acara Verifikasi tempat tinggal.',
@@ -184,7 +256,25 @@ class FaqSeeder extends Seeder
             ],
 
             [
+                'id_layanan' => 11, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Saya pernah pengajuan ke alamat suami tetapi KK yang sudah jadi status di keluargasaya menjadi Lainnya dan belum kawin ?',
+                'jawaban' => 'Jika status perpindahan masih tertera belum kawin harap ditambkan lampiran aktanikah atau surat nikah yang menunjukkan nama dan nomor surat nikah',
+            ],
+
+            [
                 'id_layanan' => 12, // pendataan penduduk non permanen
+                'pertanyaan' => 'Apa saja persyaratan pelaporan penduduk non permanen?',
+                'jawaban' => 'Surat pernyataan tidak keberatan dari pemilik rumah mengetahui RT, Surat keterangan bekerja (apabila bekerja) / Surat keterangan dari sekolah atau universitas (apabila bersekolah), atau Surat Keterangan dari RS (apabila terkait pengobatan)',
+            ],
+
+            [
+                'id_layanan' => 12, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Saya pernah pengajuan ke alamat suami tetapi KK yang sudah jadi status di keluargasaya menjadi Lainnya dan belum kawin ?',
+                'jawaban' => 'Jika status perpindahan masih tertera belum kawin harap ditambkan lampiran aktanikah atau surat nikah yang menunjukkan nama dan nomor surat nikah',
+            ],
+
+            [
+                'id_layanan' => 12, // Sesuaikan dengan id layanan yang sesuai
                 'pertanyaan' => 'Apa saja persyaratan pelaporan penduduk non permanen?',
                 'jawaban' => 'Surat pernyataan tidak keberatan dari pemilik rumah mengetahui RT, Surat keterangan bekerja (apabila bekerja) / Surat keterangan dari sekolah atau universitas (apabila bersekolah), atau Surat Keterangan dari RS (apabila terkait pengobatan)',
             ],
@@ -202,18 +292,30 @@ class FaqSeeder extends Seeder
             ],
 
             [
-                'id_layanan' => 4,
-                'pertanyaan' => 'Apa saja Berkas Persyaratan Mengurus Akta Perceraian',
-                'jawaban' => 'Berkas Persyaratan pengajuan Akta Perceraian :
-    <ol>
-        <li>Keputusan Pengadilan tentang penetapan perceraian yang mempunyai kekuatan hukum yang tetap (asli);</li>
-        <li>Fotocopy KK dan KTP dengan menunjukkan aslinya;</li>
-        <li>Fotocopy Kutipan Akta Kelahiran dengan menunjukkan aslinya (catatan pinggir bagi yang sudah berganti nama dan atau berubah kewarganegaraan);</li>
-        <li>Kutipan Akta Perkawinan (asli);</li>
-        <li>Fotocopy Surat Bukti Ganti Nama (bagi WNI keturunan yang sudah ganti nama) dengan menunjukkan aslinya;</li>
-        <li>Fotocopy Dokumen Imigrasi dan STLD (bagi Orang Asing) dengan menunjukkan aslinya;</li>
-        <li>Pas foto 3 x 4 cm sebanyak 3 lembar.</li>
-    </ol>',
+                'id_layanan' => 13,
+                'pertanyaan' => ' Siapakah orang asing yang wajib melapor ke Dispendukcapil Kabupaten Trenggalek?',
+                'jawaban' => 'Orang asing pemegang izin tinggal terbatas yang tinggal di Trenggalek wajib melapor agar diterbitkan SKTT, Orang asing pemegang izin tinggal tetap yang tinggal di Surabaya wajib melapor agar diterbitkan KK dan KTP OA.',
+            ],
+
+
+            [
+                'id_layanan' => 13,
+                'pertanyaan' => 'Apa saja syarat pengurusan untuk SKTT?',
+                'jawaban' => 'Berdasarkan Peraturan Daerah No.6 Tahun 2019 tentang Adminduk:
+    <ul>
+        <li>Foto Passport</li>
+        <li>Foto cap limited stay / tinggal terbatas yang terbaru di buku passport</li>
+        <li>Foto ITAS</li>
+        <li>Foto Bukti pembayaran (yg ada stempel pick up passport)</li>
+        <li>Foto Notifikasi penggunaan Tenaga Kerja Asing (IMTA), RPTKA untuk yang bekerja / Surat Keputusan dari KEMENKUMHAM untuk INVESTMENT</li>
+        <li>Foto STM / SKJ dari Kepolisian</li>
+        <li>Surat Keterangan dari Sponsor (Perusahaan penjamin) yang mendatangkan Orang Asing / dari suami WNI/ istri WNI yang kawin secara tercatat dengan Orang Asing, Foto Akta Kawin, KK / KTP (Bagi OA yang bersuami / beristri WNI)</li>
+        <li>Surat Pernyataan tidak keberatan penggunaan alamat dalam dokumen kependudukan dari pemilik rumah mengetahui RT, RW / Manajemen Apartemen</li>
+        <li>Foto Orang Asing dengan memegang passport halaman depan yang ada fotonya dengan menggunakan aplikasi Geotag photo.</li>
+        <li>Pas Foto background Merah (untuk tahun kelahiran ganjil) atau Biru (Untuk tahun kelahiran genap)</li>
+        <li>SKTT lama bagi yang perpanjangan</li>
+        <li>Upload semua dokumen yang sudah dijadikan 1 dalam format pdf</li>
+    </ul>',
             ],
 
 
@@ -240,6 +342,18 @@ class FaqSeeder extends Seeder
                 'id_layanan' => 15, // Sesuaikan dengan id layanan yang sesuai
                 'pertanyaan' => 'Bagaimana Cara Pengajuan Pecah Kartu Keluarga ?',
                 'jawaban' => 'Pecah Kartu Keluarga Bisa Di Lakukan Dengan Datang Ke Kelurahan atau Kecamatan Setempat.',
+            ],
+
+            [
+                'id_layanan' => 15, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Apakah bila ada pemohon tinggal di rusun bisa mengajukan pecah kk ?',
+                'jawaban' => 'Sesuai dengan peraturan perwali no 907 pasal 3 terkait rumah rusun tidak boleh lebih dari 1 KK.',
+            ],
+
+            [
+                'id_layanan' => 15, // Sesuaikan dengan id layanan yang sesuai
+                'pertanyaan' => 'Apa Saja Yang Harus Di Lampirkan Jika Ingin Menumpang KK ?',
+                'jawaban' => 'Pemohon Harus Melampirkan Kk Tujuan Dengan Alamat Yang Sama.',
             ],
 
         ]);
