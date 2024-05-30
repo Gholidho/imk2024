@@ -80,7 +80,7 @@
 @section('container')
 <main class="main">
     <div class="page-title" data-aos="fade">
-        <div class="heading">
+        <div class="heading" style="padding:0">
             <div class="row d-flex justify-content-center text-center">
                 <section id="faq" class="faq section">
                     <div class="container section-title" data-aos="fade-up" style="padding-bottom:0;">
