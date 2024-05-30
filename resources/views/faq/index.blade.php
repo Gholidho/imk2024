@@ -13,14 +13,11 @@
         align-items: center;
         text-align: left;
         padding-left: 0;
-        /* Menghapus padding kiri */
     }
 
     .services-list a .num {
         width: 30px;
-        /* Menentukan lebar nomor */
         margin-right: 10px;
-        /* Menambahkan jarak antara nomor dan teks */
     }
 
     .services-list a i {
@@ -43,11 +40,8 @@
         display: none;
         width: 95%;
         text-align: left;
-        /* Mengatur teks jawaban menjadi rata kiri */
         margin-left: 30px;
         margin-top: 20px;
-        /* Menambahkan jarak kiri untuk jawaban */
-
     }
 
     .faq-item.active .faq-answer {
@@ -68,12 +62,10 @@
 
     .faq-item .faq-question {
         text-align: left;
-        /* Menghapus padding kiri pada pertanyaan */
     }
 
     .faq-question span.num {
         margin-right: 10px;
-        /* Menyesuaikan jarak antara nomor dan pertanyaan */
     }
 </style>
 <!-- Vendor CSS Files -->
@@ -104,7 +96,6 @@
                                         <div class="services-list">
                                             @foreach($layananFaq as $layanan)
                                             <a href="#" onclick="showFaq('{{ $layanan->id }}'); return false;" @if($loop->first) class="active" @endif>
-                                                <!-- <span class="num">{{ $loop->index + 1 }}</span> Menampilkan nomor FAQ -->
                                                 <i class="bi bi-arrow-right-circle"></i>
                                                 <span>{{ $layanan->layanan }}</span>
                                             </a>
@@ -167,7 +158,7 @@
             faqGroupToShow.style.display = 'block';
         }
 
-        var clickedFaqLink = document.querySelector('.services-list a[onclick="showFaq(\'' + faqNumber + '\')"]');
+        var clickedFaqLink = document.querySelector(`.services-list a[onclick="showFaq('${faqNumber}'); return false;"]`);
         if (clickedFaqLink) {
             clickedFaqLink.classList.add('active');
         }
