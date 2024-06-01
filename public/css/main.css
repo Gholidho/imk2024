@@ -947,13 +947,49 @@ section,
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
+.section-title-stats {
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+    --background-color: #f4f4f4;
+    background-color: var(--background-color);
+}
+
+.section-title-stats h2 {
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title-stats h2:before,
+.section-title-stats h2:after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: var(--accent-color);
+    display: inline-block;
+}
+
+.section-title-stats h2:before {
+    margin: 0 15px 10px 0;
+}
+
+.section-title-stats h2:after {
+    margin: 0 0 10px 15px;
+}
+
+.section-title-stats p {
+    margin-bottom: 0;
+}
+
+
 .stats {
     --default-color: #ffffff;
     --default-color-rgb: 255, 255, 255;
     --background-color: #000000;
     --background-color-rgb: 0, 0, 0;
     position: relative;
-    padding: 120px 0;
+    padding: 50px 0;
 }
 
 .stats img {
@@ -968,7 +1004,7 @@ section,
 
 .stats:before {
     content: "";
-    background: rgba(var(--background-color-rgb), 0.6);
+    background: rgba(var(--background-color-rgb), 0.5);
     position: absolute;
     inset: 0;
     z-index: 2;
@@ -980,7 +1016,6 @@ section,
 }
 
 .stats .stats-item {
-    padding: 30px;
     width: 100%;
 }
 
@@ -1000,6 +1035,11 @@ section,
     color: rgba(var(--default-color-rgb), 0.6);
 }
 
+
+.bi-person-standing, .bi-people-fill, .bi-person-lines-fill, .bi-person-standing-dress{
+    font-size: 5em;
+    padding: 0; /* Ubah ukuran ikon menjadi 2 kali lipat ukuran aslinya */
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -1837,6 +1877,7 @@ section,
     color: rgba(var(--default-color-rgb), 0.5);
     margin-bottom: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -2849,3 +2890,5 @@ section,
     color: rgba(var(--default-color-rgb), 0.4);
     font-size: 14px;
 }
+
+

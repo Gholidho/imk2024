@@ -24,7 +24,7 @@
         <span class="pmd-floating-hidden">Dialpad</span>
         <i class="material-icons">dialpad</i>
     </a>
-    <a class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-primary" data-title="Add"
+    <a class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-primary"
         href="javascript:void(0);">
         <span class="pmd-floating-hidden">Primary</span>
         <i class="material-icons pmd-sm">help</i>
