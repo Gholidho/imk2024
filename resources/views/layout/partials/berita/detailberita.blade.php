@@ -6,11 +6,17 @@
     <div class="px-4">
         <div class="d-flex flex-row align-items-center mt-2 mb-3">
             <div class="d-flex align-items-center">
-                <i class="fa-solid fa-newspaper"></i> {{ $berita->kategoriBerita->nama_kategori_berita }}
+                <i class="bi bi-tags"></i> : {{ $berita->kategoriBerita->nama_kategori_berita }}
             </div>
+            <br>
             <div class="d-flex align-items-center">
-                <i class="fa-regular fa-calendar"></i> {{ $berita->tanggal_berita }}
+                <i class="bi bi-calendar-check"></i> : {{ $berita->tanggal_berita }}
             </div>
+            <br>
+            <div class="d-flex align-items-center">
+                <i class="bi bi-person-lines-fill"></i> : {{ $berita->author }}
+            </div>
+
         </div>
 
         {{-- Konten narasi berita --}}

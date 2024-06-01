@@ -312,3 +312,10 @@ h6 {
 #loader-container.fadeOut {
     animation: fadeOut 0.5s ease-out;
 }
+
+/*added css*/
+.mid {
+    background-color: #059652;
+    text-align: center;
+
+}
