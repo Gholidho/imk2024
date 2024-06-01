@@ -55,8 +55,12 @@ Route::prefix('/profil')->group(function () {
 #routes layanan
 Route::prefix('/layanan')->group(function () {
     Route::get('/', function () {
-        return view('layanan.index');
+        return view('layanan.cardview');
     })->name('layanan');
+    Route::get('/akta-pengesahan-anak', function () {
+        return view('layanan.detail');
+    })->name('layanan.detail');
+
 });
 
 
