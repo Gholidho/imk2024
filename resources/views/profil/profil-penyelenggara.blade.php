@@ -55,6 +55,7 @@
     DI KABUPATEN TRENGGALEK
 </h3>
 <hr>
+
 <div class="profile-details">
     <div class="detail-item"><strong>1. Nama Lembaga </strong> : Dinas Kependudukan dan Pencatatan Sipil</div>
     <div class="detail-item"><strong>2. Singkatan </strong> : Disdukcapil</div>

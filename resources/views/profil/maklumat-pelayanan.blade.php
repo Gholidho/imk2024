@@ -2,6 +2,7 @@
     MAKLUMAT PELAYANAN<br>
     DISDUKCAPIL TRENGGALEK
 </h3>
+<hr>
 
 <div class="text-center">
     <img src="{{ asset('/img/maklumat-pelayanan.jpg') }}" alt="Struktur Organisasi"

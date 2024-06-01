@@ -1,5 +1,5 @@
 <div class="service-box">
-    <h4>PROFIL</h4>
+    <h4>PROFIL KAMI</h4>
     <div class="services-list">
         <a href="{{ route('profil.struktur-organisasi') }}" class="service-link" data-target="struktur-organisasi"><i
                 class="bi bi-arrow-right-circle"></i><span>Struktur
