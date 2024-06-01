@@ -1,7 +1,7 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="{{ '/' }}" class="">Beranda</a></li>
-                    <li><a href="{{ route('profil.struktur-organisasi') }}">Profil</a></li>
+                    <li><a href="{{ route('profil.index') }}">Profil</a></li>
                     <li><a href="{{ '/berita' }}">Berita</a></li>
                     <li><a href="{{ route('layanan') }}">Layanan</a></li>
                     <li><a href="{{ route('publikasi') }}">Publikasi</a></li>

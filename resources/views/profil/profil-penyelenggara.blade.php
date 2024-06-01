@@ -1,60 +1,83 @@
-@extends('layout.main')
+<style>
+    .profile-details {
+        line-height: 1.8;
+    }
 
-@section('styles')
-    <style>
-        /* .col-lg-8.ps-lg-5 h3 {
-                                                text-align: center;
-                                            } */
+    .profile-details .detail-item {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: baseline;
+    }
 
-        .col-lg-8.ps-lg-5 p {
-            text-align: justify;
-        }
-    </style>
-@endsection
+    .profile-details .detail-item a,
+    .profile-details .detail-item span {
+        margin-left: 0.3em;
+        /* Adjust the value as needed */
+    }
 
-@section('container')
-    <main class="main">
+    .profile-details .detail-item strong {
+        min-width: 200px;
+        display: inline-block;
+        /* Ensure min-width works */
+    }
 
-        <!-- Page Title -->
-        <div class="page-title" data-aos="fade">
-            <div class="heading">
-                <div class="container">
-                    <div class="row d-flex justify-content-center text-center">
-                        <div class="col-lg-8">
-                            <h1 class="">PROFIL</h1>
-                            <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio
-                                sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus
-                                dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <nav class="breadcrumbs">
-                <div class="container">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="current">Profil</li>
-                    </ol>
-                </div>
-            </nav>
-        </div><!-- End Page Title -->
+    .profile-details .address-details {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5em;
+        /* Align the address items similarly */
+    }
 
-        <!-- Service Details Section -->
-        <section id="service-details" class="service-details section">
-            <div class="container">
-                <div class="row gy-5">
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        @include('profil.partials.service-list')
-                    </div>
-                    <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-                        <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-                        <h3>Motto</h3>
-                        <p style="text-align: center">
-                            Coming soon: profil-penyelenggara
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section><!-- /Service Details Section -->
-    </main>
-@endsection
+    .profile-details .address-details div {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 5px;
+    }
+
+    .profile-details .address-details strong {
+        min-width: 200px;
+        /* Same width as other strong elements */
+        display: inline-block;
+        /* Ensure min-width works */
+        margin-left: 1em;
+        /* Adjust as needed */
+    }
+
+    .profile-details .detail-item.address {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+</style>
+
+<h3 style="text-align: center">
+    PROFIL PENYELENGGARA<br>
+    PELAYANAN ADMINISTRASI KEPENDUDUKAN<br>
+    DI KABUPATEN TRENGGALEK
+</h3>
+<hr>
+<div class="profile-details">
+    <div class="detail-item"><strong>1. Nama Lembaga </strong> : Dinas Kependudukan dan Pencatatan Sipil</div>
+    <div class="detail-item"><strong>2. Singkatan </strong> : Disdukcapil</div>
+    <div class="detail-item"><strong>3. Nomor Telepon </strong> : (0355) 791160</div>
+    <div class="detail-item"><strong>4. Jumlah Produk Layanan </strong> : 19 (Sembilan Belas)</div>
+    <div class="detail-item"><strong>5. Jumlah Jenis Layanan </strong> : 55 (Lima Puluh Lima)</div>
+    <div class="detail-item"><strong>6. Email </strong> : disdukcapil.trenggalek@gmail.com</div>
+    <div class="detail-item"><strong>7. Website </strong> : <a href="http://dukcapil.trenggalekkab.go.id"
+            target="_blank">dukcapil.trenggalekkab.go.id</a></div>
+    <div class="detail-item"><strong>8. Instagram </strong> : <a href="https://www.instagram.com/disdukcapil.trenggalek"
+            target="_blank">disdukcapil.trenggalek</a></div>
+    <div class="detail-item"><strong>9. Facebook </strong> : <a href="https://www.facebook.com/disdukcapil.trenggalek"
+            target="_blank">disdukcapil trenggalek</a></div>
+
+    <div class="detail-item address">
+        <strong>10. Alamat</strong>
+        <div class="address-details">
+            <div><strong>Provinsi </strong>: Jawa Timur</div>
+            <div><strong>Kabupaten </strong>: Trenggalek</div>
+            <div><strong>Kecamatan </strong>: Trenggalek</div>
+            <div><strong>Kelurahan </strong>: Sumbergedong</div>
+            <div><strong>Alamat </strong>: Jl. Soetran Nomor 17 Trenggalek</div>
+            <div><strong>Kode Pos </strong>: 66315</div>
+        </div>
+    </div>
+</div>
