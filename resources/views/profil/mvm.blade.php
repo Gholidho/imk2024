@@ -30,6 +30,7 @@
     VISI DAN MISI<br>
     DISDUKCAPIL TRENGGALEK
 </h3>
+<hr>
 
 <div class="visi-misi-container">
     <h4 style="text-align: center">VISI</h4>

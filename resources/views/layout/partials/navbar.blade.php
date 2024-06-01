@@ -1,6 +1,7 @@
 <nav id="navmenu" class="navmenu">
     <ul>
         <li><a href="{{ url('/') }}" class="{{ request()->is('/') ? 'active' : '' }}">Beranda</a></li>
+        <li><a href="{{ route('profil.index') }}" class="{{ request()->is('profil') ? 'active' : '' }}">Profil</a></li>
         <li><a href="{{ route('profil.struktur-organisasi') }}"
                 class="{{ request()->is('profil/struktur-organisasi') ? 'active' : '' }}">Profil</a></li>
         <li><a href="{{ url('/berita') }}" class="{{ request()->is('berita') ? 'active' : '' }}">Berita</a></li>
@@ -8,8 +9,8 @@
         <li><a href="{{ route('publikasi') }}" class="{{ request()->is('publikasi') ? 'active' : '' }}">Publikasi</a>
         </li>
         <li class="dropdown"><a href="#"
-                class="{{ request()->is('statistik', 'faq', 'pengaduan') ? 'active' : '' }}"><span>Informasi</span> <i
-                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                class="{{ request()->is('statistik', 'faq', 'pengaduan') ? 'active' : '' }}"><span>Informasi</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
                 <li><a href="{{ route('statistik') }}"
                         class="{{ request()->is('statistik') ? 'active' : '' }}">Statistik</a></li>

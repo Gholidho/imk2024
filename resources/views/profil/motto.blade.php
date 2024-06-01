@@ -34,6 +34,7 @@
 <h3 class="rainbow-text">
     MEMBAHAGIAKAN MASYARAKAT
 </h3>
+</hr>
 
 <div class="text-center">
     <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-people-waving-illustration_52683-79273.jpg?w=900&t=st=1716972893~exp=1716973493~hmac=6f47d90512bb1d73bd3ec7bb9708c23ca46c2a14fa555e390d27e3626896ef16"
