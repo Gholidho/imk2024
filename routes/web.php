@@ -21,6 +21,10 @@ Route::get('/', [BerandaController::class, 'index'])->name('beranda.berita');
 
 #routes profile
 Route::prefix('/profil')->group(function () {
+    Route::get('/', function () {
+        return view('profil.index');
+    })->name('profil.index');
+
     Route::get('/struktur-organisasi', function () {
         return view('profil.struktur-organisasi');
     })->name('profil.struktur-organisasi');
@@ -40,6 +44,10 @@ Route::prefix('/profil')->group(function () {
     Route::get('/motto-visi-misi', function () {
         return view('profil.mvm');
     })->name('profil.mvm');
+
+    Route::get('/motto', function () {
+        return view('profil.motto');
+    })->name('profil.motto');
 });
 
 
