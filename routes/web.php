@@ -1,8 +1,9 @@
 <?php
 
+use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
-use App\Models\Berita;
+use App\Http\Controllers\BerandaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,7 @@ use App\Models\Berita;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('/', [BerandaController::class, 'index'])->name('index');
 
 
 #routes profile
