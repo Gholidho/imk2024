@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             KategoriBeritaSeeder::class,
+            NewsTableSeeder::class,
             // Tambahkan seeder lainnya jika ada
         ]);
     }

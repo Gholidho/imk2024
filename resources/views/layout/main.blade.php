@@ -7,6 +7,11 @@
     <title>Services Details - Append Bootstrap Template</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+    <!-- -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Favicons -->
     <link href="{{ asset('img/favicon.png') }}" rel="icon">
@@ -39,8 +44,6 @@
     <link rel="stylesheet" href="{{ asset('css/floating.css') }}">
 
     @yield('styles')
-
-
 
     <!-- =======================================================
   * Template Name: Append

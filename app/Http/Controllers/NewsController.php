@@ -6,6 +6,7 @@ use App\Models\Menu;
 use App\Models\Berita;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Models\KategoriBerita;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
@@ -16,7 +17,7 @@ class NewsController extends Controller
     {
         return $berita->map(function ($item) {
             $item->tanggal_berita = Carbon::parse($item->tanggal_berita)->translatedFormat('d F Y');
-            $item->narasi_berita = Str::limit($item->narasi_berita, 100, '...');
+            $item->narasi_berita = Str::limit($item->narasi_berita, 200, '...');
             return $item;
         });
     }
@@ -102,5 +103,46 @@ class NewsController extends Controller
             // Handle the case when berita is not found
             return redirect()->back()->with('status.error', 'Berita not found.');
         }
+    }
+
+    private function getPopulerBerita()
+    {
+        return Berita::orderBy('klik', 'desc')->take(3)->get();
+    }
+
+    private function getTerbaruBerita()
+    {
+        return Berita::orderBy('tanggal_berita', 'desc')->take(3)->get();
+    }
+
+    public function search(Request $request)
+    {
+        Log::info('Search initiated', ['request' => $request->all()]);
+
+        $keyword = $request->input('keyword');
+        $category = $request->input('category');
+
+        Log::info('Search parameters', ['keyword' => $keyword, 'category' => $category]);
+
+        $query = Berita::query();
+
+        if ($category) {
+            Log::info('Searching with category');
+            $query->where('kategori_berita_id', $category);
+        }
+
+        if ($keyword) {
+            Log::info('Searching with keyword');
+            $query->where(function ($q) use ($keyword) {
+                $q->where('judul', 'like', '%' . $keyword . '%')
+                    ->orWhere('narasi_berita', 'like', '%' . $keyword . '%');
+            });
+        }
+
+        $results = $this->formatTanggalBerita($query->orderBy('tanggal_berita', 'desc')->get());
+
+        Log::info('Search results', ['results' => $results]);
+
+        return response()->view('layout.partials.berita.search-results', compact('results'));
     }
 }

@@ -1,8 +1,8 @@
-@props(['berita'])
+@props(['results'])
 
-<div class="container-fluid px-1 py-1">
+<div class="container-fluid px-2 py-3">
     <div class="d-flex flex-column">
-        @foreach ($berita as $item)
+        @foreach ($results as $item)
             <div class="d-flex flex-row" data-aos="fade-up" data-aos-delay="200" style="border-bottom: 1px solid lightgrey">
                 <div class="col-4">
                     <a href="{{ route('berita.detail', $item->id) }}">
@@ -17,20 +17,22 @@
                     <span class="small" style="color: var(--branding-secondary-color4);">
                         <i>{{ $item->tanggal_berita }}</i>
                     </span>
-                    <span class="d-flex flex-wrap justify-content-start mt-2">
-                        <div
-                            class="badge bg-secondary rounded-sm px-2 py-1 badge-custom me-2 mt-2 d-flex align-items-center">
+                    <span class="d-flex justify-content-left mt-2">
+                        <div class="badge bg-secondary rounded-sm px-2 py-1 badge-custom" style="margin-left: 2px">
                             <span class="bi bi-person-vcard-fill"></span>
-                            <span class="ms-2">{{ $item->author }}</span>
+                            <span class="ms-2"> {{ $item->author }}</span>
                         </div>
-                        <div class="badge bg-info rounded-sm px-2 py-1 d-flex align-items-center me-2 mt-2">
+                        <div class="badge bg-info rounded-sm px-2 py-1 d-flex align-items-center"
+                            style="margin-left: 2px">
                             <span class="bi bi-eye-fill"></span>
                             <span class="ms-2">{{ $item->klik }} kali</span>
                         </div>
-                        <div class="badge bg-primary rounded-sm px-2 py-1 d-flex align-items-center me-2 mt-2">
+                        <div class="badge bg-primary rounded-sm px-2 py-1 d-flex align-items-center"
+                            style="margin-left: 2px">
                             <span class="bi bi-newspaper"></span>
                             <span class="ms-2">{{ $item->kategoriBerita->nama_kategori_berita }}</span>
                         </div>
+
                     </span>
                     <span class="small d-none d-lg-block d-md-block" style="color: var(--branding-secondary-color2);">
                         {!! $item->narasi_berita !!}

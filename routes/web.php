@@ -102,4 +102,7 @@ Route::prefix('/kontak')->group(function () {
 #route berita
 Route::get('/berita', [NewsController::class, 'index'])->name('berita.index');
 Route::get('/berita/detail/{id}', [NewsController::class, 'detail'])->name('berita.detail');
+Route::get('/search', [NewsController::class, 'search'])->name('news.search');
 
+
+//Route::get('/berita/search', [NewsController::class, 'search'])->name('berita.search');
