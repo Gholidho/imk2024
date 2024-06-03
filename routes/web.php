@@ -4,7 +4,6 @@ use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\FaqController;
-use App\Models\Berita;
 use App\Http\Controllers\BerandaController;
 
 /*
@@ -69,7 +68,6 @@ Route::prefix('/layanan')->group(function () {
     Route::get('/akta-pengesahan-anak', function () {
         return view('layanan.detail');
     })->name('layanan.detail');
-
 });
 
 
