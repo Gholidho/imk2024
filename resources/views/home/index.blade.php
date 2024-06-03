@@ -238,61 +238,6 @@
 
         </section><!-- /Services Section -->
 
-        <!-- Features Section -->
-        <section id="features" class="features section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-4 align-items-center features-item">
-                    <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Corporis temporibus maiores provident</h3>
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                            in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident.
-                        </p>
-                        <a href="#" class="btn btn-get-started">Get Started</a>
-                    </div>
-                    <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out"
-                        data-aos-delay="100">
-                        <div class="image-stack">
-                            <img src="{{ asset('img/tester.png') }}" alt="" class="stack-front">
-                            <img src="{{ asset('img/tester.png') }}" alt="" class="stack-back">
-                        </div>
-                    </div>
-                </div><!-- Features Item -->
-
-                <div class="row gy-4 align-items-stretch justify-content-between features-item ">
-                    <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-                        <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
-                        <h3>Sunt consequatur ad ut est nulla</h3>
-                        <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit
-                            aut quia voluptatem hic voluptas dolor doloremque.</p>
-                        <ul>
-                            <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</span></li>
-                            <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate
-                                    velit.</span></li>
-                            <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad
-                                    fugiat</span>.</li>
-                        </ul>
-                        <a href="#" class="btn btn-get-started align-self-start">Get Started</a>
-                    </div>
-                </div><!-- Features Item -->
-
-            </div>
-
-        </section><!-- /Features Section -->
-
         <!-- Portfolio Section -->
         <section id="portfolio" class="portfolio section">
 
@@ -308,129 +253,34 @@
 
                     <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
                         <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-app">Foto</li>
-                        <li data-filter=".filter-product">Card</li>
+                        <li data-filter=".filter-foto">Poster</li>
+                        <li data-filter=".filter-vidio">Vidio</li>
                         <li data-filter=".filter-branding">Web</li>
                     </ul><!-- End Portfolio Filters -->
 
                     <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 1</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1"
-                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Product 1</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Branding 1</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 2</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2"
-                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Product 2</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Branding 2</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('img/tester.png') }}" title="Branding 2"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 3</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('img/tester.png') }}" title="App 3"
-                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Product 3</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Branding 3</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('img/tester.png') }}" title="Branding 2"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
+                        @foreach ($foto as $item)
+                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item {{ $item['filter'] }}">
+                                @if (!empty($item->thumbnail))
+                                    <img src="{{ asset($item['thumbnail']) }}" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>{{ $item['judul'] }}</h4>
+                                        <p>{{ $item['keterangan'] }}</p>
+                                        <a href="{{ asset($item['thumbnail']) }}" title="{{ $item['judul'] }}"
+                                            data-gallery="portfolio-gallery-{{ $item['filter'] }}"
+                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                        <a href="{{ $item['link'] }}" title="More Details" class="details-link"><i
+                                                class="bi bi-link-45deg"></i></a>
+                                    </div>
+                                @else
+                                    <iframe width="100%" height="315" src="{{ $item->vidio }}"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                @endif
+                            </div><!-- End Portfolio Item -->
+                        @endforeach
 
                     </div><!-- End Portfolio Container -->
 
