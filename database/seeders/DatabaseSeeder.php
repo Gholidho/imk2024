@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             KategoriBeritaSeeder::class,
             LayananSeeder::class,
+            LayananFaqSeeder::class,
+            FaqSeeder::class,
             // Tambahkan seeder lainnya jika ada
         ]);
     }

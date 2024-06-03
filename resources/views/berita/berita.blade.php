@@ -1,5 +1,13 @@
 @extends('layout.main')
 
+@section('styles')
+    <style>
+        #blogs {
+            z-index: 9999;
+        }
+    </style>
+@endsection
+
 @section('container')
     <main id="main">
         <section id="portfolio" class="portfolio section-bg">
@@ -18,19 +26,14 @@
             <!-- ======= Blog Section ======= -->
             <div id="blogs" class="blog">
                 <div class="container">
-
                     <div class="row">
-
                         <div class="col-lg-12">
-
                             <div class="row gy-4 posts-list">
                                 <div class="row">
-
-                                    {{-- List Berita --}}
+                                    <!-- List Berita -->
                                     <div class="col-lg-8">
                                         <x-card judul='Daftar Berita'>
-
-                                            {{-- Navigasi kategori --}}
+                                            <!-- Navigasi kategori -->
                                             <nav style="margin-top: 10px">
                                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                                     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
@@ -65,7 +68,7 @@
                                                 </div>
                                             </nav>
 
-                                            {{-- Berita per kategori --}}
+                                            <!-- Berita per kategori -->
                                             <div class="tab-content mt-2">
                                                 <div class="tab-pane fade show active" id="nav-all">
                                                     <x-item :berita="$semuaBerita" />
@@ -92,28 +95,25 @@
                                                     <x-item :berita="$renstra" />
                                                 </div>
                                             </div>
-
                                         </x-card>
                                     </div>
 
-                                    {{-- Berita Populer --}}
+                                    <!-- Berita Populer -->
                                     <div class="col-lg-4">
                                         <x-card judul='Berita Populer'>
                                             <x-item-pop :berita="$populer" />
                                         </x-card>
+                                        <x-card judul='Berita Terbaru'>
+                                            <x-item-pop :berita="$terbaru" />
+                                        </x-card>
                                     </div>
-
-
-
                                 </div><!-- End blog posts list -->
-
                             </div>
-
-                        </div>
-
+                        </div><!-- End blog sidebar -->
                     </div>
-                </div><!-- End Blog Section -->
 
+                </div>
+            </div>
         </section>
-    </main><!-- End #main -->
+    </main>
 @endsection
