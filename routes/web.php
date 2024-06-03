@@ -3,6 +3,8 @@
 use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\FaqController;
+use App\Models\Berita;
 use App\Http\Controllers\BerandaController;
 
 /*
@@ -84,11 +86,10 @@ Route::prefix('/statistik')->group(function () {
 
 
 #routes FAQ
-Route::prefix('/faq')->group(function () {
-    Route::get('/', function () {
-        return view('faq.index');
-    })->name('faq');
-});
+Route::get(
+    '/faq',
+    [FaqController::class, 'index']
+);
 
 
 #routes pengaduan
