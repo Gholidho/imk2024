@@ -1,9 +1,11 @@
 <?php
 
+use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\FaqController;
 use App\Models\Berita;
+use App\Http\Controllers\BerandaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +18,15 @@ use App\Models\Berita;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('/', [BerandaController::class, 'index'])->name('beranda.berita');
 
 
 #routes profile
 Route::prefix('/profil')->group(function () {
+    Route::get('/', function () {
+        return view('profil.index');
+    })->name('profil.index');
+
     Route::get('/struktur-organisasi', function () {
         return view('profil.struktur-organisasi');
     })->name('profil.struktur-organisasi');
@@ -42,6 +46,10 @@ Route::prefix('/profil')->group(function () {
     Route::get('/motto-visi-misi', function () {
         return view('profil.mvm');
     })->name('profil.mvm');
+
+    Route::get('/motto', function () {
+        return view('profil.motto');
+    })->name('profil.motto');
 });
 
 
@@ -102,3 +110,4 @@ Route::prefix('/kontak')->group(function () {
 #route berita
 Route::get('/berita', [NewsController::class, 'index'])->name('berita.index');
 Route::get('/berita/detail/{id}', [NewsController::class, 'detail'])->name('berita.detail');
+//Route::get('/berita/search', [NewsController::class, 'search'])->name('berita.search');

@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Services Details - Append Bootstrap Template</title>
+    <title>Dukcapil Trenggalek</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('img/logo_trenggalek.png') }}" rel="icon">
+    <link href="{{ asset('img/logo_trenggalek.png') }}" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -34,7 +34,10 @@
 
     <!-- Main CSS File -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/floating.css') }}">
+
     @yield('styles')
 
 
@@ -53,18 +56,31 @@
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" style="margin-left: 5%">
                 <img src="{{ asset('img/logo_trenggalek.png') }}" alt="logo trenggalek">
-                <h1 class="sitename">Dukcapil Trenggalek</h1><span>.</span>
+                <h1 class="sitename">Dukcapil Trenggalek</h1>
             </a>
 
             @include('layout.partials.navbar')
 
             <div class="btn-getstarted" style="color: white; background-color: white" href="index.html#about"></div>
 
+            <style>
+                .clickable-div {
+                    cursor: pointer;
+                }
+
+                .artikel-berita {
+                    transform: translateY(0);
+                    transition: ease-in-out 0.5s;
+                }
+
+                .artikel-berita:hover {
+                    transition: ease-in-out 0.5s;
+                    border: solid 3px black;
+                    transform: translateY(-5%);
+                }
+            </style>
         </div>
     </header>
 
@@ -93,7 +109,6 @@
 
     <!-- Main JS File -->
     <script src="{{ asset('js/main.js') }}"></script>
-
 </body>
 
 </html>
