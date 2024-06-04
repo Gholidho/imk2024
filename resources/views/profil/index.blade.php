@@ -1,6 +1,10 @@
 <!-- resources/views/profil.blade.php -->
 @extends('layout.main')
 
+@section('header')
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+@endsection
+
 @section('container')
     <main class="main">
 
@@ -36,7 +40,7 @@
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         @include('profil.partials.service-list')
                     </div>
-                    <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-8 ps-lg-8" data-aos="fade-up" data-aos-delay="200">
                         <div class="card">
                             <div class="card-body">
                                 <div id="service-content">
@@ -49,7 +53,9 @@
             </div>
         </section><!-- /Service Details Section -->
     </main>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
     <script>
         document.querySelectorAll('.service-link').forEach(link => {
             link.addEventListener('click', function(e) {
@@ -59,9 +65,39 @@
                     .then(response => response.text())
                     .then(html => {
                         document.getElementById('service-content').innerHTML = html;
+                        // Log untuk memastikan fungsi callback dijalankan
+                        console.log("Callback function executed after table content loaded.");
+                        // Re-initiate DataTables after new content is loaded
+                        initDataTable();
                     })
                     .catch(error => console.warn('Something went wrong.', error));
             });
         });
+
+        function initDataTable() {
+            $('#service-content').find('#dataTable').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": true, // Setel opsi autoWidth ke true
+                "pageLength": 5,
+                "scrollX": true,
+                "scrollCollapse": true,
+                "scrollY": '570px',
+                "columnDefs": [{
+                    "searchable": false,
+                    "targets": 0
+                }],
+                "language": {
+                    "paginate": {
+                        "previous": "Sebelumnya",
+                        "next": "Selanjutnya"
+                    }
+                },
+                "pagingType": "simple_numbers"
+            });
+        }
     </script>
 @endsection
