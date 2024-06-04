@@ -58,6 +58,7 @@ Route::prefix('/layanan')->group(function () {
         return view('layanan.index');
     })->name('layanan');
 });
+Route::get('/services', [ServiceController::class, 'index']);
 
 
 #routes publikasi
@@ -74,6 +75,7 @@ Route::prefix('/statistik')->group(function () {
         return view('statistik.index');
     })->name('statistik');
 });
+Route::get('/chart', [ChartController::class, 'index']);
 
 
 #routes FAQ

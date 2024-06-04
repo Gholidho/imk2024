@@ -196,6 +196,23 @@ h6 {
     color: #012970;
 }
 
+.service-box {
+    text-align: center;
+    padding: 30px;
+    margin: 15px 0;
+    background: #f7f7f7;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+.service-box:hover {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.icon-box {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #e96b56;
+}
+
 /* Bordered Tabs */
 .nav-tabs {
     border-bottom: 2px solid #ebeef4;
