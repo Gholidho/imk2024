@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Models\Berita;
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,11 +55,15 @@ Route::prefix('/profil')->group(function () {
 
 #routes layanan
 Route::prefix('/layanan')->group(function () {
+    // Route untuk halaman utama layanan
+    Route::get('/', [ServiceController::class, 'index'])->name('layanan.index');
+});
+/*Route::prefix('/layanan')->group(function () {
     Route::get('/', function () {
         return view('layanan.index');
     })->name('layanan');
 });
-Route::get('/services', [ServiceController::class, 'index']);
+Route::get('/layanan', [ServiceController::class, 'index']);*/
 
 
 #routes publikasi

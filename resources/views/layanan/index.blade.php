@@ -4,8 +4,6 @@
 @endsection
 
 @section('container')
-    <main class="main">
-    <div class="container">
         <div class="section-title">
             <h2>Jadwal Layanan</h2>
             <p>Berikut adalah jadwal layanan kami</p>
@@ -38,5 +36,4 @@
                 </div>
             </div> 
         </div>--> <!-- End Page Title --> 
-    </main>
 @endsection
