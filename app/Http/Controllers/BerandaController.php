@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use App\Models\Berita;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -27,9 +28,11 @@ class BerandaController extends Controller
             ->get();
         // Memformat tanggal berita untuk setiap koleksi berita
         $berita = $this->formatTanggalBerita($berita);
+        $foto = News::all();
 
         return view('home.index', [
             'berita' => $berita,
+            'foto' => $foto,
         ]);
     }
 }

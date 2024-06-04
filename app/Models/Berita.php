@@ -21,7 +21,8 @@ class Berita extends Model
         'tanggal_berita',
         'tumbnail_berita',
         'narasi_berita',
-        'klik'
+        'klik',
+        'author'
     ];
 
     public function kategoriBerita()

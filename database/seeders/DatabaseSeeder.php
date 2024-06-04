@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Berita;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,6 +18,11 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             KategoriBeritaSeeder::class,
+            LayananFaqSeeder::class,
+            FaqSeeder::class,
+            BeritaSeeder::class,
+            LayananSeeder::class,
+            NewsTableSeeder::class,
             // Tambahkan seeder lainnya jika ada
         ]);
     }

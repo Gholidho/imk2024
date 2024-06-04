@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('tanggal_berita');
             $table->string('tumbnail_berita');
             $table->text('narasi_berita');
+            $table->string('author');
             $table->integer('klik')->nullable();
         });
     }
