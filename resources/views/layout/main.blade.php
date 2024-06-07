@@ -4,13 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Services Details - Append Bootstrap Template</title>
+    <title>Dukcapil Trenggalek</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+    @yield('header')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+    <!-- -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Favicons -->
-    <link href="{{ asset('img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('img/logo_trenggalek.png') }}" rel="icon">
+    <link href="{{ asset('img/logo_trenggalek.png') }}" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -24,7 +30,12 @@
     <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+
+    {{-- <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet"> --}}
+
     <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
     {{-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -34,10 +45,11 @@
 
     <!-- Main CSS File -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/floating.css') }}">
+
     @yield('styles')
-
-
 
     <!-- =======================================================
   * Template Name: Append
@@ -53,18 +65,31 @@
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" style="margin-left: 5%">
                 <img src="{{ asset('img/logo_trenggalek.png') }}" alt="logo trenggalek">
-                <h1 class="sitename">Dukcapil Trenggalek</h1><span>.</span>
+                <h1 class="sitename">Dukcapil Trenggalek</h1>
             </a>
 
             @include('layout.partials.navbar')
 
             <div class="btn-getstarted" style="color: white; background-color: white" href="index.html#about"></div>
 
+            <style>
+                .clickable-div {
+                    cursor: pointer;
+                }
+
+                .artikel-berita {
+                    transform: translateY(0);
+                    transition: ease-in-out 0.5s;
+                }
+
+                .artikel-berita:hover {
+                    transition: ease-in-out 0.5s;
+                    border: solid 3px black;
+                    transform: translateY(-5%);
+                }
+            </style>
         </div>
     </header>
 

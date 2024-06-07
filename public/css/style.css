@@ -150,7 +150,7 @@ h6 {
     padding: 10px;
 }
 
-.card-header h4{
+.card-header h4 {
     color: #fff;
 }
 
@@ -204,7 +204,7 @@ h6 {
 .nav-tabs .nav-link {
     margin-bottom: -2px;
     border: none;
-    color: blueviolet;
+    color: black;
 }
 
 .nav-tabs .nav-link:hover,
@@ -229,6 +229,16 @@ h6 {
     color: var(--branding-base-color);
 }
 
+.badge-custom {
+    display: inline-block;
+    width: max-content;
+    text-align: left;
+    padding: auto;
+}
+
+.icon-space{
+    margin-right: 5px;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -311,4 +321,11 @@ h6 {
 
 #loader-container.fadeOut {
     animation: fadeOut 0.5s ease-out;
+}
+
+/*added css*/
+.mid {
+    background-color: #059652;
+    text-align: center;
+
 }

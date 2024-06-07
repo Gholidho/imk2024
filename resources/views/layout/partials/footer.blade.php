@@ -1,64 +1,49 @@
-    <footer id="footer" class="footer position-relative">
-
-        <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-5 col-md-12 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">Append</span>
-                    </a>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
-                        valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-                    <div class="social-links d-flex mt-4">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
+<footer id="footer" class="footer position-relative">
+    <div class="container footer-top">
+        <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-about">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <span class="sitename">VISI </span> <br>
+                </a>
+                <p>TERWUJUDNYA KABUPATEN TRENGGALEK YANG MAJU MELALUI EKONOMI INKLUSIF, SUMBERDAYA MANUSIA KREATIF DAN
+                    PEMBANGUNAN BERKELANJUTAN (SUSTAINABLE DEVELOPMENT)</p>
+                <p><b>Lokasi</b></p>
+                <p>NGEMPLAK, SUMBERGEDONG, KECAMATAN TRENGGALEK, KABUPATEN TRENGGALEK, PROVINSI JAWA TIMUR, KODE POS
+                    66315</p>
+                <div class="social-links d-flex mt-4">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
+                <div></div>
 
-                <div class="col-lg-2 col-6 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                    </ul>
-                </div>
+                <p style="font-size: 10px; margin-top: 2em;">© <span>Copyright</span> <strong class="sitename">DINAS
+                        KEPENDUDUKAN DAN PENCATATAN SIPIL KABUPATEN
+                        TRENGGALEK</strong> <br> <span>All Rights Reserved</span></p>
+            </div>
 
-                <div class="col-lg-2 col-6 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                    </ul>
-                </div>
+            <div class="col-lg-2 col-6 footer-links">
+                <h4>Halaman Terkait</h4>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Profil</a></li>
+                    <li><a href="#">Berita</a></li>
+                    <li><a href="#">Layanan</a></li>
+                    <li><a href="#">Publikasi</a></li>
+                    <li><a href="#">Statistik</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Pengaduan</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
 
-                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                    <h4>Contact Us</h4>
-                    <p>A108 Adam Street</p>
-                    <p>New York, NY 535022</p>
-                    <p>United States</p>
-                    <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                    <p><strong>Email:</strong> <span>info@example.com</span></p>
-                </div>
-
+            <div class="col-lg-5 col-md-12 footer-map">
+                <h4>Lokasi Dukcapil Trenggalek</h4>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15676.114615504812!2d111.7165951802018!3d-8.056805887403376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1624045935792!5m2!1sen!2sid"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
-
-        <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="sitename">Append</strong> <span>All Rights Reserved</span></p>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you've purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-        </div>
-
-    </footer>
+    </div>
+</footer>
