@@ -1,6 +1,14 @@
 <!-- resources/views/profil.blade.php -->
 @extends('layout.main')
 
+@section('styles')
+    <style>
+        .card-body {
+            padding: 1em;
+        }
+    </style>
+@endsection
+
 @section('header')
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
 @endsection
