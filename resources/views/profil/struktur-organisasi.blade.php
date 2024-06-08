@@ -118,6 +118,7 @@
         overflow-y: auto;
         text-align: center;
         padding: 5px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.15);
     }
 
     .card1-container h4 {
@@ -164,11 +165,14 @@
 </style>
 
 <div class="text-center">
+    <div class="card-title">
+        <h3 style="text-align: center">
+            STRUKTUR ORGANISASI<br>
+            DISDUKCAPIL TRENGGALEK
+        </h3>
+    </div>
 
-    <h3 style="text-align: center">
-        STRUKTUR ORGANISASI<br>
-        DISDUKCAPIL TRENGGALEK
-    </h3>
+
     <div class="card1-container">
 
         <div class="card1">

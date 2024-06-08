@@ -5,6 +5,7 @@
     <style>
         .card-body {
             padding: 1em;
+            background-color: var(--background-color);
         }
     </style>
 @endsection
