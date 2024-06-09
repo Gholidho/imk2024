@@ -76,11 +76,10 @@ Route::prefix('/publikasi')->group(function () {
 
 #routes statistik
 Route::prefix('/statistik')->group(function () {
-    Route::get('/', function () {
-        return view('statistik.index');
-    })->name('statistik');
+    // Route untuk halaman utama layanan
+    // Route::get('/chart', [ChartController::class, 'index']);
+    Route::get('/', [ChartController::class, 'index'])->name('statistik.index');
 });
-Route::get('/chart', [ChartController::class, 'index']);
 
 
 #routes FAQ
@@ -97,6 +96,7 @@ Route::prefix('/pengaduan')->group(function () {
         return view('pengaduan.index');
     })->name('pengaduan');
 });
+
 
 
 #routes kontak

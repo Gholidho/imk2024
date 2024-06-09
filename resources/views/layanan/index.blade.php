@@ -11,7 +11,7 @@
 
         <div class="row">
             @foreach($services as $service)
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
                     <div class="service-box">
                         <div class="icon-box">
                             <i class="bi bi-calendar-event"></i>
