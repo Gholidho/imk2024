@@ -1,11 +1,43 @@
 @extends('layout.main')
 
 @section('container')
+    <!-- Custom CSS -->
+    <style>
+        .portfolio-info {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .portfolio-item:hover .portfolio-info {
+            opacity: 1;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #000;
+            border-radius: 50%;
+        }
+
+        .carousel-item {
+            padding: 15px;
+        }
+
+        .carousel-item img {
+            border-radius: 10px;
+        }
+    </style>
     <main class="main">
         <!-- Hero Section -->
         <section id="hero" class="hero section">
 
-            <img src="img/trenggalek-bg.jpeg" alt="" data-aos="fade-in">
+            <img src="img/trenggalek-bg.jpg" alt="" data-aos="fade-in">
 
             <div class="container">
                 <div class="row">
@@ -240,56 +272,156 @@
 
         <!-- Portfolio Section -->
         <section id="portfolio" class="portfolio section">
-
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Galeri</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, illum.</p>
+                <p>Poster dan Vidio terbaru di Dukcapil Trenggalek</p>
             </div><!-- End Section Title -->
 
             <div class="container">
-
-                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
+                <div class="isotope-layout" data-default-filter=".filter-foto" data-layout="masonry"
+                    data-sort="original-order">
                     <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-foto">Poster</li>
+                        <li data-filter=".filter-foto" class="filter-active">Poster</li>
                         <li data-filter=".filter-vidio">Vidio</li>
-                        <li data-filter=".filter-branding">Web</li>
+                        {{-- <li data-filter=".filter-branding">Web</li> --}}
                     </ul><!-- End Portfolio Filters -->
 
-                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-                        @foreach ($foto as $item)
-                            <div class="col-lg-4 col-md-6 portfolio-item isotope-item {{ $item['filter'] }}">
-                                @if (!empty($item->thumbnail))
-                                    <img src="{{ asset($item['thumbnail']) }}" class="img-fluid" alt="">
-                                    <div class="portfolio-info">
-                                        <h4>{{ $item['judul'] }}</h4>
-                                        <p>{{ $item['keterangan'] }}</p>
-                                        <a href="{{ asset($item['thumbnail']) }}" title="{{ $item['judul'] }}"
-                                            data-gallery="portfolio-gallery-{{ $item['filter'] }}"
-                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                        <a href="{{ $item['link'] }}" title="More Details" class="details-link"><i
-                                                class="bi bi-link-45deg"></i></a>
+                    <div class="filter-foto portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                        <div id="fotoCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach ($foto->filter(fn($item) => str_contains($item['filter'], 'filter-foto'))->chunk(4) as $chunk)
+                                    <div class="carousel-item @if ($loop->first) active @endif">
+                                        <div class="row gy-4">
+                                            @foreach ($chunk as $item)
+                                                <div
+                                                    class="col-lg-3 col-md-6 portfolio-item isotope-item {{ $item['filter'] }}">
+                                                    <img src="{{ asset($item['thumbnail']) }}" class="img-fluid"
+                                                        alt="">
+                                                    <div class="portfolio-info">
+                                                        <h4>{{ $item['judul'] }}</h4>
+                                                        <p>{{ $item['keterangan'] }}</p>
+                                                        <a href="{{ asset($item['thumbnail']) }}"
+                                                            title="{{ $item['judul'] }}"
+                                                            data-gallery="portfolio-gallery-{{ $item['filter'] }}"
+                                                            class="glightbox preview-link"><i
+                                                                class="bi bi-zoom-in"></i></a>
+                                                        <a href="{{ $item['link'] }}" title="More Details"
+                                                            class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                                    </div>
+                                                </div><!-- End Portfolio Item -->
+                                            @endforeach
+                                        </div>
                                     </div>
-                                @else
-                                    <iframe width="100%" height="315" src="{{ $item->vidio }}"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                @endif
-                            </div><!-- End Portfolio Item -->
-                        @endforeach
+                                @endforeach
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#fotoCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#fotoCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div><!-- End Foto Filter -->
 
-                    </div><!-- End Portfolio Container -->
-
+                    <div class="filter-vidio portfolio-container" data-aos="fade-up" data-aos-delay="200"
+                        style="display: none;">
+                        <div id="vidioCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach ($foto->filter(fn($item) => str_contains($item['filter'], 'filter-vidio'))->chunk(3) as $chunk)
+                                    <div class="carousel-item @if ($loop->first) active @endif">
+                                        <div class="row gy-4">
+                                            @foreach ($chunk as $item)
+                                                <div
+                                                    class="col-lg-4 col-md-6 portfolio-item isotope-item {{ $item['filter'] }}">
+                                                    <iframe width="100%" height="315" src="{{ $item->vidio }}"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        referrerpolicy="strict-origin-when-cross-origin"
+                                                        allowfullscreen></iframe>
+                                                </div><!-- End Portfolio Item -->
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#vidioCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#vidioCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div><!-- End Vidio Filter -->
                 </div>
-
             </div>
-
         </section><!-- /Portfolio Section -->
 
+        <!-- Custom CSS -->
+        <style>
+            .portfolio-info {
+                position: relative;
+                bottom: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.7);
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 0.5s;
+            }
+
+            .portfolio-item:hover .portfolio-info {
+                opacity: 1;
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-color: #000;
+                border-radius: 50%;
+            }
+
+            .carousel-item {
+                padding: 15px;
+            }
+
+            .carousel-item img,
+            .carousel-item iframe {
+                border-radius: 10px;
+            }
+        </style>
+
+        <!-- Custom JS for Filter Handling -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const filters = document.querySelectorAll('.portfolio-filters li');
+                const portfolioContainers = document.querySelectorAll('.portfolio-container');
+
+                filters.forEach(filter => {
+                    filter.addEventListener('click', () => {
+                        filters.forEach(f => f.classList.remove('filter-active'));
+                        filter.classList.add('filter-active');
+
+                        const filterValue = filter.getAttribute('data-filter');
+                        portfolioContainers.forEach(container => {
+                            if (container.classList.contains(filterValue.substring(1))) {
+                                container.style.display = 'block';
+                            } else {
+                                container.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
 
         <!-- Faq Section -->
         <section id="faq" class="faq section">
@@ -509,7 +641,7 @@
         </section><!-- /Team Section -->
 
 
-        <!-- Recent Posts Section -->
+        {{-- <!-- Recent Posts Section -->
         <section id="recent-posts" class="recent-posts section">
             <div class="container section-title" data-aos="fade-up">
                 <h2>Berita Terkini</h2>
@@ -553,105 +685,7 @@
                 @endforeach
             </div>
 
-        </section><!-- /Recent Posts Section -->
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-6">
-
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="200">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <h3>Address</h3>
-                                    <p>A108 Adam Street</p>
-                                    <p>New York, NY 535022</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="300">
-                                    <i class="bi bi-telephone"></i>
-                                    <h3>Call Us</h3>
-                                    <p>+1 5589 55488 55</p>
-                                    <p>+1 6678 254445 41</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="400">
-                                    <i class="bi bi-envelope"></i>
-                                    <h3>Email Us</h3>
-                                    <p>info@example.com</p>
-                                    <p>contact@example.com</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="500">
-                                    <i class="bi bi-clock"></i>
-                                    <h3>Open Hours</h3>
-                                    <p>Monday - Friday</p>
-                                    <p>9:00AM - 05:00PM</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                            data-aos-delay="200">
-                            <div class="row gy-4">
-
-                                <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
-                                        required="">
-                                </div>
-
-                                <div class="col-md-6 ">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email"
-                                        required="">
-                                </div>
-
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                        required="">
-                                </div>
-
-                                <div class="col-md-12">
-                                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                                </div>
-
-                                <div class="col-md-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                    <button type="submit">Send Message</button>
-                                </div>
-
-                            </div>
-                        </form>
-                    </div><!-- End Contact Form -->
-
-                </div>
-
-            </div>
-
-        </section><!-- /Contact Section -->
+        </section><!-- /Recent Posts Section --> --}}
 
         <script>
             // Menangani peristiwa klik pada div dengan kelas clickable-div
