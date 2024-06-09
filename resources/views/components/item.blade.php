@@ -1,12 +1,20 @@
 @props(['berita'])
-
+<style>
+    .fixed-size {
+        height: 175px;
+        width: 250px;
+        object-fit: cover;
+        /* Agar gambar menyesuaikan ukuran tanpa terdistorsi */
+    }
+</style>
 <div class="container-fluid px-1 py-1">
     <div class="d-flex flex-column">
         @foreach ($berita as $item)
             <div class="d-flex flex-row" data-aos="fade-up" data-aos-delay="200" style="border-bottom: 1px solid lightgrey">
                 <div class="col-4">
                     <a href="{{ route('berita.detail', $item->id) }}">
-                        <img class="img-fluid my-2 rounded" src="{{ asset($item->tumbnail_berita) }}" alt="Thumbnail">
+                        <img class="img-fluid my-2 rounded fixed-size" src="{{ asset($item->tumbnail_berita) }}"
+                            alt="Thumbnail">
                     </a>
                 </div>
                 <div class="col-8 d-flex flex-column py-2 px-3">

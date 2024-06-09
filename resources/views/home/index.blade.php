@@ -423,103 +423,13 @@
             });
         </script>
 
-        <!-- Faq Section -->
-        <section id="faq" class="faq section">
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="content px-xl-5">
-                            <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-
-                        <div class="faq-container">
-                            <div class="faq-item faq-active">
-                                <h3><span class="num">1.</span> <span>Non consectetur a erat nam at lectus urna
-                                        duis?</span></h3>
-                                <div class="faq-content">
-                                    <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
-                                        non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
-                                        purus non.</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
-
-                            <div class="faq-item">
-                                <h3><span class="num">2.</span> <span>Feugiat scelerisque varius morbi enim nunc
-                                        faucibus a pellentesque?</span></h3>
-                                <div class="faq-content">
-                                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                        velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
-                                        donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                                        cursus turpis massa tincidunt dui.</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
-
-                            <div class="faq-item">
-                                <h3><span class="num">3.</span> <span>Dolor sit amet consectetur adipiscing elit
-                                        pellentesque?</span></h3>
-                                <div class="faq-content">
-                                    <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
-                                        pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit.
-                                        Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis
-                                        tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
-
-                            <div class="faq-item">
-                                <h3><span class="num">4.</span> <span>Ac odio tempor orci dapibus. Aliquam eleifend mi
-                                        in nulla?</span></h3>
-                                <div class="faq-content">
-                                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                        velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
-                                        donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                                        cursus turpis massa tincidunt dui.</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
-
-                            <div class="faq-item">
-                                <h3><span class="num">5.</span> <span>Tempus quam pellentesque nec nam aliquam sem et
-                                        tortor consequat?</span></h3>
-                                <div class="faq-content">
-                                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in
-                                        est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl
-                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
-                            <div class="col-xl-5 content about">
-                                <div class="content">
-                                    <a href="/profil/motto-visi-misi" class="read-more"><span>Baca Selengkapnya</span><i
-                                            class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section><!-- /Faq Section -->
-
         <!-- Team Section -->
         <section id="team" class="team section">
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Team</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <h2>Pegawai</h2>
+                <p>Badan Pengurus Harian Dinas Kependudukan dan Pencatatan Sipil</p>
             </div><!-- End Section Title -->
 
             <div class="container">
@@ -528,43 +438,41 @@
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
                         <div class="member-img">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team/iqbal.svg') }}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/iqqqbaallll/"><i class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-info text-center">
-                            <h4>Walter White</h4>
-                            <span>Chief Executive Officer</span>
-                            <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio
-                                dire flow</p>
+                            <h4>Muhamad Iqbal P. P.</h4>
+                            <span>Ketua</span>
+                            <p>Melayani dengan Integritas, Membangun Kepercayaan, Trenggalek Semakin Didepan</p>
                         </div>
                     </div><!-- End Team Member -->
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
                         <div class="member-img">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team/adinda.svg') }}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/adindaspm88/"><i class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-info text-center">
-                            <h4>Sarah Jhonson</h4>
-                            <span>Product Manager</span>
-                            <p>Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores
-                                exercitationem ut</p>
+                            <h4>Adinda Shakilla P. M.</h4>
+                            <span>Wakil Ketua</span>
+                            <p>Bersama Menuju Pelayanan Prima Trenggalek Jaya</p>
                         </div>
                     </div><!-- End Team Member -->
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
                         <div class="member-img">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team/meischa.svg') }}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
@@ -573,28 +481,26 @@
                             </div>
                         </div>
                         <div class="member-info text-center">
-                            <h4>William Anderson</h4>
-                            <span>CTO</span>
-                            <p>Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel tque
-                                sed facilis at qui</p>
+                            <h4>Meischa Zahra N. A.</h4>
+                            <span>Sekretaris</span>
+                            <p>Administrasi Tertib, Pelayanan Efektif, Trenggalek Meroket</p>
                         </div>
                     </div><!-- End Team Member -->
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
                         <div class="member-img">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team/pandu.svg') }}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/panduwahyuaji_/"><i class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-info text-center">
-                            <h4>Amanda Jepson</h4>
-                            <span>Accountant</span>
-                            <p>Magni voluptatem accusamus assumenda cum nisi aut qui dolorem voluptate sed et veniam quasi
-                                quam consectetur</p>
+                            <h4>Pandu Wahyu A.</h4>
+                            <span>Bendahara</span>
+                            <p>Transparansi dalam Keuangan, Trenggalek Maju dalam Pembangunan</p>
                         </div>
                     </div><!-- End Team Member -->
 
@@ -604,33 +510,14 @@
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/gholidho_herda/"><i class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-info text-center">
-                            <h4>Brian Doe</h4>
-                            <span>Marketing</span>
-                            <p>Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia
-                                impedit laborum velit</p>
-                        </div>
-                    </div><!-- End Team Member -->
-
-                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-                        <div class="member-img">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href="#"><i class="bi bi-twitter"></i></a>
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info text-center">
-                            <h4>Josepha Palas</h4>
-                            <span>Operation</span>
-                            <p>Sint sint eveniet explicabo amet consequatur nesciunt error enim rerum earum et omnis fugit
-                                eligendi cupiditate vel</p>
+                            <h4>Gholidho Herda P.</h4>
+                            <span>Humas</span>
+                            <p>Menghubungkan dengan Hati, Menyampaikan dengan Empati, Trenggalek Bersinergi</p>
                         </div>
                     </div><!-- End Team Member -->
 
@@ -639,6 +526,50 @@
             </div>
 
         </section><!-- /Team Section -->
+
+        <!-- Faq Section -->
+        <section id="faq" class="faq section">
+            <div class="container">
+                <div class="row gy-4">
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="content px-xl-5">
+                            <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+                            <p>
+                                Daftar Pertanyaan yang paling sering ditanyakan oleh masyarakat Trenggalek berkaitan dengan
+                                Dukcapil Trenggalek.
+                            </p>
+                            <div class="col-lg-5 content about">
+                                <div class="content" style="width: 10rem">
+                                    <a href="/faq" class="read-more" style="font-size: small"><span>Semua FAQ</span><i
+                                            class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-container">
+                            @foreach ($faqs as $index => $faq)
+                                <div class="faq-item {{ $index === 0 ? 'faq-active' : '' }}">
+                                    <h3><span class="num">{{ $index + 1 }}.</span>
+                                        <span>{{ $faq['pertanyaan'] }}</span>
+                                    </h3>
+                                    <div class="faq-content">
+                                        <p>{{ $faq['jawaban'] }}</p>
+                                    </div>
+                                    <i class="faq-toggle bi bi-chevron-right"></i>
+                                </div><!-- End Faq item-->
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            </div>
+        </section><!-- /Faq Section -->
 
 
         {{-- <!-- Recent Posts Section -->

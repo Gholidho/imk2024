@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\News;
 use App\Models\Berita;
 use Illuminate\Support\Str;
@@ -29,10 +30,21 @@ class BerandaController extends Controller
         // Memformat tanggal berita untuk setiap koleksi berita
         $berita = $this->formatTanggalBerita($berita);
         $foto = News::all();
+        $faqs = collect();
+
+        // Loop through id_layanan from 1 to 5
+        for ($i = 1; $i <= 5; $i++) {
+            // Fetch one FAQ for the current id_layanan
+            $faq = Faq::where('id_layanan', $i)->first();
+            if ($faq) {
+                $faqs->push($faq);
+            }
+        }
 
         return view('home.index', [
             'berita' => $berita,
             'foto' => $foto,
+            'faqs' => $faqs,
         ]);
     }
 }
