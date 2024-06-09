@@ -3,8 +3,8 @@
 @section('styles')
 <style>
     .contact .info-item {
-        padding: 10px;
-        padding-top: 20px;
+        padding: 20px;
+        /* padding-top: 20px; */
     }
 
     .contact .info-item .social-icon i {
@@ -49,11 +49,8 @@
                     <div class="col-lg-12">
                         <section id="contact" class="contact section">
                             <div class="container" data-aos="fade-up" data-aos-delay="100">
-
                                 <div class="row gy-4">
-
                                     <div class="col-lg-6">
-
                                         <div class="row gy-4">
                                             <div class="col-md-6">
                                                 <div class="info-item" data-aos="fade" data-aos-delay="200">
@@ -118,7 +115,7 @@
                                     </div>
 
                                     <div class="col-lg-6">
-                                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200" style="padding: 10px 20px;">
                                             <div class="row gy-4">
                                                 <h3 style="font-size: 25px; font-weight: bold;">Form Aduan</h3>
                                                 <div class="col-md-12">
