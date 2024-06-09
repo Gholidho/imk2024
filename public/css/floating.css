@@ -17,7 +17,7 @@
     position: fixed;
     margin: 1em;
     left: 0;
-    /* z-index: 1000; */
+    z-index: 1000;
 }
 
 .pmd-floating-action-btn {
@@ -25,6 +25,7 @@
     position: relative;
     transition: all 0.2s ease-out;
     background-color: var(--accent-color);
+    z-index: 1000;
 }
 
 .pmd-floating-action-btn:before {
@@ -44,6 +45,8 @@
     display: inline-block;
     box-shadow: 0px 2px 3px -2px rgba(0, 0, 0, 0.18),
         0px 2px 2px -7px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+    margin-left: 5px;
 }
 
 .pmd-floating-action-btn:last-child:before {
@@ -68,13 +71,11 @@
     margin-left: 8px;
     position: absolute;
     bottom: 0;
-    background-color: #fff; /* Atur warna background menjadi putih */
-    color: #333; /* Atur warna teks */
+    background-color: var(--accent-color); /* Atur warna background menjadi putih */
+    color: #fff; /* Atur warna teks */
+    z-index: 1000;
 }
 
-.pmd-floating-action-btn:not(:last-child) {
-    width: 500px; /* Atur lebar tombol menjadi 50px */
-}
 
 .pmd-floating-action-btn:not(:last-child):nth-last-child(1) {
     transition-delay: 50ms;
