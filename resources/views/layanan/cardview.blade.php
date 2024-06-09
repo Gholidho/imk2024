@@ -4,7 +4,8 @@
     <style>
         .about .icon-box {
             padding: 20px;
-            height: 12rem;
+            height: 15rem;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
         }
 
         .about .icon-box i {
@@ -15,14 +16,28 @@
             font-size: 20px;
         }
 
-        a {
+        #about a {
             color: #e84545 !important;
+            text-decoration: none;
         }
 
-        a:hover .about .icon-box {
+        #about a .icon-box:hover {
             background-color: #e84545;
             color: white;
-            text-decoration: underline;
+        }
+
+        .about .icon-box:hover i {
+            background-color: white;
+            color: #e84545;
+        }
+
+        section,
+        .section {
+            background-color: white;
+        }
+
+        .container a {
+            color: #e84545;
         }
     </style>
 @endsection
@@ -91,10 +106,158 @@
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
                             <a href="{{ route('layanan.detail') }}">
                                 <div class="icon-box">
-                                    <i><img width="48" height="48"
-                                            src="https://img.icons8.com/windows/64/couple-man-woman.png"
-                                            alt="couple-man-woman" /></i>
+                                    <i class="bi bi-arrow-through-heart"></i>
                                     <h3>Akta Perkawinan</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-skull"></i>
+                                    <h3>Akta Kematian</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-cake-candles"></i>
+                                    <h3>Akta Kelahiran</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-child-reaching"></i>
+                                    <h3>Surat Keterangan Pengangkatan Anak</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-hand-holding-heart"></i>
+                                    <h3>Surat Keterangan Pembatalan Perceraian</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-ring"></i>
+                                    <h3>Surat Keterangan Pembatalan Perkawinan</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-skull"></i>
+                                    <h3>Surat Keterangan Kematian untuk Orang Asing</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-skull-crossbones"></i>
+                                    <h3>Surat Keterangan Lahir Mati Untuk Orang Asing</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-cake-candles"></i>
+                                    <h3>Surat Keterangan Kelahiran Untuk Orang Asing</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-house-chimney"></i>
+                                    <h3>Surat Keterangan Tempat Tinggal Untuk Orang Asing</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-truck-moving"></i>
+                                    <h3>Surat Keterangan Pindah Datang Penduduk WNI Dalam Wilayah NKRI</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-truck-ramp-box"></i>
+                                    <h3>Surat Keterangan Pindah Penduduk WNI Dalam Wilayah NKRI</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-address-card"></i>
+                                    <h3>Kartu Identitas Anak</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-id-card"></i>
+                                    <h3>Kartu Tanda Penduduk Elektronik</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="bi bi-card-heading"></i>
+                                    <h3>Kartu Keluarga</h3>
+                                    {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
+                                </div>
+                            </a>
+                        </div> <!-- End Icon Box -->
+
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+                            <a href="{{ route('layanan.detail') }}">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-users-line"></i>
+                                    <h3>Dokumen Biodata Penduduk</h3>
                                     {{-- <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p> --}}
                                 </div>
                             </a>

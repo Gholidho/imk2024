@@ -114,4 +114,58 @@
             });
         }
     </script>
+    <script>
+        function initModal() {
+            // Ambil elemen tombol "Lihat Struktur Organisasi"
+            var btnLihatStruktur = document.querySelector('.btn');
+
+            // Ambil elemen modal
+            var modal = document.getElementById("imageModal");
+
+            // Ambil elemen gambar untuk menampilkan dalam pop-up
+            var modalImg = document.getElementById("img01");
+
+            // Ambil elemen span untuk menutup modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // Ketika tombol close di klik, sembunyikan modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // Ketika pengguna mengklik di luar modal, sembunyikan modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // Ketika tombol "Lihat Struktur Organisasi" diklik, tampilkan modal dengan gambar struktur
+            if (btnLihatStruktur) {
+                btnLihatStruktur.onclick = function() {
+                    modal.style.display = "block";
+                    modalImg.src = "{{ asset('/img/struktur.png') }}"; // Ganti dengan path gambar yang benar
+                }
+            }
+        }
+
+        // Inisialisasi pertama kali
+        document.addEventListener("DOMContentLoaded", initModal);
+
+        // Pantau perubahan DOM pada elemen tertentu
+        var targetNode = document.getElementById('service-content');
+        var observer = new MutationObserver(function(mutationsList, observer) {
+            for (var mutation of mutationsList) {
+                if (mutation.type === 'childList') {
+                    initModal();
+                }
+            }
+        });
+
+        observer.observe(targetNode, {
+            attributes: false,
+            childList: true,
+            subtree: false
+        });
+    </script>
 @endsection
