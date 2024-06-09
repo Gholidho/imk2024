@@ -1,4 +1,4 @@
-<button onclick="toggleAccessibilityFeatures()">Buka Fitur Disabilitas</button>
+{{-- <button onclick="toggleAccessibilityFeatures()">Buka Fitur Disabilitas</button>
 
 <div id="accessibilityFeatures" style="display: none;">
     <!-- Konten Fitur Disabilitas -->
@@ -16,4 +16,4 @@
             accessibilityDiv.style.display = 'none';
         }
     }
-</script>
+</script> --}}

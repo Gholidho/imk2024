@@ -119,11 +119,3 @@ Route::get('/search', [NewsController::class, 'search'])->name('news.search');
 
 //Route::get('/berita/search', [NewsController::class, 'search'])->name('berita.search');
 
-#Route mengatur bahasa
-Route::get('setlocale/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'es'])) {
-        Session::put('locale', $locale);
-    }
-    
-    return redirect()->back();
-});

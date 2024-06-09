@@ -106,6 +106,44 @@
         color: #fff;
         border: none;
     }
+
+    /* Customize the search bar */
+    .dataTables_filter {
+        text-align: center;
+        /* Pusatkan search bar */
+        margin-bottom: 1rem;
+        /* Tambahkan margin bawah untuk tampilan yang lebih baik */
+    }
+
+    .dataTables_filter label {
+        display: inline-block;
+        /* Agar label dapat disesuaikan dengan lebar input */
+        font-weight: bold;
+        color: #333;
+        width: auto;
+        /* Atur lebar label agar tidak terlalu lebar */
+        margin-right: 5px;
+        /* Tambahkan margin agar terdapat jarak antara label dan input */
+    }
+
+    .dataTables_filter input {
+        width: 60%;
+        border-radius: 4px;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        /* Tambahkan border agar terlihat */
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        /* Efek transisi untuk hover */
+    }
+
+    .dataTables_filter input:focus {
+        border-color: #007bff;
+        /* Warna border saat input difokuskan */
+        outline: 0;
+        /* Hapus outline bawaan untuk tampilan yang lebih bersih */
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        /* Efek shadow saat input difokuskan */
+    }
 </style>
 
 <h3 style="text-align: center;margin-bottom:1rem;">

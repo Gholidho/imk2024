@@ -94,31 +94,38 @@
     <h4>PROFIL KAMI</h4>
     <div class="services-list">
         <a href="{{ route('profil.struktur-organisasi') }}"
-            class="service-link @if (request()->routeIs('profil.struktur-organisasi')) active @endif" data-target="struktur-organisasi">
+            class="service-link {{ request()->routeIs('profil.struktur-organisasi') ? 'active' : 'active' }}"
+            data-target="struktur-organisasi">
             <i class="bi bi-arrow-right-circle"></i><span>Struktur Organisasi</span>
         </a>
         <a href="{{ route('profil.maklumat-pelayanan') }}"
-            class="service-link @if (request()->routeIs('profil.maklumat-pelayanan')) active @endif" data-target="maklumat-pelayanan">
+            class="service-link {{ request()->routeIs('profil.maklumat-pelayanan') && !request()->routeIs('profil.struktur-organisasi') ? 'active' : '' }}"
+            data-target="maklumat-pelayanan">
             <i class="bi bi-arrow-right-circle"></i><span>Maklumat Pelayanan</span>
         </a>
         <a href="{{ route('profil.profil-penyelenggara') }}"
-            class="service-link @if (request()->routeIs('profil.profil-penyelenggara')) active @endif" data-target="profil-penyelenggara">
+            class="service-link {{ request()->routeIs('profil.profil-penyelenggara') && !request()->routeIs('profil.struktur-organisasi') ? 'active' : '' }}"
+            data-target="profil-penyelenggara">
             <i class="bi bi-arrow-right-circle"></i><span>Profil Penyelenggara</span>
         </a>
         <a href="{{ route('profil.pelaksana-layanan') }}"
-            class="service-link @if (request()->routeIs('profil.pelaksana-layanan')) active @endif" data-target="pelaksana-layanan">
+            class="service-link {{ request()->routeIs('profil.pelaksana-layanan') && !request()->routeIs('profil.struktur-organisasi') ? 'active' : '' }}"
+            data-target="pelaksana-layanan">
             <i class="bi bi-arrow-right-circle"></i><span>Pelaksana Layanan</span>
         </a>
-        <a href="{{ route('profil.mvm') }}" class="service-link @if (request()->routeIs('profil.mvm')) active @endif"
+        <a href="{{ route('profil.mvm') }}"
+            class="service-link {{ request()->routeIs('profil.mvm') && !request()->routeIs('profil.struktur-organisasi') ? 'active' : '' }}"
             data-target="mvm">
             <i class="bi bi-arrow-right-circle"></i><span>Visi dan Misi</span>
         </a>
-        <a href="{{ route('profil.motto') }}" class="service-link @if (request()->routeIs('profil.motto')) active @endif"
+        <a href="{{ route('profil.motto') }}"
+            class="service-link {{ request()->routeIs('profil.motto') && !request()->routeIs('profil.struktur-organisasi') ? 'active' : '' }}"
             data-target="motto">
             <i class="bi bi-arrow-right-circle"></i><span>Motto Pelayanan</span>
         </a>
     </div>
 </div><!-- End Services List -->
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
