@@ -34,6 +34,25 @@
     button.accordion-button{
       border-top: 1px solid #dee2e6;
     }
+    table{
+      width: 100%;
+    }
+    td.list{
+      width:90%;
+    }
+    td button {
+      border: none; /* Menghilangkan border */
+      background-color: #e84545; /* Warna latar belakang merah, sesuaikan dengan kebutuhan Anda */
+      color: #fff; /* Warna teks putih, sesuaikan dengan kebutuhan Anda */
+      padding: 10px 20px; /* Padding dalam tombol */
+      text-align: center; /* Perataan teks di tengah */
+      text-decoration: none; /* Menghilangkan garis bawah pada teks */
+      display: inline-block; /* Tampilan inline block */
+      font-size: 16px; /* Ukuran font */
+      cursor: pointer; /* Ganti kursor saat di hover */
+      border-radius: 5px; /* Sudut melengkung, sesuaikan dengan kebutuhan Anda */
+    }
+
   </style>
 @endsection
 
@@ -47,9 +66,9 @@
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
                             <h1 class="">Publikasi/Unduhan</h1>
-                            <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio
+                            {{-- <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio
                                 sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus
-                                dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+                                dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p> --}}
                         </div>
                     </div>
                 </div>
@@ -92,9 +111,16 @@
                                           </h2>
                                           <div id="collapseOneDasarHukum" class="accordion-collapse collapse show" aria-labelledby="headingOneDasarHukum" data-bs-parent="#accordionExampleDasarHukum">
                                             <div class="accordion-body">
-                                              <ul>
-                                                <li></li>
-                                              </ul>
+                                              <table>
+                                                <tr>
+                                                  <td class="list"><ul><li>Undang-Undang Republik Indonesia Nomor 23 Tahun 2006 Tentang Administrasi Kependudukan</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="list"><ul><li>Undang-Undang Republik Indonesia Nomor 24 Tahun 2013 Tentang Perubahan Atas Undang-Undang Nomor 23 Tahun 2006 Tentang Administrasi Kependudukan</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                              </table>
                                             </div>
                                           </div>
                                         </div>
@@ -106,7 +132,13 @@
                                           </h2>
                                           <div id="collapseTwoDasarHukum" class="accordion-collapse collapse" aria-labelledby="headingTwoDasarHukum" data-bs-parent="#accordionExampleDasarHukum">
                                             <div class="accordion-body">
-                                              Konten dari Accordion Item #2.
+                                              <table>
+                                                <tr>
+                                                  <td class="list"><ul><li>Peraturan Pemerintah Republik Indonesia Nomor 40 Tahun 2019 Tentang Pelaksanaan Undang-Undang Nomor 23 Tahun 2006 Tentang Administrasi Kependudukan Sebagaimana Telah Diubah Dengan Undang-Undang Nomor 24 Tahun 2013 Tentang Perubahan Atas Undang-Undang Nomor 23 Tahun 2006 Tentang Administrasi Kependudukan</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                              </table>
+                                              
                                             </div>
                                           </div>
                                         </div>
@@ -118,11 +150,16 @@
                                           </h2>
                                           <div id="collapseTreeDasarHukum" class="accordion-collapse collapse" aria-labelledby="headingTreeDasarHukum" data-bs-parent="#accordionExampleDasarHukum">
                                             <div class="accordion-body">
-                                              Konten dari Accordion Item #2.
+                                              <table>
+                                                <tr>
+                                                  <td class="list"><ul><li>Peraturan Presiden Republik Indonesia Nomor 96 Tahun 2018 Tentang Persyaratan Dan Tata Cara Pendaftaran Penduduk Dan Pencatatan Sipil</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                              </table>
                                             </div>
                                           </div>
                                         </div>
-                                        <div class="accordion-item">
+                                        {{-- <div class="accordion-item">
                                           <h2 class="accordion-header" id="headingFourDasarHukum">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourDasarHukum" aria-expanded="false" aria-controls="collapseFourDasarHukum">
                                               Keputusan Presiden
@@ -133,7 +170,7 @@
                                               Konten dari Accordion Item #2.
                                             </div>
                                           </div>
-                                        </div>
+                                        </div> --}}
                                         <div class="accordion-item">
                                           <h2 class="accordion-header" id="headingFiveDasarHukum">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveDasarHukum" aria-expanded="false" aria-controls="collapseFiveDasarHukum">
@@ -142,7 +179,32 @@
                                           </h2>
                                           <div id="collapseFiveDasarHukum" class="accordion-collapse collapse" aria-labelledby="headingFiveDasarHukum" data-bs-parent="#accordionExampleDasarHukum">
                                             <div class="accordion-body">
-                                              Konten dari Accordion Item #2.
+                                              <table>
+                                                <tr>
+                                                  <td class="list"><ul><li>Peraturan Menteri Dalam Negeri Republik Indonesia Nomor 19 Tahun 2018 Tentang Peningkatan Kualitas Layanan Administrasi Kependudukan</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="list"><ul><li>Peraturan Menteri Dalam Negeri Republik Indonesia Nomor 2 Tahun 2016 Tentang Kartu Identitas Anak</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="list"><ul><li>Peraturan Menteri Dalam Negeri Republik Indonesia Nomor 14 Tahun 2015 Tentang Pedoman Pendataan Penduduk Nonpermanen</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="list"><ul><li>Peraturan Menteri Dalam Negeri Republik Indonesia Nomor 102 Tahun 2019 Tentang Pemberian Hak Akses Dan Pemanfaatan Data Kependudukan</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="list"><ul><li>Peraturan Menteri Dalam Negeri Republik Indonesia Nomor 108 Tahun 2019 Tentang Peraturan Pelaksanaan Peraturan Presiden Nomor 96 Tahun 2018 Tentang Persyaratan Dan Tata Cara Pendaftaran Penduduk Dan Pencatatan Sipil</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="list"><ul><li>Peraturan Menteri Dalam Negeri Republik Indonesia Nomor 104 Tahun 2019 Tentang Pendokumentasian Administrasi Kependudukan</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                              </table>
                                             </div>
                                           </div>
                                         </div>
@@ -171,7 +233,12 @@
                                               </h2>
                                               <div id="collapseOneRenja" class="accordion-collapse collapse show" aria-labelledby="headingOneRenja" data-bs-parent="#accordionExampleRenja">
                                                 <div class="accordion-body">
-                                                  Konten dari Accordion Item #1.
+                                                  <table>
+                                                    <tr>
+                                                      <td class="list"><ul><li>Rencana Kerja Tahun 2018</li></ul></td>
+                                                      <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                    </tr>
+                                                  </table>
                                                 </div>
                                               </div>
                                             </div>
@@ -183,7 +250,12 @@
                                               </h2>
                                               <div id="collapseTwoRenja" class="accordion-collapse collapse" aria-labelledby="headingTwoRenja" data-bs-parent="#accordionExampleRenja">
                                                 <div class="accordion-body">
-                                                  Konten dari Accordion Item #2.
+                                                  <table>
+                                                    <tr>
+                                                      <td class="list"><ul><li>Rencana Kerja Tahun 2019</li></ul></td>
+                                                      <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                    </tr>
+                                                  </table>
                                                 </div>
                                               </div>
                                             </div>
@@ -195,7 +267,10 @@
                                               </h2>
                                               <div id="collapseTreeRenja" class="accordion-collapse collapse" aria-labelledby="headingTreeRenja" data-bs-parent="#accordionExampleRenja">
                                                 <div class="accordion-body">
-                                                  Konten dari Accordion Item #2.
+                                                  <table>
+                                                    <tr><ul><li>Rencana Kerja Tahun 2020</li></ul></tr>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </table>
                                                 </div>
                                               </div>
                                             </div>    
@@ -207,7 +282,12 @@
                                               </h2>
                                               <div id="collapseFourRenja" class="accordion-collapse collapse" aria-labelledby="headingFourRenja" data-bs-parent="#accordionExampleRenja">
                                                 <div class="accordion-body">
-                                                  Konten dari Accordion Item #2.
+                                                  <table>
+                                                    <tr>
+                                                      <td class="list"><ul><li>Rencana Kerja Tahun 2021</li></ul></td>
+                                                      <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                    </tr>
+                                                  </table>
                                                 </div>
                                               </div>
                                             </div>    
@@ -219,7 +299,16 @@
                                               </h2>
                                               <div id="collapseFiveRenja" class="accordion-collapse collapse" aria-labelledby="headingFiveRenja" data-bs-parent="#accordionExampleRenja">
                                                 <div class="accordion-body">
-                                                  Konten dari Accordion Item #2.
+                                                  <table>
+                                                    <tr>
+                                                      <td class="list"><ul><li>Rencana Kerja Tahun 2022</li></ul></td>
+                                                      <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td class="list"><ul><li>Rencana Kerja Tahun 2022 Perubahan</li></ul></td>
+                                                      <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                    </tr>
+                                                  </table>
                                                 </div>
                                               </div>
                                             </div>    
@@ -231,7 +320,12 @@
                                               </h2>
                                               <div id="collapseSixRenja" class="accordion-collapse collapse" aria-labelledby="headingSixRenja" data-bs-parent="#accordionExampleRenja">
                                                 <div class="accordion-body">
-                                                  Konten dari Accordion Item #2.
+                                                  <table>
+                                                    <tr>
+                                                      <td class="list"><ul><li>Rencana Kerja Tahun 2023</li></ul></td>
+                                                      <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                    </tr>
+                                                  </table>
                                                 </div>
                                               </div>
                                             </div>
@@ -248,7 +342,12 @@
                                             </h2>
                                             <div id="collapseOneLakip" class="accordion-collapse collapse show" aria-labelledby="headingOneLakip" data-bs-parent="#accordionExampleLakip">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>LAKIP 2017</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -260,7 +359,12 @@
                                             </h2>
                                             <div id="collapseTwoLakip" class="accordion-collapse collapse" aria-labelledby="headingTwoLakip" data-bs-parent="#accordionExampleLakip">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>LAKIP 2018</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -272,7 +376,12 @@
                                             </h2>
                                             <div id="collapseThreeLakip" class="accordion-collapse collapse" aria-labelledby="headingThreeLakip" data-bs-parent="#accordionExampleLakip">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>LAKIP 2019</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -284,7 +393,12 @@
                                             </h2>
                                             <div id="collapseFourLakip" class="accordion-collapse collapse" aria-labelledby="headingFourLakip" data-bs-parent="#accordionExampleLakip">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>LAKIP 2020</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -296,7 +410,12 @@
                                             </h2>
                                             <div id="collapseFiveLakip" class="accordion-collapse collapse" aria-labelledby="headingFiveLakip" data-bs-parent="#accordionExampleLakip">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>LAKIP 2021</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -308,7 +427,12 @@
                                             </h2>
                                             <div id="collapseSixLakip" class="accordion-collapse collapse" aria-labelledby="headingSixLakip" data-bs-parent="#accordionExampleLakip">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>LAKIP 2022</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -320,7 +444,12 @@
                                             </h2>
                                             <div id="collapseSevenLakip" class="accordion-collapse collapse" aria-labelledby="headingSevenLakip" data-bs-parent="#accordionExampleLakip">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>LAKIP 2023</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -337,7 +466,12 @@
                                             </h2>
                                             <div id="collapseOneRenstra" class="accordion-collapse collapse show" aria-labelledby="headingOneRenstra" data-bs-parent="#accordionExampleRenstra">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Renstra 2016-2021</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -349,7 +483,12 @@
                                             </h2>
                                             <div id="collapseTwoRenstra" class="accordion-collapse collapse" aria-labelledby="headingTwoRenstra" data-bs-parent="#accordionExampleRenstra">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Renstra 2021-2026</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -366,7 +505,12 @@
                                             </h2>
                                             <div id="collapseOneKinerja" class="accordion-collapse collapse show" aria-labelledby="headingOneKinerja" data-bs-parent="#accordionExampleKinerja">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Perjanjian Kinerja 2020</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -378,7 +522,12 @@
                                             </h2>
                                             <div id="collapseTwoKinerja" class="accordion-collapse collapse" aria-labelledby="headingTwoKinerja" data-bs-parent="#accordionExampleKinerja">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Perjanjian Kinerja 2021</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -390,7 +539,12 @@
                                             </h2>
                                             <div id="collapseThreeKinerja" class="accordion-collapse collapse" aria-labelledby="headingThreeKinerja" data-bs-parent="#accordionExampleKinerja">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Perjanjian Kinerja 2022</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -402,7 +556,12 @@
                                             </h2>
                                             <div id="collapseFourKinerja" class="accordion-collapse collapse" aria-labelledby="headingFourKinerja" data-bs-parent="#accordionExampleKinerja">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Perjanjian Kinerja 2023</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -419,7 +578,12 @@
                                               </h2>
                                               <div id="collapseOneKonsultasi" class="accordion-collapse collapse show" aria-labelledby="headingOneKonsultasi" data-bs-parent="#accordionExampleKonsultasi">
                                                 <div class="accordion-body">
-                                                  Konten dari Accordion Item #1.
+                                                  <table>
+                                                    <tr>
+                                                      <td class="list"><ul><li>LFKP 2019</li></ul></td>
+                                                      <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                    </tr>
+                                                  </table>
                                                 </div>
                                               </div>
                                             </div>
@@ -436,7 +600,12 @@
                                             </h2>
                                             <div id="collapseOneIKM" class="accordion-collapse collapse show" aria-labelledby="headingOneIKM" data-bs-parent="#accordionExampleIKM">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Laporan Hasil Survei IKM 2017</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -448,7 +617,12 @@
                                             </h2>
                                             <div id="collapseTwoIKM" class="accordion-collapse collapse" aria-labelledby="headingTwoIKM" data-bs-parent="#accordionExampleIKM">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Laporan Hasil Survei IKM 2018</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -460,7 +634,12 @@
                                             </h2>
                                             <div id="collapseThreeIKM" class="accordion-collapse collapse" aria-labelledby="headingThreeIKM" data-bs-parent="#accordionExampleIKM">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Laporan Hasil Survei IKM 2019</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -472,7 +651,12 @@
                                             </h2>
                                             <div id="collapseFourIKM" class="accordion-collapse collapse" aria-labelledby="headingFourIKM" data-bs-parent="#accordionExampleIKM">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Laporan Hasil Survei IKM 2020</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -484,7 +668,12 @@
                                             </h2>
                                             <div id="collapseFiveIKM" class="accordion-collapse collapse" aria-labelledby="headingFiveIKM" data-bs-parent="#accordionExampleIKM">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Laporan Hasil Survei IKM 2021</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
@@ -496,7 +685,12 @@
                                             </h2>
                                             <div id="collapseSixIKM" class="accordion-collapse collapse" aria-labelledby="headingSixIKM" data-bs-parent="#accordionExampleIKM">
                                               <div class="accordion-body">
-                                                Konten dari Accordion Item #1.
+                                                <table>
+                                                  <tr>
+                                                    <td class="list"><ul><li>Laporan Hasil Survei IKM 2023</li></ul></td>
+                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                  </tr>
+                                                </table>
                                               </div>
                                             </div>
                                           </div>
