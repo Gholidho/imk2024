@@ -982,7 +982,6 @@ section,
     margin-bottom: 0;
 }
 
-
 .stats {
     --default-color: #ffffff;
     --default-color-rgb: 255, 255, 255;
@@ -1035,8 +1034,10 @@ section,
     color: rgba(var(--default-color-rgb), 0.6);
 }
 
-
-.bi-person-standing, .bi-people-fill, .bi-person-lines-fill, .bi-person-standing-dress{
+.bi-person-standing,
+.bi-people-fill,
+.bi-person-lines-fill,
+.bi-person-standing-dress {
     font-size: 5em;
     padding: 0; /* Ubah ukuran ikon menjadi 2 kali lipat ukuran aslinya */
 }
@@ -1267,7 +1268,7 @@ section,
     overflow: hidden;
 }
 
-.portfolio .portfolio-item img{
+.portfolio .portfolio-item img {
     width: 100%;
     height: auto;
 }
@@ -1884,7 +1885,6 @@ section,
     color: rgba(var(--default-color-rgb), 0.5);
     margin-bottom: 0;
 }
-
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -2897,5 +2897,3 @@ section,
     color: rgba(var(--default-color-rgb), 0.4);
     font-size: 14px;
 }
-
-

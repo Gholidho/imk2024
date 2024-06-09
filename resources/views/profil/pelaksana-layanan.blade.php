@@ -93,12 +93,18 @@
     .dataTables_wrapper .dataTables_paginate {
         display: flex;
         justify-content: center;
-        margin-top: 3rem;
-        margin-right: 5rem;
+        margin: 3rem auto auto;
     }
 
     .dataTables_wrapper .dataTables_paginate .paginate_button {
         font-size: 3px;
+        box-shadow: none;
+    }
+
+    .pagination li.active a {
+        background-color: #e84545;
+        color: #fff;
+        border: none;
     }
 </style>
 
