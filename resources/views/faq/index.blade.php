@@ -67,6 +67,12 @@
     .faq-question span.num {
         margin-right: 10px;
     }
+
+    .services-list {
+        height: 400px;
+        overflow-y: scroll;
+        sssss
+    }
 </style>
 <!-- Vendor CSS Files -->
 <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
