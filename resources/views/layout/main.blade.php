@@ -101,6 +101,8 @@
 
     @include('layout.partials.floating-button')
 
+    @include('layout.partials.disabilitas')
+
     @include('layout.partials.scrolltop')
 
     <!-- Preloader -->

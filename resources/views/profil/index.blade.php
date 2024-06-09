@@ -24,6 +24,7 @@
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
                             <h1 class="">PROFIL</h1>
+
                             {{-- <p class="mb-0">Pada halaman ini, Anda dapat melihat struktur organisasi,
                                 maklumat pelayanan, profil penyelenggaran, pelaksanan layanan, serta motto, visi,
                                 dan misi Dukcapil Trenggalek.
@@ -87,7 +88,7 @@
             $('#service-content').find('#dataTable').DataTable({
                 "paging": true,
                 "lengthChange": false,
-                "searching": false,
+                "searching": true,
                 "ordering": true,
                 "info": true,
                 "autoWidth": true, // Setel opsi autoWidth ke true
