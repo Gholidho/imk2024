@@ -12,7 +12,7 @@
             <ul>
                 <li><a href="{{ route('statistik') }}"
                         class="{{ request()->is('statistik') ? 'active' : '' }}">Statistik</a></li>
-                <li><a href="{{ /faq }}" class="{{ request()->is('faq') ? 'active' : '' }}">FAQ</a></li>
+                <li><a href="{{ url('/faq') }}" class="{{ request()->is('faq') ? 'active' : '' }}">FAQ</a></li>
                 <li><a href="{{ route('pengaduan') }}"
                         class="{{ request()->is('pengaduan') ? 'active' : '' }}">Pengaduan</a></li>
             </ul>

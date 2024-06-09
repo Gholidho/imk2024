@@ -4,7 +4,6 @@ use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\FaqController;
-use App\Models\Berita;
 use App\Http\Controllers\BerandaController;
 
 /*
