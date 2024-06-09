@@ -332,35 +332,3 @@
     <span class="close">&times;</span>
     <img class="modal-content" id="img01">
 </div>
-
-<script>
-    // Ambil elemen tombol "Lihat Struktur Organisasi"
-    var btnLihatStruktur = document.querySelector('.btn');
-
-    // Ambil elemen modal
-    var modal = document.getElementById("imageModal");
-
-    // Ambil elemen gambar untuk menampilkan dalam pop-up
-    var modalImg = document.getElementById("img01");
-
-    // Ambil elemen span untuk menutup modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // Ketika tombol close di klik, sembunyikan modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // Ketika pengguna mengklik di luar modal, sembunyikan modal
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-    // Ketika tombol "Lihat Struktur Organisasi" diklik, tampilkan modal dengan gambar struktur
-    btnLihatStruktur.onclick = function() {
-        modal.style.display = "block";
-        modalImg.src = "{{ asset('/img/struktur.png') }}"; // Ganti dengan path gambar yang benar
-    }
-</script>
