@@ -7,6 +7,12 @@
             padding: 1em;
             background-color: var(--background-color);
         }
+
+        hr.solid {
+            border: none;
+            border-top: 3px solid;
+            color: #000;
+        }
     </style>
 @endsection
 
@@ -24,11 +30,9 @@
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
                             <h1 class="">PROFIL</h1>
-
-                            {{-- <p class="mb-0">Pada halaman ini, Anda dapat melihat struktur organisasi,
-                                maklumat pelayanan, profil penyelenggaran, pelaksanan layanan, serta motto, visi,
-                                dan misi Dukcapil Trenggalek.
-                            </p> --}}
+                            <p class="mb-0">
+                                Mengenal lebih dekat Dinas Kependudukan dan Pencatatan Sipil Kabupaten Trenggalek
+                            </p>
                         </div>
                     </div>
                 </div>

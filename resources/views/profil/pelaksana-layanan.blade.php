@@ -151,6 +151,10 @@
     DISDUKCAPIL TRENGGALEK
 </h3>
 <div class="card-body">
+    <div class="input-group mb-3">
+        <input type="text" id="search-all" class="form-control" placeholder="Cari berita...">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+    </div>
     <div class="table-responsive">
         <table class="tableBku table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
