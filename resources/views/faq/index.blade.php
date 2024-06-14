@@ -69,7 +69,7 @@
     }
 
     .services-list {
-        height: 400px;
+        height: 370px;
         overflow-y: scroll;
         sssss
     }
