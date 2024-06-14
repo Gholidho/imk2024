@@ -58,7 +58,7 @@
         <div class="row d-flex justify-content-center text-center">
           <div class="col-lg-8">
             <h1 class="">Akta Pengesahan Anak</h1>
-            {{-- <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p> --}}
+            <p class="mb-0">Pengesahan anak merupakan pengesahan status seorang anak yang lahir dari perkawinan yang telah sah menurut hukum agama, pada saat pencatatan perkawinan dari kedua orang tua anak tersebut telah sah menurut hukum negara.</p>
           </div>
         </div>
       </div>
