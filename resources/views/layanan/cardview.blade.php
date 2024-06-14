@@ -52,9 +52,7 @@
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
                             <h1 class="">Layanan Informasi</h1>
-                            <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio
-                                sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus
-                                dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+                            <p class="mb-0">Layanan-layanan yang disediakan oleh Dukcapil Trenggalek</p>
                         </div>
                     </div>
                 </div>

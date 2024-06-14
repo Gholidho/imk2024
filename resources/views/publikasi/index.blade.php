@@ -52,7 +52,9 @@
       cursor: pointer; /* Ganti kursor saat di hover */
       border-radius: 5px; /* Sudut melengkung, sesuaikan dengan kebutuhan Anda */
     }
-
+    .section-title{
+      padding-bottom: 1rem;
+    }
   </style>
 @endsection
 
@@ -66,9 +68,7 @@
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
                             <h1 class="">Publikasi/Unduhan</h1>
-                            {{-- <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio
-                                sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus
-                                dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p> --}}
+                            <p class="mb-0">Dokumen-dokumen terkait pelaksanaan layanan Dukcapil Trenggalek</p>
                         </div>
                     </div>
                 </div>
@@ -86,11 +86,10 @@
                             <section id="portfolio" class="portfolio section">
                                 <div class="container">
                         
-                                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+                                <div class="isotope-layout" data-default-filter=".filter-dasarhukum" data-layout="masonry" data-sort="original-order">
                         
                                     <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                                      <li data-filter="*" class="filter-active">Semua</li>
-                                      <li data-filter=".filter-dasarhukum">Dasar Hukum</li>
+                                      <li data-filter=".filter-dasarhukum" class="filter-active">Dasar Hukum</li>
                                       <li data-filter=".filter-renja">Rencana Kerja</li>
                                       <li data-filter=".filter-lakip">LAKIP</li>
                                       <li data-filter=".filter-renstra">Rencana Strategis</li>
@@ -102,14 +101,17 @@
                                     <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
                         
                                     <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-dasarhukum">
+                                      <div class="container section-title" data-aos="fade-up">
+                                        <h2>Dasar Hukum</h2>
+                                      </div>
                                       <div class="accordion" id="accordionExampleDasarHukum">
                                         <div class="accordion-item">
                                           <h2 class="accordion-header" id="headingOneDasarHukum">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneDasarHukum" aria-expanded="true" aria-controls="collapseOneDasarHukum">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneDasarHukum" aria-expanded="true" aria-controls="collapseOneDasarHukum">
                                               Undang-undang
                                             </button>
                                           </h2>
-                                          <div id="collapseOneDasarHukum" class="accordion-collapse collapse show" aria-labelledby="headingOneDasarHukum" data-bs-parent="#accordionExampleDasarHukum">
+                                          <div id="collapseOneDasarHukum" class="accordion-collapse collapse" aria-labelledby="headingOneDasarHukum" data-bs-parent="#accordionExampleDasarHukum">
                                             <div class="accordion-body">
                                               <table>
                                                 <tr>
@@ -173,11 +175,11 @@
                                         </div> --}}
                                         <div class="accordion-item">
                                           <h2 class="accordion-header" id="headingFiveDasarHukum">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveDasarHukum" aria-expanded="false" aria-controls="collapseFiveDasarHukum">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveDasarHukum" aria-expanded="false" aria-controls="collapseFiveDasarHukum">
                                               Peraturan Menteri Dalam Negeri
                                             </button>
                                           </h2>
-                                          <div id="collapseFiveDasarHukum" class="accordion-collapse collapse" aria-labelledby="headingFiveDasarHukum" data-bs-parent="#accordionExampleDasarHukum">
+                                          <div id="collapseFiveDasarHukum" class="accordion-collapse collapse show" aria-labelledby="headingFiveDasarHukum" data-bs-parent="#accordionExampleDasarHukum">
                                             <div class="accordion-body">
                                               <table>
                                                 <tr>
@@ -216,7 +218,16 @@
                                           </h2>
                                           <div id="collapseSixDasarHukum" class="accordion-collapse collapse" aria-labelledby="headingSixDasarHukum" data-bs-parent="#accordionExampleDasarHukum">
                                             <div class="accordion-body">
-                                              Konten dari Accordion Item #2.
+                                              <table>
+                                                <tr>
+                                                  <td class="list"><ul><li>Peraturan Daerah Kabupaten Trenggalek Nomor 4 Tahun 2009 tentang Administrasi Kependudukan di Kabupaten Trenggalek</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="list"><ul><li>Peraturan Daerah Kabupaten Trenggalek Nomor 14 tahun 2016 tentang Perubahan Kedua Atas Perda Kabupaten Trenggalek Nomor 4 Tahun 2009 tentang Administrasi Kependudukan di Kabupaten Trenggalek</li></ul></td>
+                                                  <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                </tr>
+                                              </table>
                                             </div>
                                           </div>
                                         </div>
@@ -224,6 +235,9 @@
                                     </div><!-- End Portfolio Item -->
                         
                                     <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-renja">
+                                      <div class="container section-title" data-aos="fade-up">
+                                        <h2>Rencana Kerja</h2>
+                                      </div>
                                         <div class="accordion" id="accordionExampleRenja">
                                             <div class="accordion-item">
                                               <h2 class="accordion-header" id="headingOneRenja">
@@ -268,8 +282,10 @@
                                               <div id="collapseTreeRenja" class="accordion-collapse collapse" aria-labelledby="headingTreeRenja" data-bs-parent="#accordionExampleRenja">
                                                 <div class="accordion-body">
                                                   <table>
-                                                    <tr><ul><li>Rencana Kerja Tahun 2020</li></ul></tr>
-                                                    <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                    <tr>
+                                                      <td class="list"><ul><li>Rencana Kerja Tahun 2020</li></ul></td>
+                                                      <td class="tombol"><a href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a></td>
+                                                    </tr>
                                                   </table>
                                                 </div>
                                               </div>
@@ -333,6 +349,9 @@
                                     </div><!-- End Portfolio Item -->
                         
                                     <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-lakip">
+                                      <div class="container section-title" data-aos="fade-up">
+                                        <h2>Laporan Akuntabilitas Kinerja Instansi Pemerintah</h2>
+                                      </div>
                                         <div class="accordion" id="accordionExampleLakip">
                                           <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingOneLakip">
@@ -457,6 +476,9 @@
                                     </div><!-- End Portfolio Item -->
                         
                                     <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-renstra">
+                                      <div class="container section-title" data-aos="fade-up">
+                                        <h2>Rencana Strategis</h2>
+                                      </div>
                                         <div class="accordion" id="accordionExampleRenstra">
                                           <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingOneRenstra">
@@ -496,6 +518,9 @@
                                     </div><!-- End Portfolio Item -->
                         
                                     <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-kinerja">
+                                      <div class="container section-title" data-aos="fade-up">
+                                        <h2>Perjanjian Kinerja</h2>
+                                      </div>
                                         <div class="accordion" id="accordionExampleKinerja">
                                           <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingOneKinerja">
@@ -569,6 +594,9 @@
                                     </div><!-- End Portfolio Item -->
                         
                                     <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-konsultasi">
+                                      <div class="container section-title" data-aos="fade-up">
+                                        <h2>Laporan Forum Konsultasi Publik</h2>
+                                      </div>
                                         <div class="accordion" id="accordionExampleKonsultasi">
                                             <div class="accordion-item">
                                               <h2 class="accordion-header" id="headingOneKonsultasi">
@@ -591,6 +619,9 @@
                                     </div><!-- End Portfolio Item -->
                         
                                     <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-ikm">
+                                      <div class="container section-title" data-aos="fade-up">
+                                        <h2>Laporan Hasil Survei Indeks Kepuasan Masyarakat</h2>
+                                      </div>
                                         <div class="accordion" id="accordionExampleIKM">
                                           <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingOneIKM">
@@ -706,4 +737,37 @@
                         
                             </section><!-- /Portfolio Section -->
     </main>
+    {{-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+
+        accordionButtons.forEach(button => {
+          button.addEventListener('click', function () {
+            const targetId = button.getAttribute('data-bs-target');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement.classList.contains('show')) {
+              // Collapse the accordion content
+              targetElement.style.height = '0px';
+              targetElement.classList.remove('show');
+            } else {
+              // Expand the accordion content
+              const height = targetElement.scrollHeight;
+              targetElement.style.height = height + 'px';
+              targetElement.classList.add('show');
+            }
+
+            // Close other accordions
+            const allContents = document.querySelectorAll('.accordion-collapse');
+            allContents.forEach(content => {
+              if (content !== targetElement) {
+                content.style.height = '0px';
+                content.classList.remove('show');
+              }
+            });
+          });
+        });
+      });
+    </script> --}}
+    
 @endsection
