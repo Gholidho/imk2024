@@ -17,6 +17,20 @@
         margin-bottom: 10px;
         /* Menambahkan margin di bawah item */
     }
+
+    .judul-berita strong {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1rem;
+        transition: font-size 0.2s ease;
+    }
+
+    .news-item:hover {
+        color: #e84545;
+    }
 </style>
 
 <div class="container-fluid px-2 py-3">
@@ -30,7 +44,7 @@
                                 alt="{{ $itemPop->judul }}">
                         </a>
                     </div>
-                    <div class="col-8 d-flex flex-column py-2 px-3">
+                    <div class="col-8 d-flex flex-column py-2 px-3 judul-berita">
                         <a href="{{ route('berita.detail', $itemPop->id) }}"
                             style="color: var(--branding-secondary-color2);">
                             <span><strong>{{ $itemPop->judul }}</strong></span>

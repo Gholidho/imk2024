@@ -32,6 +32,15 @@
         .carousel-item img {
             border-radius: 10px;
         }
+
+        table td {
+            font-size: small;
+        }
+
+        table td:nth-child(2) {
+            padding-left: 20px;
+            /* Menambahkan jarak pada kolom kedua */
+        }
     </style>
     <main class="main">
         <!-- Hero Section -->
@@ -88,37 +97,46 @@
 
                             <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                                 <div class="icon-box">
-                                    <i class="bi bi-buildings"></i>
-                                    <h3>Eius provident</h3>
-                                    <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem
+                                    <i class="bi bi-calendar-event"></i>
+                                    <h3>Jam Kerja </h3>
+                                    <p>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                Senin - Kamis
+                                            </td>
+                                            <td>
+                                                07.00 - 12.00 WIB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>12.00 - 15.15 WIB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Jum'at
+                                            </td>
+                                            <td>
+                                                07.00 - 11.30 WIB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>11.30 - 15.30 WIB</td>
+                                        </tr>
+                                    </table>
                                     </p>
                                 </div>
                             </div> <!-- End Icon Box -->
 
                             <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                                 <div class="icon-box">
-                                    <i class="bi bi-clipboard-pulse"></i>
-                                    <h3>Rerum aperiam</h3>
-                                    <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates quia
-                                    </p>
-                                </div>
-                            </div> <!-- End Icon Box -->
-
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                                <div class="icon-box">
-                                    <i class="bi bi-command"></i>
-                                    <h3>Veniam omnis</h3>
-                                    <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur
-                                        corrupti</p>
-                                </div>
-                            </div> <!-- End Icon Box -->
-
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                                <div class="icon-box">
-                                    <i class="bi bi-graph-up-arrow"></i>
-                                    <h3>Delares sapiente</h3>
-                                    <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis
-                                        quideme lorenda</p>
+                                    <i class="bi bi-map"></i>
+                                    <h3>Lokasi</h3>
+                                    <p style="font-size: small">Jl. Brigjen Sutran No. 17 , Sumbergedong, Kec. Trenggalek.
+                                        Kab. Trenggalek , Jawa
+                                        Timur 66315. Telepon / Fax : 0355-791160 </p>
                                 </div>
                             </div> <!-- End Icon Box -->
 
@@ -193,12 +211,15 @@
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                            <div class="icon flex-shrink-0"><i class="fas fa-baby"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Lorem Ipsum</a>
+                                <h4 class="title"><a href="/layanan/akta-pengesahan-anak" class="stretched-link">Akta
+                                        Pengesahan
+                                        Anak</a>
                                 </h4>
-                                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                    excepturi sint occaecati cupiditate non provident</p>
+                                <p class="description">Pengesahan anak merupakan pengesahan status seorang anak yang lahir
+                                    dari perkawinan yang telah sah menurut hukum agama, pada saat pencatatan perkawinan dari
+                                    kedua orang tua anak tersebut telah sah menurut hukum negara.</p>
                             </div>
                         </div>
                     </div>
@@ -206,64 +227,77 @@
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                            <div class="icon flex-shrink-0"><i class="fas fa-hands-holding-child"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Dolor
-                                        Sitema</a></h4>
-                                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat tarad limino ata</p>
+                                <h4 class="title"><a href="/layanan/akta-pengakuan-anak" class="stretched-link">Akta
+                                        Pengakuan
+                                        Anak</a></h4>
+                                <p class="description">Pengakuan anak merupakan pengakuan seorang ayah terhadap anaknya
+                                    yang lahir dari perkawinan yang telah sah menurut hukum agama dan disetujui oleh ibu
+                                    kandung anak tersebut.</p>
                             </div>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-arrow-through-heart"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Sed ut
-                                        perspiciatis</a></h4>
-                                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur</p>
+                                <h4 class="title"><a href="/layanan/akta-perkawinan" class="stretched-link">Akta
+                                        Perkawinan</a></h4>
+                                <p class="description">Akta Perkawinan adalah dokumen resmi yang diterbitkan oleh Dinas
+                                    Kependudukan dan Pencatatan Sipil atau Kantor Urusan Agama setelah seorang pria dan
+                                    seorang wanita melangsungkan perkawinan secara sah</p>
                             </div>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+                            <div class="icon flex-shrink-0"><i class="fa-solid fa-heart-crack"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Magni
-                                        Dolores</a></h4>
-                                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                    officia deserunt mollit anim id est laborum</p>
+                                <h4 class="title"><a href="/layanan/akta-perceraian" class="stretched-link">Akta
+                                        Perceraian</a></h4>
+                                <p class="description">Akta perceraian adalah suatu akta yang dibuat dan diterbitkan oleh
+                                    Dinas Kependudukan yang membuktikan secara pasti dan sah tentang Pencatatan Perceraian
+                                    seseorang setelah adanya Penetapan Pengadilan Negeri</p>
                             </div>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+                            <div class="icon flex-shrink-0"><i class="fa-solid fa-cake-candles"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Nemo Enim</a>
+                                <h4 class="title"><a href="/layanan/akta-kelahiran" class="stretched-link">Akta
+                                        Kelahiran</a>
                                 </h4>
-                                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                    blanditiis praesentium voluptatum deleniti atque</p>
+                                <p class="description">Akta Kelahiran adalah suatu dokumen identitas autentik yang wajib
+                                    dimiliki setiap warga negara Indonesia.</p>
                             </div>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+                            <div class="icon flex-shrink-0"><i class="fa-solid fa-ring"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Eiusmod
-                                        Tempor</a></h4>
-                                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                    tempore, cum soluta nobis est eligendi</p>
+                                <h4 class="title"><a href="/layanan/surat-keterangan-pembatalan-perkawinan"
+                                        class="stretched-link">Surat
+                                        Keterangan Pembatalan Perkawinan</a></h4>
+                                <p class="description">Pembatalan perkawinan ialah tindakan Pengadilan yang berupa putusan
+                                    yang menyatakan perkawinan yang dilakukan itu dinyatakan tidak sah, sehingga perkawinan
+                                    tersebut dianggap tidak pernah ada.</p>
                             </div>
                         </div>
                     </div><!-- End Service Item -->
 
+                    <div class="content about" style="text-align: center">
+                        <div class="content">
+                            <a href="/layanan" class="read-more" style="font-size: small"><span>Baca
+                                    Selengkapnya</span><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
 
             </div>

@@ -2,10 +2,11 @@
 
 use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NewsController;
 use App\Http\Controllers\FaqController;
-use App\Http\Controllers\BerandaController;
 use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\CommentController;
 
 
 /*
@@ -115,7 +116,8 @@ Route::prefix('/kontak')->group(function () {
 Route::get('/berita', [NewsController::class, 'index'])->name('berita.index');
 Route::get('/berita/detail/{id}', [NewsController::class, 'detail'])->name('berita.detail');
 Route::get('/search', [NewsController::class, 'search'])->name('news.search');
+Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
+Route::post('/comments/{parentId}/reply', [CommentController::class, 'reply'])->name('comments.reply');
 
 
 //Route::get('/berita/search', [NewsController::class, 'search'])->name('berita.search');
-

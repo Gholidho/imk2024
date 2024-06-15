@@ -17,7 +17,7 @@ class NewsController extends Controller
     {
         return $berita->map(function ($item) {
             $item->tanggal_berita = Carbon::parse($item->tanggal_berita)->translatedFormat('d F Y');
-            $item->narasi_berita = Str::limit($item->narasi_berita, 200, '...');
+            $item->narasi_berita = Str::limit($item->narasi_berita, 150, '...');
             return $item;
         });
     }
@@ -66,7 +66,7 @@ class NewsController extends Controller
             $berita = Berita::find($id);
             $populer = Berita::orderBy('klik', 'desc')
                 ->take(8)
-                ->get(['id', 'tumbnail_berita', 'judul', 'tanggal_berita']);
+                ->get(['id', 'tumbnail_berita', 'judul', 'tanggal_berita', 'author', 'klik']);
 
             if ($berita) {
                 $berita->increment('klik');
