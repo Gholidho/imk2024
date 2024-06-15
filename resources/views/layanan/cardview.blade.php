@@ -4,7 +4,7 @@
   <style>
     .about .icon-box {
       padding: 20px;
-      height: 15rem;
+      /* height: 15rem; */
       box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
     }
     .about .icon-box i {
@@ -266,4 +266,35 @@
             </div>
         </div><!-- End Page Title -->
     </main>
+    <script>
+      function adjustIconBoxHeight() {
+        // Ambil semua elemen dengan kelas .about .icon-box
+        const iconBoxes = document.querySelectorAll('.about .icon-box');
+        let maxHeight = 0;
+
+        // Temukan tinggi maksimum
+        iconBoxes.forEach(box => {
+          const boxHeight = box.offsetHeight;
+          if (boxHeight > maxHeight) {
+            maxHeight = boxHeight;
+          }
+        });
+
+        // Terapkan tinggi maksimum ke semua .icon-box
+        iconBoxes.forEach(box => {
+          box.style.height = `${maxHeight}px`;
+        });
+      }
+
+      // Panggil fungsi adjustIconBoxHeight setelah DOM dimuat
+      document.addEventListener('DOMContentLoaded', adjustIconBoxHeight);
+    
+      // Panggil fungsi adjustIconBoxHeight setelah perubahan ukuran jendela
+      window.addEventListener('resize', adjustIconBoxHeight);
+
+      // Panggil fungsi adjustIconBoxHeight setelah semua animasi selesai
+      setTimeout(() => {
+        adjustIconBoxHeight();
+      }, 350); // Sesuaikan waktu sesuai durasi animasi
+    </script>
 @endsection
