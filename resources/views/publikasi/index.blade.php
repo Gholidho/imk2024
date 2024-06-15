@@ -737,37 +737,62 @@
                         
                             </section><!-- /Portfolio Section -->
     </main>
-    {{-- <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const accordionButtons = document.querySelectorAll('.accordion-button');
+    <script>
+      function adjustContainerHeight() {
+          const container = document.querySelector('.isotope-container');
+          const activeFilter = document.querySelector('.portfolio-filters .filter-active').dataset.filter;
 
-        accordionButtons.forEach(button => {
-          button.addEventListener('click', function () {
-            const targetId = button.getAttribute('data-bs-target');
-            const targetElement = document.querySelector(targetId);
+          // Filter visible .isotope-item elements
+          const visibleItems = Array.from(document.querySelectorAll('.isotope-item')).filter(item => item.classList.contains(activeFilter.substring(1)));
 
-            if (targetElement.classList.contains('show')) {
-              // Collapse the accordion content
-              targetElement.style.height = '0px';
-              targetElement.classList.remove('show');
-            } else {
-              // Expand the accordion content
-              const height = targetElement.scrollHeight;
-              targetElement.style.height = height + 'px';
-              targetElement.classList.add('show');
-            }
+          let totalHeight = 0;
 
-            // Close other accordions
-            const allContents = document.querySelectorAll('.accordion-collapse');
-            allContents.forEach(content => {
-              if (content !== targetElement) {
-                content.style.height = '0px';
-                content.classList.remove('show');
-              }
-            });
+          // Calculate height of each visible item
+          visibleItems.forEach(item => {
+              const h2Height = item.querySelector('h2').offsetHeight;
+              const accordionButtons = item.querySelectorAll('.accordion-button');
+              const activeAccordionButtons = item.querySelectorAll('.accordion-button.collapsed');
+              const activeAccordionContents = item.querySelectorAll('.accordion-collapse.show');
+
+              let accordionButtonsHeight = 53;
+              accordionButtons.forEach(button => {
+                  accordionButtonsHeight += button.offsetHeight;
+              });
+
+              let activeContentsHeight = 0;
+              activeAccordionContents.forEach(content => {
+                  activeContentsHeight += content.scrollHeight;
+              });
+
+              totalHeight += h2Height + accordionButtonsHeight + activeContentsHeight;
           });
-        });
+
+          container.style.height = `${totalHeight}px`;
+      }
+
+      // Call the function initially
+      adjustContainerHeight();
+
+      // Optionally, call the function whenever the filter changes or an accordion is toggled
+      document.querySelectorAll('.portfolio-filters li').forEach(filterButton => {
+          filterButton.addEventListener('click', () => {
+              // Update the active filter class
+              document.querySelectorAll('.portfolio-filters li').forEach(btn => btn.classList.remove('filter-active'));
+              filterButton.classList.add('filter-active');
+
+              // Adjust the container height after the filter change
+              adjustContainerHeight();
+          });
       });
-    </script> --}}
+
+      document.querySelectorAll('.accordion-button').forEach(button => {
+          button.addEventListener('click', () => {
+              // Adjust the container height after an accordion is toggled
+              setTimeout(() => {
+                  adjustContainerHeight();
+              }, 400); // Adjust timing as needed for animation
+          });
+      });
+    </script>
     
 @endsection
