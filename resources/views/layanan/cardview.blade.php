@@ -17,7 +17,6 @@
     }
     #about a .icon-box:hover{
       background-color: #e84545;
-      color: white;
     }
     #about a .icon-box:hover h3{
       color: white;
