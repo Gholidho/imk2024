@@ -4,7 +4,6 @@
   <style>
     .about .icon-box {
       padding: 20px;
-      /* height: 15rem; */
       box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
     }
     .about .icon-box i {
@@ -14,11 +13,13 @@
       font-size: 20px;
     }
     #about a {
-      color: #e84545 !important;
       text-decoration: none;
     }
     #about a .icon-box:hover{
       background-color: #e84545;
+      color: white;
+    }
+    #about a .icon-box:hover h3{
       color: white;
     }
     .about .icon-box:hover i {
