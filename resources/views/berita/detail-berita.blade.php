@@ -21,7 +21,7 @@
                     <div class="row">
 
                         <!-- Berita Details -->
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 detail-berita">
                             <x-detail :berita="$berita" />
                         </div>
 

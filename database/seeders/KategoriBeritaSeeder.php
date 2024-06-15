@@ -21,7 +21,7 @@ class KategoriBeritaSeeder extends Seeder
             ['id' => 'BR03', 'nama_kategori_berita' => 'Berita Nasional'],
             ['id' => 'BR04', 'nama_kategori_berita' => 'Dokumen Perencanaan'],
             ['id' => 'BR05', 'nama_kategori_berita' => 'Info Penting'],
-            ['id' => 'BR06', 'nama_kategori_berita' => 'Pengumuman Pencatatan Perkawinan'],
+            ['id' => 'BR06', 'nama_kategori_berita' => 'Pencatatan Perkawinan'],
             ['id' => 'BR07', 'nama_kategori_berita' => 'Renstra'],
         ]);
     }

@@ -21,11 +21,16 @@ class Berita extends Model
         'tanggal_berita',
         'tumbnail_berita',
         'narasi_berita',
-        'klik'
+        'klik',
+        'author'
     ];
 
     public function kategoriBerita()
     {
         return $this->belongsTo(KategoriBerita::class, 'kategori_berita_id');
+    }
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 }

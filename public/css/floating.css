@@ -17,13 +17,15 @@
     position: fixed;
     margin: 1em;
     left: 0;
-    /* z-index: 1000; */
+    z-index: 1000;
 }
 
 .pmd-floating-action-btn {
     display: block;
     position: relative;
     transition: all 0.2s ease-out;
+    background-color: var(--accent-color);
+    z-index: 1000;
 }
 
 .pmd-floating-action-btn:before {
@@ -43,6 +45,8 @@
     display: inline-block;
     box-shadow: 0px 2px 3px -2px rgba(0, 0, 0, 0.18),
         0px 2px 2px -7px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+    margin-left: 5px;
 }
 
 .pmd-floating-action-btn:last-child:before {
@@ -55,6 +59,8 @@
 .pmd-floating-action-btn:hover {
     box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18),
         0px 4px 12px -7px rgba(0, 0, 0, 0.15);
+    background-color: rgba(var(--accent-color-rgb), 0.8);
+    color: var(--contrast-color);
 }
 
 .pmd-floating-action-btn:not(:last-child) {
@@ -65,7 +71,11 @@
     margin-left: 8px;
     position: absolute;
     bottom: 0;
+    background-color: var(--accent-color); /* Atur warna background menjadi putih */
+    color: #fff; /* Atur warna teks */
+    z-index: 1000;
 }
+
 
 .pmd-floating-action-btn:not(:last-child):nth-last-child(1) {
     transition-delay: 50ms;

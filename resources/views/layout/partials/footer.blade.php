@@ -11,10 +11,10 @@
                 <p>NGEMPLAK, SUMBERGEDONG, KECAMATAN TRENGGALEK, KABUPATEN TRENGGALEK, PROVINSI JAWA TIMUR, KODE POS
                     66315</p>
                 <div class="social-links d-flex mt-4">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href="mailto:disdukcapil.trenggalek@gmail.com"><i class="bi bi-envelope"></i></a>
+                    <a href="https://www.facebook.com/disdukcapil.trenggalek/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/disdukcapil.trenggalek/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCEEESG__YcRnf9qXKIxcIwQ"><i class="bi bi-youtube"></i></a>
                 </div>
                 <div></div>
 
@@ -26,15 +26,15 @@
             <div class="col-lg-2 col-6 footer-links">
                 <h4>Halaman Terkait</h4>
                 <ul>
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Profil</a></li>
-                    <li><a href="#">Berita</a></li>
-                    <li><a href="#">Layanan</a></li>
-                    <li><a href="#">Publikasi</a></li>
-                    <li><a href="#">Statistik</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Pengaduan</a></li>
-                    <li><a href="#">Kontak</a></li>
+                    <li><a href="/">Beranda</a></li>
+                    <li><a href="/profil">Profil</a></li>
+                    <li><a href="/berita">Berita</a></li>
+                    <li><a href="/layanan">Layanan</a></li>
+                    <li><a href="/publikasi">Publikasi</a></li>
+                    <li><a href="/statistik">Statistik</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/pengaduan">Pengaduan</a></li>
+                    <li><a href="/kontak">Kontak</a></li>
                 </ul>
             </div>
 

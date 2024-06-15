@@ -29,18 +29,25 @@
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
-        <div class="heading" style="padding:0">
+        <div class="heading">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Pengaduan</h2>
+                <p>Layanan Aspirasi dan Pengaduan Online Rakyat</p>
+            </div><!-- End Section Title -->
+            <nav class="breadcrumbs">
+                <div class="container">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Pengaduan</li>
+                    </ol>
+                </div>
+            </nav>
+
             <div class="container">
                 <div class="row d-flex justify-content-center text-center">
                     <div class="col-lg-12">
                         <section id="contact" class="contact section">
-
-                            <!-- Section Title -->
-                            <div class="container section-title" data-aos="fade-up">
-                                <h2>Pengaduan</h2>
-                                <p>Layanan Aspirasi dan Pengaduan Online Rakyat</p>
-                            </div><!-- End Section Title -->
-
                             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                                 <div class="row gy-4">

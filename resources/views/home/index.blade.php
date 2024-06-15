@@ -1,11 +1,52 @@
 @extends('layout.main')
 
 @section('container')
+    <!-- Custom CSS -->
+    <style>
+        .portfolio-info {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .portfolio-item:hover .portfolio-info {
+            opacity: 1;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #000;
+            border-radius: 50%;
+        }
+
+        .carousel-item {
+            padding: 15px;
+        }
+
+        .carousel-item img {
+            border-radius: 10px;
+        }
+
+        table td {
+            font-size: small;
+        }
+
+        table td:nth-child(2) {
+            padding-left: 20px;
+            /* Menambahkan jarak pada kolom kedua */
+        }
+    </style>
     <main class="main">
         <!-- Hero Section -->
         <section id="hero" class="hero section">
 
-            <img src="img/trenggalek-bg.jpeg" alt="" data-aos="fade-in">
+            <img src="img/trenggalek-bg.jpg" alt="" data-aos="fade-in">
 
             <div class="container">
                 <div class="row">
@@ -56,37 +97,46 @@
 
                             <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                                 <div class="icon-box">
-                                    <i class="bi bi-buildings"></i>
-                                    <h3>Eius provident</h3>
-                                    <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem
+                                    <i class="bi bi-calendar-event"></i>
+                                    <h3>Jam Kerja </h3>
+                                    <p>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                Senin - Kamis
+                                            </td>
+                                            <td>
+                                                07.00 - 12.00 WIB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>12.00 - 15.15 WIB</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Jum'at
+                                            </td>
+                                            <td>
+                                                07.00 - 11.30 WIB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>11.30 - 15.30 WIB</td>
+                                        </tr>
+                                    </table>
                                     </p>
                                 </div>
                             </div> <!-- End Icon Box -->
 
                             <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                                 <div class="icon-box">
-                                    <i class="bi bi-clipboard-pulse"></i>
-                                    <h3>Rerum aperiam</h3>
-                                    <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates quia
-                                    </p>
-                                </div>
-                            </div> <!-- End Icon Box -->
-
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                                <div class="icon-box">
-                                    <i class="bi bi-command"></i>
-                                    <h3>Veniam omnis</h3>
-                                    <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur
-                                        corrupti</p>
-                                </div>
-                            </div> <!-- End Icon Box -->
-
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                                <div class="icon-box">
-                                    <i class="bi bi-graph-up-arrow"></i>
-                                    <h3>Delares sapiente</h3>
-                                    <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis
-                                        quideme lorenda</p>
+                                    <i class="bi bi-map"></i>
+                                    <h3>Lokasi</h3>
+                                    <p style="font-size: small">Jl. Brigjen Sutran No. 17 , Sumbergedong, Kec. Trenggalek.
+                                        Kab. Trenggalek , Jawa
+                                        Timur 66315. Telepon / Fax : 0355-791160 </p>
                                 </div>
                             </div> <!-- End Icon Box -->
 
@@ -161,12 +211,15 @@
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                            <div class="icon flex-shrink-0"><i class="fas fa-baby"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Lorem Ipsum</a>
+                                <h4 class="title"><a href="/layanan/akta-pengesahan-anak" class="stretched-link">Akta
+                                        Pengesahan
+                                        Anak</a>
                                 </h4>
-                                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                    excepturi sint occaecati cupiditate non provident</p>
+                                <p class="description">Pengesahan anak merupakan pengesahan status seorang anak yang lahir
+                                    dari perkawinan yang telah sah menurut hukum agama, pada saat pencatatan perkawinan dari
+                                    kedua orang tua anak tersebut telah sah menurut hukum negara.</p>
                             </div>
                         </div>
                     </div>
@@ -174,370 +227,243 @@
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                            <div class="icon flex-shrink-0"><i class="fas fa-hands-holding-child"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Dolor
-                                        Sitema</a></h4>
-                                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat tarad limino ata</p>
+                                <h4 class="title"><a href="/layanan/akta-pengakuan-anak" class="stretched-link">Akta
+                                        Pengakuan
+                                        Anak</a></h4>
+                                <p class="description">Pengakuan anak merupakan pengakuan seorang ayah terhadap anaknya
+                                    yang lahir dari perkawinan yang telah sah menurut hukum agama dan disetujui oleh ibu
+                                    kandung anak tersebut.</p>
                             </div>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-arrow-through-heart"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Sed ut
-                                        perspiciatis</a></h4>
-                                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur</p>
+                                <h4 class="title"><a href="/layanan/akta-perkawinan" class="stretched-link">Akta
+                                        Perkawinan</a></h4>
+                                <p class="description">Akta Perkawinan adalah dokumen resmi yang diterbitkan oleh Dinas
+                                    Kependudukan dan Pencatatan Sipil atau Kantor Urusan Agama setelah seorang pria dan
+                                    seorang wanita melangsungkan perkawinan secara sah</p>
                             </div>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+                            <div class="icon flex-shrink-0"><i class="fa-solid fa-heart-crack"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Magni
-                                        Dolores</a></h4>
-                                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                    officia deserunt mollit anim id est laborum</p>
+                                <h4 class="title"><a href="/layanan/akta-perceraian" class="stretched-link">Akta
+                                        Perceraian</a></h4>
+                                <p class="description">Akta perceraian adalah suatu akta yang dibuat dan diterbitkan oleh
+                                    Dinas Kependudukan yang membuktikan secara pasti dan sah tentang Pencatatan Perceraian
+                                    seseorang setelah adanya Penetapan Pengadilan Negeri</p>
                             </div>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+                            <div class="icon flex-shrink-0"><i class="fa-solid fa-cake-candles"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Nemo Enim</a>
+                                <h4 class="title"><a href="/layanan/akta-kelahiran" class="stretched-link">Akta
+                                        Kelahiran</a>
                                 </h4>
-                                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                    blanditiis praesentium voluptatum deleniti atque</p>
+                                <p class="description">Akta Kelahiran adalah suatu dokumen identitas autentik yang wajib
+                                    dimiliki setiap warga negara Indonesia.</p>
                             </div>
                         </div>
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
                         <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+                            <div class="icon flex-shrink-0"><i class="fa-solid fa-ring"></i></div>
                             <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Eiusmod
-                                        Tempor</a></h4>
-                                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                    tempore, cum soluta nobis est eligendi</p>
+                                <h4 class="title"><a href="/layanan/surat-keterangan-pembatalan-perkawinan"
+                                        class="stretched-link">Surat
+                                        Keterangan Pembatalan Perkawinan</a></h4>
+                                <p class="description">Pembatalan perkawinan ialah tindakan Pengadilan yang berupa putusan
+                                    yang menyatakan perkawinan yang dilakukan itu dinyatakan tidak sah, sehingga perkawinan
+                                    tersebut dianggap tidak pernah ada.</p>
                             </div>
                         </div>
                     </div><!-- End Service Item -->
 
+                    <div class="content about" style="text-align: center">
+                        <div class="content">
+                            <a href="/layanan" class="read-more" style="font-size: small"><span>Baca
+                                    Selengkapnya</span><i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
         </section><!-- /Services Section -->
 
-        <!-- Features Section -->
-        <section id="features" class="features section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-4 align-items-center features-item">
-                    <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Corporis temporibus maiores provident</h3>
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                            in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident.
-                        </p>
-                        <a href="#" class="btn btn-get-started">Get Started</a>
-                    </div>
-                    <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out"
-                        data-aos-delay="100">
-                        <div class="image-stack">
-                            <img src="{{ asset('img/tester.png') }}" alt="" class="stack-front">
-                            <img src="{{ asset('img/tester.png') }}" alt="" class="stack-back">
-                        </div>
-                    </div>
-                </div><!-- Features Item -->
-
-                <div class="row gy-4 align-items-stretch justify-content-between features-item ">
-                    <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-                        <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
-                        <h3>Sunt consequatur ad ut est nulla</h3>
-                        <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit
-                            aut quia voluptatem hic voluptas dolor doloremque.</p>
-                        <ul>
-                            <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</span></li>
-                            <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate
-                                    velit.</span></li>
-                            <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad
-                                    fugiat</span>.</li>
-                        </ul>
-                        <a href="#" class="btn btn-get-started align-self-start">Get Started</a>
-                    </div>
-                </div><!-- Features Item -->
-
-            </div>
-
-        </section><!-- /Features Section -->
-
         <!-- Portfolio Section -->
         <section id="portfolio" class="portfolio section">
-
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Galeri</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, illum.</p>
+                <p>Poster dan Vidio terbaru di Dukcapil Trenggalek</p>
             </div><!-- End Section Title -->
 
             <div class="container">
-
-                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
+                <div class="isotope-layout" data-default-filter=".filter-foto" data-layout="masonry"
+                    data-sort="original-order">
                     <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-app">Foto</li>
-                        <li data-filter=".filter-product">Card</li>
-                        <li data-filter=".filter-branding">Web</li>
+                        <li data-filter=".filter-foto" class="filter-active">Poster</li>
+                        <li data-filter=".filter-vidio">Vidio</li>
+                        {{-- <li data-filter=".filter-branding">Web</li> --}}
                     </ul><!-- End Portfolio Filters -->
 
-                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 1</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1"
-                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                    <div class="filter-foto portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                        <div id="fotoCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach ($foto->filter(fn($item) => str_contains($item['filter'], 'filter-foto'))->chunk(4) as $chunk)
+                                    <div class="carousel-item @if ($loop->first) active @endif">
+                                        <div class="row gy-4">
+                                            @foreach ($chunk as $item)
+                                                <div
+                                                    class="col-lg-3 col-md-6 portfolio-item isotope-item {{ $item['filter'] }}">
+                                                    <img src="{{ asset($item['thumbnail']) }}" class="img-fluid"
+                                                        alt="">
+                                                    <div class="portfolio-info">
+                                                        <h4>{{ $item['judul'] }}</h4>
+                                                        <p>{{ $item['keterangan'] }}</p>
+                                                        <a href="{{ asset($item['thumbnail']) }}"
+                                                            title="{{ $item['judul'] }}"
+                                                            data-gallery="portfolio-gallery-{{ $item['filter'] }}"
+                                                            class="glightbox preview-link"><i
+                                                                class="bi bi-zoom-in"></i></a>
+                                                        <a href="{{ $item['link'] }}" title="More Details"
+                                                            class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                                    </div>
+                                                </div><!-- End Portfolio Item -->
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
-                        </div><!-- End Portfolio Item -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#fotoCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#fotoCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div><!-- End Foto Filter -->
 
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Product 1</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
+                    <div class="filter-vidio portfolio-container" data-aos="fade-up" data-aos-delay="200"
+                        style="display: none;">
+                        <div id="vidioCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach ($foto->filter(fn($item) => str_contains($item['filter'], 'filter-vidio'))->chunk(3) as $chunk)
+                                    <div class="carousel-item @if ($loop->first) active @endif">
+                                        <div class="row gy-4">
+                                            @foreach ($chunk as $item)
+                                                <div
+                                                    class="col-lg-4 col-md-6 portfolio-item isotope-item {{ $item['filter'] }}">
+                                                    <iframe width="100%" height="315" src="{{ $item->vidio }}"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        referrerpolicy="strict-origin-when-cross-origin"
+                                                        allowfullscreen></iframe>
+                                                </div><!-- End Portfolio Item -->
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Branding 1</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 2</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2"
-                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Product 2</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Branding 2</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('img/tester.png') }}" title="Branding 2"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 3</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('img/tester.png') }}" title="App 3"
-                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Product 3</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Branding 3</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('img/tester.png') }}" title="Branding 2"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                    </div><!-- End Portfolio Container -->
-
+                            <button class="carousel-control-prev" type="button" data-bs-target="#vidioCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#vidioCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div><!-- End Vidio Filter -->
                 </div>
-
             </div>
-
         </section><!-- /Portfolio Section -->
 
+        <!-- Custom CSS -->
+        <style>
+            .portfolio-info {
+                position: relative;
+                bottom: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.7);
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 0.5s;
+            }
 
-        <!-- Faq Section -->
-        <section id="faq" class="faq section">
+            .portfolio-item:hover .portfolio-info {
+                opacity: 1;
+            }
 
-            <div class="container">
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-color: #000;
+                border-radius: 50%;
+            }
 
-                <div class="row gy-4">
+            .carousel-item {
+                padding: 15px;
+            }
 
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="content px-xl-5">
-                            <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                            </p>
-                        </div>
-                    </div>
+            .carousel-item img,
+            .carousel-item iframe {
+                border-radius: 10px;
+            }
+        </style>
 
-                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+        <!-- Custom JS for Filter Handling -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const filters = document.querySelectorAll('.portfolio-filters li');
+                const portfolioContainers = document.querySelectorAll('.portfolio-container');
 
-                        <div class="faq-container">
-                            <div class="faq-item faq-active">
-                                <h3><span class="num">1.</span> <span>Non consectetur a erat nam at lectus urna
-                                        duis?</span></h3>
-                                <div class="faq-content">
-                                    <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
-                                        non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
-                                        purus non.</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
+                filters.forEach(filter => {
+                    filter.addEventListener('click', () => {
+                        filters.forEach(f => f.classList.remove('filter-active'));
+                        filter.classList.add('filter-active');
 
-                            <div class="faq-item">
-                                <h3><span class="num">2.</span> <span>Feugiat scelerisque varius morbi enim nunc
-                                        faucibus a pellentesque?</span></h3>
-                                <div class="faq-content">
-                                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                        velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
-                                        donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                                        cursus turpis massa tincidunt dui.</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
-
-                            <div class="faq-item">
-                                <h3><span class="num">3.</span> <span>Dolor sit amet consectetur adipiscing elit
-                                        pellentesque?</span></h3>
-                                <div class="faq-content">
-                                    <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
-                                        pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit.
-                                        Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis
-                                        tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
-
-                            <div class="faq-item">
-                                <h3><span class="num">4.</span> <span>Ac odio tempor orci dapibus. Aliquam eleifend mi
-                                        in nulla?</span></h3>
-                                <div class="faq-content">
-                                    <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                        velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
-                                        donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                                        cursus turpis massa tincidunt dui.</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
-
-                            <div class="faq-item">
-                                <h3><span class="num">5.</span> <span>Tempus quam pellentesque nec nam aliquam sem et
-                                        tortor consequat?</span></h3>
-                                <div class="faq-content">
-                                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in
-                                        est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl
-                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
-                                </div>
-                                <i class="faq-toggle bi bi-chevron-right"></i>
-                            </div><!-- End Faq item-->
-                            <div class="col-xl-5 content about">
-                                <div class="content">
-                                    <a href="/profil/motto-visi-misi" class="read-more"><span>Baca Selengkapnya</span><i
-                                            class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section><!-- /Faq Section -->
+                        const filterValue = filter.getAttribute('data-filter');
+                        portfolioContainers.forEach(container => {
+                            if (container.classList.contains(filterValue.substring(1))) {
+                                container.style.display = 'block';
+                            } else {
+                                container.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
 
         <!-- Team Section -->
         <section id="team" class="team section">
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Team</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <h2>Pegawai</h2>
+                <p>Badan Pengurus Harian Dinas Kependudukan dan Pencatatan Sipil</p>
             </div><!-- End Section Title -->
 
             <div class="container">
@@ -546,43 +472,41 @@
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
                         <div class="member-img">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team/iqbal.svg') }}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/iqqqbaallll/"><i class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-info text-center">
-                            <h4>Walter White</h4>
-                            <span>Chief Executive Officer</span>
-                            <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio
-                                dire flow</p>
+                            <h4>Muhamad Iqbal P. P.</h4>
+                            <span>Ketua</span>
+                            <p>Melayani dengan Integritas, Membangun Kepercayaan, Trenggalek Semakin Didepan</p>
                         </div>
                     </div><!-- End Team Member -->
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
                         <div class="member-img">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team/adinda.svg') }}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/adindaspm88/"><i class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-info text-center">
-                            <h4>Sarah Jhonson</h4>
-                            <span>Product Manager</span>
-                            <p>Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores
-                                exercitationem ut</p>
+                            <h4>Adinda Shakilla P. M.</h4>
+                            <span>Wakil Ketua</span>
+                            <p>Bersama Menuju Pelayanan Prima Trenggalek Jaya</p>
                         </div>
                     </div><!-- End Team Member -->
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
                         <div class="member-img">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team/meischa.svg') }}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
@@ -591,28 +515,26 @@
                             </div>
                         </div>
                         <div class="member-info text-center">
-                            <h4>William Anderson</h4>
-                            <span>CTO</span>
-                            <p>Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel tque
-                                sed facilis at qui</p>
+                            <h4>Meischa Zahra N. A.</h4>
+                            <span>Sekretaris</span>
+                            <p>Administrasi Tertib, Pelayanan Efektif, Trenggalek Meroket</p>
                         </div>
                     </div><!-- End Team Member -->
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
                         <div class="member-img">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team/pandu.svg') }}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/panduwahyuaji_/"><i class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-info text-center">
-                            <h4>Amanda Jepson</h4>
-                            <span>Accountant</span>
-                            <p>Magni voluptatem accusamus assumenda cum nisi aut qui dolorem voluptate sed et veniam quasi
-                                quam consectetur</p>
+                            <h4>Pandu Wahyu A.</h4>
+                            <span>Bendahara</span>
+                            <p>Transparansi dalam Keuangan, Trenggalek Maju dalam Pembangunan</p>
                         </div>
                     </div><!-- End Team Member -->
 
@@ -622,33 +544,14 @@
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/gholidho_herda/"><i class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-info text-center">
-                            <h4>Brian Doe</h4>
-                            <span>Marketing</span>
-                            <p>Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia
-                                impedit laborum velit</p>
-                        </div>
-                    </div><!-- End Team Member -->
-
-                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-                        <div class="member-img">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href="#"><i class="bi bi-twitter"></i></a>
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info text-center">
-                            <h4>Josepha Palas</h4>
-                            <span>Operation</span>
-                            <p>Sint sint eveniet explicabo amet consequatur nesciunt error enim rerum earum et omnis fugit
-                                eligendi cupiditate vel</p>
+                            <h4>Gholidho Herda P.</h4>
+                            <span>Humas</span>
+                            <p>Menghubungkan dengan Hati, Menyampaikan dengan Empati, Trenggalek Bersinergi</p>
                         </div>
                     </div><!-- End Team Member -->
 
@@ -658,8 +561,52 @@
 
         </section><!-- /Team Section -->
 
+        <!-- Faq Section -->
+        <section id="faq" class="faq section">
+            <div class="container">
+                <div class="row gy-4">
 
-        <!-- Recent Posts Section -->
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="content px-xl-5">
+                            <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+                            <p>
+                                Daftar Pertanyaan yang paling sering ditanyakan oleh masyarakat Trenggalek berkaitan dengan
+                                Dukcapil Trenggalek.
+                            </p>
+                            <div class="col-lg-5 content about">
+                                <div class="content" style="width: 10rem">
+                                    <a href="/faq" class="read-more" style="font-size: small"><span>Semua FAQ</span><i
+                                            class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-container">
+                            @foreach ($faqs as $index => $faq)
+                                <div class="faq-item {{ $index === 0 ? 'faq-active' : '' }}">
+                                    <h3><span class="num">{{ $index + 1 }}.</span>
+                                        <span>{{ $faq['pertanyaan'] }}</span>
+                                    </h3>
+                                    <div class="faq-content">
+                                        <p>{{ $faq['jawaban'] }}</p>
+                                    </div>
+                                    <i class="faq-toggle bi bi-chevron-right"></i>
+                                </div><!-- End Faq item-->
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            </div>
+        </section><!-- /Faq Section -->
+
+
+        {{-- <!-- Recent Posts Section -->
         <section id="recent-posts" class="recent-posts section">
             <div class="container section-title" data-aos="fade-up">
                 <h2>Berita Terkini</h2>
@@ -703,105 +650,7 @@
                 @endforeach
             </div>
 
-        </section><!-- /Recent Posts Section -->
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-6">
-
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="200">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <h3>Address</h3>
-                                    <p>A108 Adam Street</p>
-                                    <p>New York, NY 535022</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="300">
-                                    <i class="bi bi-telephone"></i>
-                                    <h3>Call Us</h3>
-                                    <p>+1 5589 55488 55</p>
-                                    <p>+1 6678 254445 41</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="400">
-                                    <i class="bi bi-envelope"></i>
-                                    <h3>Email Us</h3>
-                                    <p>info@example.com</p>
-                                    <p>contact@example.com</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="500">
-                                    <i class="bi bi-clock"></i>
-                                    <h3>Open Hours</h3>
-                                    <p>Monday - Friday</p>
-                                    <p>9:00AM - 05:00PM</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                            data-aos-delay="200">
-                            <div class="row gy-4">
-
-                                <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
-                                        required="">
-                                </div>
-
-                                <div class="col-md-6 ">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email"
-                                        required="">
-                                </div>
-
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                        required="">
-                                </div>
-
-                                <div class="col-md-12">
-                                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                                </div>
-
-                                <div class="col-md-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                    <button type="submit">Send Message</button>
-                                </div>
-
-                            </div>
-                        </form>
-                    </div><!-- End Contact Form -->
-
-                </div>
-
-            </div>
-
-        </section><!-- /Contact Section -->
+        </section><!-- /Recent Posts Section --> --}}
 
         <script>
             // Menangani peristiwa klik pada div dengan kelas clickable-div
