@@ -80,13 +80,22 @@
 @section('container')
 <main class="main">
     <div class="page-title" data-aos="fade">
-        <div class="heading" style="padding:0">
+        <div class="heading">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>FAQ</h2>
+                <p>Frequently Asked Questions</p>
+            </div><!-- End Section Title -->
+            <nav class="breadcrumbs">
+                <div class="container">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">FAQ</li>
+                    </ol>
+                </div>
+            </nav>
             <div class="row d-flex justify-content-center text-center">
                 <section id="faq" class="faq section">
-                    <div class="container section-title" data-aos="fade-up" style="padding-bottom:0;">
-                        <h2>FAQ</h2>
-                        <p>Frequently Asked Questions</p>
-                    </div>
                     <div class="container">
                         <div class="row gy-4">
                             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">

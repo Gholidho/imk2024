@@ -1,12 +1,22 @@
 <style>
     .profile-details {
         line-height: 1.8;
+        max-height: 350px;
+        /* Atur ketinggian maksimum detail profil */
+        overflow-y: auto;
+        /* Tambahkan scroll vertikal jika konten melebihi ketinggian maksimum */
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.15);
+        padding: 1em;
     }
 
     .profile-details .detail-item {
         margin-bottom: 10px;
         display: flex;
         align-items: baseline;
+        padding-bottom: 10px;
+        /* Menambahkan ruang antara setiap baris */
+        border-bottom: 1px solid #ccc;
+        /* Menambahkan garis di bagian bawah setiap baris */
     }
 
     .profile-details .detail-item a,
@@ -16,7 +26,7 @@
     }
 
     .profile-details .detail-item strong {
-        min-width: 200px;
+        min-width: 296px;
         display: inline-block;
         /* Ensure min-width works */
     }
@@ -25,6 +35,7 @@
         display: flex;
         flex-direction: column;
         padding-left: 5em;
+        width: 100%;
         /* Align the address items similarly */
     }
 
@@ -32,7 +43,10 @@
         display: flex;
         align-items: baseline;
         margin-bottom: 5px;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
     }
+
 
     .profile-details .address-details strong {
         min-width: 200px;
@@ -47,14 +61,18 @@
         flex-direction: column;
         align-items: flex-start;
     }
+
+    /* Menghilangkan garis di baris terakhir */
+    .profile-details .detail-item:last-child {
+        border-bottom: none;
+    }
 </style>
 
-<h3 style="text-align: center">
+<h3 style="text-align: center; margin-bottom:1em">
     PROFIL PENYELENGGARA<br>
     PELAYANAN ADMINISTRASI KEPENDUDUKAN<br>
     DI KABUPATEN TRENGGALEK
 </h3>
-<hr>
 
 <div class="profile-details">
     <div class="detail-item"><strong>1. Nama Lembaga </strong> : Dinas Kependudukan dan Pencatatan Sipil</div>
