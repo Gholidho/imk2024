@@ -13,11 +13,12 @@
       font-size: 20px;
     }
     #about a {
-      color: #e84545 !important;
       text-decoration: none;
     }
     #about a .icon-box:hover{
       background-color: #e84545;
+    }
+    #about a .icon-box:hover h3{
       color: white;
     }
     .about .icon-box:hover i {
