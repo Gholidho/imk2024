@@ -64,7 +64,7 @@
                     <p class="mb-2 komen">{{ $comment->comment }}</p>
                     {{-- Display Replies --}}
                     @foreach ($comment->replies as $reply)
-                        <div class="card shadow-sm p-md-2">
+                        <div class="card shadow-sm p-md-2 mb-2">
                             <p class="mb-0">{{ $reply->comment }}</p>
 
                         </div>
