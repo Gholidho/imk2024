@@ -16,13 +16,8 @@
     </style>
 @endsection
 
-@section('header')
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-@endsection
-
 @section('container')
     <main class="main">
-
         <!-- Page Title -->
         <div class="page-title" data-aos="fade">
             <div class="heading">
@@ -40,7 +35,7 @@
             <nav class="breadcrumbs">
                 <div class="container">
                     <ol>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li class="current">Profil</li>
                     </ol>
                 </div>
@@ -67,9 +62,7 @@
             </div>
         </section><!-- /Service Details Section -->
     </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
+
     <script>
         document.querySelectorAll('.service-link').forEach(link => {
             link.addEventListener('click', function(e) {
@@ -105,6 +98,7 @@
                     "targets": 0
                 }],
                 "language": {
+                    search: "Cari :",
                     "paginate": {
                         "previous": "Sebelumnya",
                         "next": "Selanjutnya"

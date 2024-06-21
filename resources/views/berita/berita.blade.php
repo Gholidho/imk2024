@@ -55,7 +55,7 @@
                         <div class="row gy-4 posts-list">
                             <div class="row">
                                 <!-- List Berita -->
-                                <div class="col-lg-7">
+                                <div class="col-lg-8">
                                     <x-card judul='Daftar Berita'>
                                         <!-- Navigasi kategori -->
                                         <nav style="margin-top: 10px">

@@ -1,4 +1,5 @@
 <style>
+    /* Add your custom CSS here */
     .tableBku {
         width: 100%;
         margin-bottom: 1rem;
@@ -93,16 +94,22 @@
     .dataTables_wrapper .dataTables_paginate {
         display: flex;
         justify-content: center;
-        margin: 3rem auto auto;
+        margin: auto auto;
     }
 
     .dataTables_wrapper .dataTables_paginate .paginate_button {
-        font-size: 3px;
+        font-size: 16px;
         box-shadow: none;
     }
 
     .pagination li.active a {
-        background-color: #e84545;
+        background: #e84545;
+        color: #fff;
+        border: none;
+    }
+
+    .pagination li.active a.current {
+        background: #e84545;
         color: #fff;
         border: none;
     }
@@ -137,12 +144,31 @@
     }
 
     .dataTables_filter input:focus {
-        border-color: #007bff;
+        border-color: #e84545;
         /* Warna border saat input difokuskan */
         outline: 0;
         /* Hapus outline bawaan untuk tampilan yang lebih bersih */
         box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
         /* Efek shadow saat input difokuskan */
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+        background: #e84545;
+        color: white;
+        border: none;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+        background: #e84545;
+        color: white;
+        border: none;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+        background: #e84545 !important;
+        color: white !important;
+        border: none !important;
     }
 </style>
 
@@ -151,10 +177,6 @@
     DISDUKCAPIL TRENGGALEK
 </h3>
 <div class="card-body">
-    <div class="input-group mb-3">
-        <input type="text" id="search-all" class="form-control" placeholder="Cari berita...">
-        <span class="input-group-text"><i class="bi bi-search"></i></span>
-    </div>
     <div class="table-responsive">
         <table class="tableBku table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>

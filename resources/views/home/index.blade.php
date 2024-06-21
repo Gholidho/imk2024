@@ -41,28 +41,39 @@
             padding-left: 20px;
             /* Menambahkan jarak pada kolom kedua */
         }
+
+        /* CSS untuk fade-in efek */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+        }
     </style>
     <main class="main">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize AOS
+                AOS.init();
+
+                // Fade-in effect for the image
+                const img = document.querySelector('#hero img');
+                img.classList.add('show');
+            });
+        </script>
         <!-- Hero Section -->
         <section id="hero" class="hero section">
-
-            <img src="img/trenggalek-bg.jpg" alt="" data-aos="fade-in">
-
+            <img src="img/trenggalek-bg.jpg" alt="foto-trenggalek" data-aos="fade-in">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10">
                         <h2 data-aos="fade-up" data-aos-delay="100">Selamat Datang di Dukcapil Trenggalek</h2>
                         <p data-aos="fade-up" data-aos-delay="200">Membahagiakan Masyarakat</p>
                     </div>
-                    <div class="col-lg-5">
-                        <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
-                            <input type="text" class="form-control" placeholder="Cari Informasi">
-                            <input type="submit" class="btn btn-primary" value="Cari">
-                        </form>
-                    </div>
                 </div>
             </div>
-
         </section><!-- /Hero Section -->
 
         <!-- Clients Section -->
@@ -154,7 +165,7 @@
             <h2>Statistik Kependudukan</h2>
         </div>
         <section id="stats" class="stats section">
-            <img src="img/stats-bg.jpg" alt="">
+            <img src="img/statistik.png" alt="background_statistik">
             <div class="container position-relative" data-aos-delay="100">
                 <div class="row gy-1">
                     <div class="col-lg-3 col-md-6">
@@ -603,66 +614,6 @@
 
             </div>
             </div>
-        </section><!-- /Faq Section -->
-
-
-        {{-- <!-- Recent Posts Section -->
-        <section id="recent-posts" class="recent-posts section">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Berita Terkini</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="row" style="padding:1rem;">
-                @foreach ($berita as $berita)
-                    <div class="col-xl-4 col-md-6 ml-auto clickable-div"
-                        data-href="{{ route('berita.detail', $berita->id) }}" data-aos="fade-up" data-aos-delay="200">
-                        <a href="{{ route('berita.detail', $berita->id) }}"
-                            style="text-decoration: none; color: inherit;">
-                            <article class="artikel-berita">
-
-                                <div class="post-img">
-                                    <img src="{{ $berita->tumbnail_berita }}" alt=""
-                                        class="img-fluid img-hover">
-                                </div>
-
-                                <p class="post-category">{{ $berita->kategoriBerita->nama_kategori_berita }}</p>
-
-                                <h2 class="title">
-                                    <a href="{{ route('berita.detail', $berita->id) }}">{{ $berita->judul }}</a>
-                                </h2>
-
-                                <div class="d-flex align-items-center">
-                                    <div class="post-meta">
-                                        <p class="post-date">
-                                            <time
-                                                datetime="{{ $berita->tanggal_berita }}">{{ $berita->tanggal_berita }}</time>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Narasi berita -->
-                                <p>{{ $berita->narasi_berita }}</p>
-
-                            </article>
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-
-        </section><!-- /Recent Posts Section --> --}}
-
-        <script>
-            // Menangani peristiwa klik pada div dengan kelas clickable-div
-            document.querySelectorAll('.clickable-div').forEach(item => {
-                item.addEventListener('click', event => {
-                    // Mengambil URL dari atribut data-href
-                    const url = item.getAttribute('data-href');
-                    // Mengarahkan pengguna ke URL yang ditentukan
-                    window.location.href = url;
-                });
-            });
-        </script>
-
+        </section>
     </main>
 @endsection

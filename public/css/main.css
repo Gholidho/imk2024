@@ -527,7 +527,7 @@ h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+/* #preloader {
     position: fixed;
     inset: 0;
     z-index: 999999;
@@ -558,7 +558,48 @@ h6 {
     100% {
         transform: rotate(360deg);
     }
+} */
+
+#preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    overflow: hidden;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s ease-out;
 }
+
+.loading-text {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: black; /* Add this if you have a specific text color variable */
+}
+
+.progress {
+    width: 50%;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: max-content;
+}
+
+.progress-bar {
+    width: 0;
+    height: 30px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
 
 /*--------------------------------------------------------------
 # Scroll Top Button
@@ -735,9 +776,10 @@ section,
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    opacity: 0.2;
 }
 
-.hero:before {
+.hero::before {
     content: "";
     background: rgba(var(--background-color-rgb), 0.5);
     position: absolute;
@@ -2069,7 +2111,7 @@ section,
 /*--------------------------------------------------------------
 # Pagination Section
 --------------------------------------------------------------*/
-.pagination {
+/* .pagination {
     padding-top: 20px;
     color: rgba(var(--default-color-rgb), 0.6);
 }
@@ -2103,7 +2145,7 @@ section,
 .pagination li.active a,
 .pagination li:hover a {
     color: var(--contrast-color);
-}
+} */
 
 /*--------------------------------------------------------------
 # Blog Details Section

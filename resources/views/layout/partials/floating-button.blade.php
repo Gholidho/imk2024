@@ -1,22 +1,9 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-
 <style>
     /* Add WA floating button CSS */
 </style>
 
-<!-- render the button and direct it to wa.me -->
-{{-- <a href="https://wa.me/6281228430523?text=Hi%20Qiscus" class="floating" target="_blank">
-    <i class="fab fa-whatsapp fab-icon"></i>
-</a> --}}
-
 <!-- Floating Action Button like Google Material -->
 <div class="menu pmd-floating-action" role="navigation">
-    {{-- <a href="javascript:void(0);"
-        class="pmd-floating-action-btn btn btn-sm pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-default"
-        data-title="Supervisor Account">
-        <span class="pmd-floating-hidden">Supervisor Account</span>
-        <i class="material-icons">supervisor_account</i>
-    </a> --}}
     <a href="/pengaduan"
         class="pmd-floating-action-btn btn btn-sm pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-default"
         data-title="Pengaduan"> <!-- Ubah data-title menjadi "Pengaduan" -->
