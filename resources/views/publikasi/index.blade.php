@@ -98,6 +98,83 @@
             background: yellow;
             color: black;
         }
+
+        /* modal  */
+        /* Style untuk modal pop-up */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1500;
+            padding-top: 2em;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            /* Adjusted to be larger */
+            max-width: 1000px;
+            /* Adjusted to allow larger images */
+        }
+
+        @media screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+                /* Full width for smaller screens */
+            }
+        }
+
+        .modal-content,
+        .close {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        .modal-content.zoom {
+            cursor: zoom-out;
+            transition: transform 0.5s ease;
+        }
+
+        .modal-content.zoom:hover {
+            transform: scale(2);
+            /* Adjust the scale factor as needed */
+        }
+
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            right: 50px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 @endsection
 
@@ -157,13 +234,13 @@
                             <div class="accordion" id="accordionExampleDasarHukum">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOneDasarHukum">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOneDasarHukum" aria-expanded="true"
                                             aria-controls="collapseOneDasarHukum">
                                             Undang-undang
                                         </button>
                                     </h2>
-                                    <div id="collapseOneDasarHukum" class="accordion-collapse collapse"
+                                    <div id="collapseOneDasarHukum" class="accordion-collapse collapse show"
                                         aria-labelledby="headingOneDasarHukum" data-bs-parent="#accordionExampleDasarHukum">
                                         <div class="accordion-body">
                                             <table>
@@ -174,8 +251,7 @@
                                                                 Administrasi Kependudukan</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -186,8 +262,7 @@
                                                                 Administrasi Kependudukan</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -217,8 +292,7 @@
                                                                 Kependudukan</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -247,8 +321,7 @@
                                                                 Pencatatan Sipil</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -269,13 +342,13 @@
                                         </div> --}}
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFiveDasarHukum">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseFiveDasarHukum" aria-expanded="false"
                                             aria-controls="collapseFiveDasarHukum">
                                             Peraturan Menteri Dalam Negeri
                                         </button>
                                     </h2>
-                                    <div id="collapseFiveDasarHukum" class="accordion-collapse collapse show"
+                                    <div id="collapseFiveDasarHukum" class="accordion-collapse collapse"
                                         aria-labelledby="headingFiveDasarHukum"
                                         data-bs-parent="#accordionExampleDasarHukum">
                                         <div class="accordion-body">
@@ -288,8 +361,7 @@
                                                                 Kependudukan</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -299,8 +371,7 @@
                                                                 Tahun 2016 Tentang Kartu Identitas Anak</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -311,8 +382,7 @@
                                                             </li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -323,8 +393,7 @@
                                                                 Kependudukan</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -336,8 +405,7 @@
                                                                 Pendaftaran Penduduk Dan Pencatatan Sipil</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -348,8 +416,7 @@
                                                                 Kependudukan</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -377,8 +444,7 @@
                                                             </li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -390,8 +456,7 @@
                                                                 Kabupaten Trenggalek</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -424,8 +489,7 @@
                                                             <li>Rencana Kerja Tahun 2018</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -450,8 +514,7 @@
                                                             <li>Rencana Kerja Tahun 2019</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -476,8 +539,7 @@
                                                             <li>Rencana Kerja Tahun 2020</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -502,8 +564,7 @@
                                                             <li>Rencana Kerja Tahun 2021</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -528,8 +589,7 @@
                                                             <li>Rencana Kerja Tahun 2022</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -538,8 +598,7 @@
                                                             <li>Rencana Kerja Tahun 2022 Perubahan</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -564,8 +623,7 @@
                                                             <li>Rencana Kerja Tahun 2023</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -598,8 +656,7 @@
                                                             <li>LAKIP 2017</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -624,8 +681,7 @@
                                                             <li>LAKIP 2018</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -650,8 +706,7 @@
                                                             <li>LAKIP 2019</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -676,8 +731,7 @@
                                                             <li>LAKIP 2020</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -702,8 +756,7 @@
                                                             <li>LAKIP 2021</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -728,8 +781,7 @@
                                                             <li>LAKIP 2022</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -754,8 +806,7 @@
                                                             <li>LAKIP 2023</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -788,8 +839,7 @@
                                                             <li>Renstra 2016-2021</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -814,8 +864,7 @@
                                                             <li>Renstra 2021-2026</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -848,8 +897,7 @@
                                                             <li>Perjanjian Kinerja 2020</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -874,8 +922,7 @@
                                                             <li>Perjanjian Kinerja 2021</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -900,8 +947,7 @@
                                                             <li>Perjanjian Kinerja 2022</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -926,8 +972,7 @@
                                                             <li>Perjanjian Kinerja 2023</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -961,8 +1006,7 @@
                                                             <li>LFKP 2019</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -995,8 +1039,7 @@
                                                             <li>Laporan Hasil Survei IKM 2017</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1021,8 +1064,7 @@
                                                             <li>Laporan Hasil Survei IKM 2018</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1047,8 +1089,7 @@
                                                             <li>Laporan Hasil Survei IKM 2019</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1073,8 +1114,7 @@
                                                             <li>Laporan Hasil Survei IKM 2020</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1099,8 +1139,8 @@
                                                             <li>Laporan Hasil Survei IKM 2021</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol">
+                                                        <button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1125,8 +1165,7 @@
                                                             <li>Laporan Hasil Survei IKM 2023</li>
                                                         </ul>
                                                     </td>
-                                                    <td class="tombol"><a
-                                                            href="https://drive.google.com/file/d/1DkNr78yJ3y3rhxion8Anrt787dZc5KM8/view?usp=sharing"><button>Download</button></a>
+                                                    <td class="tombol"><button class="myBtn"><a><span>Lihat</span></a></button>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1141,6 +1180,11 @@
 
                 </div>
 
+            </div>
+            <!-- Pop-up modal -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <embed src="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview" class="modal-content" id="pdfContent" type="application/pdf" width="100%" height="600px"/>
             </div>
 
         </section><!-- /Portfolio Section -->
@@ -1274,6 +1318,61 @@
 
                 adjustContainerHeight();
             });
+        });
+    </script>
+    <script>
+        function initModal() {
+            // Dapatkan modal
+            var modal = document.getElementById("imageModal");
+
+            // Dapatkan elemen <embed> dalam modal
+            var pdfContent = document.getElementById("pdfContent");
+
+            // Dapatkan elemen <span> yang menutup modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // Dapatkan semua tombol dengan kelas myBtn
+            var btns = document.getElementsByClassName("myBtn");
+
+            // Tambahkan event listener untuk setiap tombol
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].onclick = function() {
+                    modal.style.display = "block";
+                }
+            }
+
+            // Ketika user mengklik <span> (x), tutup modal
+            span.onclick = function() {
+                modal.style.display = "none";
+                pdfContent.setAttribute("src", "");
+            }
+
+            // Ketika user mengklik di luar modal, tutup modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    pdfContent.setAttribute("src", "");
+                }
+            }
+        }
+
+        // Inisialisasi pertama kali
+        document.addEventListener("DOMContentLoaded", initModal);
+
+        // Pantau perubahan DOM pada elemen tertentu
+        var targetNode = document.getElementById('service-content');
+        var observer = new MutationObserver(function(mutationsList, observer) {
+            for (var mutation of mutationsList) {
+                if (mutation.type === 'childList') {
+                    initModal();
+                }
+            }
+        });
+
+        observer.observe(targetNode, {
+            attributes: false,
+            childList: true,
+            subtree: false
         });
     </script>
 @endsection
