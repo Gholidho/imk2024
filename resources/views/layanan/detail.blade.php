@@ -57,6 +57,84 @@
         .service-details ul li {
             display: list-item;
         }
+
+        /* modal  */
+        /* Style untuk modal pop-up */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1500;
+            padding-top: 2em;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            /* Adjusted to be larger */
+            max-width: 1000px;
+            /* Adjusted to allow larger images */
+        }
+
+        @media screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+                /* Full width for smaller screens */
+            }
+        }
+
+        .modal-content,
+        .close {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        .modal-content.zoom {
+            cursor: zoom-out;
+            transition: transform 0.5s ease;
+        }
+
+        .modal-content.zoom:hover {
+            transform: scale(2);
+            /* Adjust the scale factor as needed */
+        }
+
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            right: 50px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
     </style>
 @endsection
 
@@ -122,10 +200,9 @@
                         </div><!-- End Services List -->
 
                         <div class="service-box">
-                            <h4>Form Download</h4>
+                            <h4>Lihat Form</h4>
                             <div class="download-catalog">
-                                <a href="#"><i class="bi bi-filetype-pdf"></i><span>Permohonan Pengesahan
-                                        Anak</span></a>
+                                <button id="myBtn" class="btn"><a><i class="bi bi-filetype-pdf"></i><span>Form Pengesahan Anak</span></a></button>
                             </div>
                         </div><!-- End Services List -->
 
@@ -261,8 +338,61 @@
                 </div>
 
             </div>
+            <!-- Pop-up modal -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <embed src="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview" class="modal-content" id="pdfContent" type="application/pdf" width="100%" height="600px"/>
+            </div>
 
         </section><!-- /Service Details Section -->
-
+        
     </main>
+    <script>
+        function initModal() {
+            // Dapatkan modal
+            var modal = document.getElementById("imageModal");
+
+            // Dapatkan tombol yang membuka modal
+            var btn = document.getElementById("myBtn");
+
+            // Dapatkan elemen <span> yang menutup modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // Ketika user mengklik tombol, buka modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            // Ketika user mengklik <span> (x), tutup modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // Ketika user mengklik di luar modal, tutup modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
+        // Inisialisasi pertama kali
+        document.addEventListener("DOMContentLoaded", initModal);
+
+        // Pantau perubahan DOM pada elemen tertentu
+        var targetNode = document.getElementById('service-content');
+        var observer = new MutationObserver(function(mutationsList, observer) {
+            for (var mutation of mutationsList) {
+                if (mutation.type === 'childList') {
+                    initModal();
+                }
+            }
+        });
+
+        observer.observe(targetNode, {
+            attributes: false,
+            childList: true,
+            subtree: false
+        });
+    </script>
 @endsection
