@@ -50,7 +50,7 @@
                                 <td>Suprapti, S.Si., M.Si.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6282244957255"
+                                        <a target="_blank" href="https://wa.me/6282244957255"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 082244957255
                                         </a>
@@ -63,7 +63,7 @@
                                 <td>Ririn Eko Utoyo, S.Sos., M.T.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/628125983922"
+                                        <a target="_blank" href="https://wa.me/628125983922"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 08125983922
                                         </a>
@@ -76,7 +76,7 @@
                                 <td>Rina Takarina, S.Sos.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6285334896220"
+                                        <a target="_blank" href="https://wa.me/6285334896220"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 085334896220
                                         </a>
@@ -90,7 +90,7 @@
                                 <td>Sri Widayati, S.E.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6282267882717"
+                                        <a target="_blank" href="https://wa.me/6282267882717"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 082267882717
                                         </a>
@@ -103,7 +103,7 @@
                                 <td>Sri Dwijah, S.E.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6285235902123"
+                                        <a target="_blank" href="https://wa.me/6285235902123"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 085235902123
                                         </a>
@@ -116,7 +116,7 @@
                                 <td>Nur Zohainis R, S.STP.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6282244957154"
+                                        <a target="_blank" href="https://wa.me/6282244957154"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 082244957154
                                         </a>
@@ -130,7 +130,7 @@
                                 <td>Sinta Amelia Pratiwi, S.Kom.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6281333735591"
+                                        <a target="_blank" href="https://wa.me/6281333735591"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 081333735591
                                         </a>
@@ -143,7 +143,7 @@
                                 <td>Pratiwi Pujihastuti, S.Kom.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6285236525606"
+                                        <a target="_blank" href="https://wa.me/6285236525606"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 085236525606
                                         </a>
@@ -157,7 +157,7 @@
                                 <td>Agus Fian Novandia, S.H.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6282331751492"
+                                        <a target="_blank" href="https://wa.me/6282331751492"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 082331751492
                                         </a>
@@ -170,7 +170,7 @@
                                 <td>Rizqi Nur W, S.STP.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6282244957153"
+                                        <a target="_blank" href="https://wa.me/6282244957153"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 082244957153
                                         </a>
@@ -183,7 +183,7 @@
                                 <td>Satriana Sulistyowati, SH</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6282331751284"
+                                        <a target="_blank" href="https://wa.me/6282331751284"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 082331751284
                                         </a>
@@ -196,7 +196,7 @@
                                 <td>Edi Kurniawan, S.Sos.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6285734314515"
+                                        <a target="_blank" href="https://wa.me/6285734314515"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 085734314515
                                         </a>
@@ -210,7 +210,7 @@
                                 <td>Glen Gueni Lajuli, SH.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6281334108486"
+                                        <a target="_blank" href="https://wa.me/6281334108486"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 081334108486
                                         </a>
@@ -224,7 +224,7 @@
                                 <td>Frans Yuni A., S.STP., M.M.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6282331751276"
+                                        <a target="_blank" href="https://wa.me/6282331751276"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 082331751276
                                         </a>
@@ -237,7 +237,7 @@
                                 <td>Ratna Sari, S.Kom.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6282344420332"
+                                        <a target="_blank" href="https://wa.me/6282344420332"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 082344420332
                                         </a>
@@ -250,7 +250,7 @@
                                 <td>Bagus Aryo Purnomo, S.Kom.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6281333852068"
+                                        <a target="_blank" href="https://wa.me/6281333852068"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 081333852068
                                         </a>
@@ -264,60 +264,7 @@
                                 <td>Ade Sam Putri, S.STP., M.Si.</td>
                                 <td>
                                     <span>
-                                        <a href="https://wa.me/6282244957149"
-                                            class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
-                                            <i class="bi bi-whatsapp"></i> 082244957149
-                                        </a>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>18</td>
-                                <td>Kabid Pemanfaatan Data dan Inovasi Pelayanan</td>
-                                <td>Frans Yuni A., S.STP., M.M.</td>
-                                <td>
-                                    <span>
-                                        <a href="https://wa.me/6282331751276"
-                                            class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
-                                            <i class="bi bi-whatsapp"></i> 082331751276
-                                        </a>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>19</td>
-                                <td>Kasi Pengolahan dan Penyajian Data Kependudukan</td>
-                                <td>Ratna Sari, S.Kom.</td>
-                                <td>
-                                    <span>
-                                        <a href="https://wa.me/6282344420332"
-                                            class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
-                                            <i class="bi bi-whatsapp"></i> 082344420332
-                                        </a>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>20</td>
-                                <td>Kasi Pengembangan Aplikasi</td>
-                                <td>Bagus Aryo Purnomo, S.Kom.</td>
-                                <td>
-                                    <span>
-                                        <a href="https://wa.me/6281333852068"
-                                            class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
-                                            <i class="bi bi-whatsapp"></i> 081333852068
-                                        </a>
-                                    </span>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>21</td>
-                                <td>Kasi Inovasi Pelayanan</td>
-                                <td>Ade Sam Putri, S.STP., M.Si.</td>
-                                <td>
-                                    <span>
-                                        <a href="https://wa.me/6282244957149"
+                                        <a target="_blank" href="https://wa.me/6282244957149"
                                             class="btn btn-whatsapp btn-user btn-circle btn-sm whatsapp-btn">
                                             <i class="bi bi-whatsapp"></i> 082244957149
                                         </a>

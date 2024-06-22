@@ -9,7 +9,7 @@ class Layanan extends Model
 {
     use HasFactory;
 
-    public $incrementing = false;
+    public $incrementing = true;
     protected $table = 'layanan';
     public $timestamps = false;
     protected $keyType = 'string';
@@ -22,12 +22,8 @@ class Layanan extends Model
         'slug',
         'persyaratan',
         'mekanisme_prosedur',
+        'waktu_penyelesaian',
         'biaya_tarif',
         'produk_pelayanan'
     ];
-
-    public function judulLayanan()
-    {
-        return $this->belongsTo(KategoriBerita::class, 'judul_layanan');
-    }
 }

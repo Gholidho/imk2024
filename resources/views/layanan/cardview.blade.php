@@ -78,7 +78,6 @@
                                     <div class="icon-box">
                                         <i class="{{ $layanan_item['icon'] }}"></i>
                                         <h3>{{ $layanan_item['judul_layanan'] }}</h3>
-                                        {{-- <p>{{ $layanan_item['deskripsi'] }}</p> --}}
                                     </div>
                                 </a>
                             </div> <!-- End Icon Box -->
@@ -87,7 +86,7 @@
                 </div>
             </div>
         </section><!-- /About Section -->
-        
+
     </main>
     <script>
         function adjustIconBoxHeight() {

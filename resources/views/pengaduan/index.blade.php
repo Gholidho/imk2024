@@ -213,6 +213,40 @@
         .modal-content .success {
             background: none;
         }
+
+        .phone-input-container {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .country-code {
+            padding: 10px;
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 16px;
+            border-right: 1px solid #ddd;
+        }
+
+        .phone-input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .phone-input::placeholder {
+            color: #aaa;
+        }
+
+        .phone-input-container:hover,
+        .phone-input-container:focus-within {
+            border-color: #999;
+        }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 @endsection
@@ -316,28 +350,32 @@
                                                 <div class="row gy-4">
                                                     <h3 style="font-size: 25px; font-weight: bold;">Form Aduan</h3>
                                                     <div class="col-md-12">
-                                                        <input type="text" name="name" class="form-control"
-                                                            placeholder="Nama" required>
+                                                        <input type="text" id="name" name="name"
+                                                            class="form-control" placeholder="Nama" required>
                                                     </div>
                                                     <div class="col-md-12">
-                                                        <input type="text" class="form-control" name="nik"
-                                                            placeholder="NIK" required pattern="\d{16}" minlength="16"
-                                                            maxlength="16"
+                                                        <input type="text" id="nik" class="form-control"
+                                                            name="nik" placeholder="NIK" required pattern="\d{16}"
+                                                            minlength="16" maxlength="16"
                                                             oninvalid="this.setCustomValidity('NIK harus terdiri dari 16 digit angka')"
                                                             oninput="this.setCustomValidity('')">
                                                     </div>
                                                     <div class="col-md-12">
-                                                        <input type="text" class="form-control" name="phone"
-                                                            placeholder="Nomor HP" required pattern="[0-9]+"
-                                                            oninvalid="this.setCustomValidity('Nomor HP hanya bisa diisi dengan angka')"
-                                                            oninput="this.setCustomValidity('')">
+                                                        <div class="phone-input-container">
+                                                            <div class="country-code">+62</div>
+                                                            <input type="text" id="phone"
+                                                                class="form-control phone-input" name="phone"
+                                                                placeholder="Nomor HP" required pattern="[0-9]+"
+                                                                oninvalid="this.setCustomValidity('Nomor HP hanya bisa diisi dengan angka')"
+                                                                oninput="this.setCustomValidity('')">
+                                                        </div>
                                                     </div>
                                                     <div class="col-md-12">
-                                                        <input type="text" class="form-control" name="subject"
-                                                            placeholder="Persoalan" required>
+                                                        <input type="text" id="subject" class="form-control"
+                                                            name="subject" placeholder="Persoalan" required>
                                                     </div>
                                                     <div class="col-md-12">
-                                                        <textarea class="form-control" name="message" rows="6" placeholder="Deskripsi Aduan" required></textarea>
+                                                        <textarea class="form-control" id="message" name="message" rows="6" placeholder="Deskripsi Aduan" required></textarea>
                                                     </div>
                                                     <div class="col-md-12">
                                                         <p id="error-message" class="error-message"
@@ -372,7 +410,7 @@
                                                         <p>Apakah Anda yakin ingin mengirim pesan ini?</p>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn1" id="confirmNo"
+                                                        <button type="button" class="btn1" id="closeModal"
                                                             data-dismiss="modal">Tidak</button>
                                                         <button type="button" class="btn2" id="confirmYes">Ya</button>
                                                     </div>
@@ -408,6 +446,10 @@
                                                         backdrop: 'static',
                                                         keyboard: false
                                                     }).modal('show');
+                                                });
+
+                                                $('#closeModal').on('click', function() {
+                                                    $('#confirmModal').modal('hide');
                                                 });
 
                                                 $('#confirmNo').on('click', function() {
