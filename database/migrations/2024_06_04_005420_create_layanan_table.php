@@ -18,6 +18,12 @@ class CreateLayananTable extends Migration
             $table->string('judul_layanan');
             $table->text('deskripsi');
             $table->string('icon');
+            $table->string('slug');
+            $table->string('persyaratan');
+            $table->string('mekanisme_prosedur');
+            $table->string('waktu_penyelesaian');
+            $table->string('biaya_tarif');
+            $table->string('produk_pelayanan');
             $table->timestamps();
         });
     }

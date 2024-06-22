@@ -147,10 +147,8 @@
                 <div class="container">
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
-                            <h1 class="">Akta Pengesahan Anak</h1>
-                            <p class="mb-0">Pengesahan anak merupakan pengesahan status seorang anak yang lahir dari
-                                perkawinan yang telah sah menurut hukum agama, pada saat pencatatan perkawinan dari kedua
-                                orang tua anak tersebut telah sah menurut hukum negara.</p>
+                            <h1 class="">{{ $layanan->judul_layanan }}</h1>
+                        <p class="mb-0">{{ $layanan->deskripsi }}</p>
                         </div>
                     </div>
                 </div>
@@ -159,7 +157,7 @@
                 <div class="container">
                     <ol>
                         <li><a href="{{ '/' }}">Home</a></li>
-                        <li><a href="{{ route('layanan') }}">Layanan</a></li>
+                        <li><a href="{{ url('/layanan') }}">Layanan</a></li>
                         <li class="current">Akta Pengesahan Anak</li>
                     </ol>
                 </div>
@@ -178,31 +176,19 @@
                         <div class="service-box">
                             <h4>Daftar Layanan</h4>
                             <div class="services-list">
-                                <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Akta
-                                        Pengesahan Anak</span></a>
-                                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Akta Pengakuan
-                                        Anak</span></a>
-                                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Akta Perceraian</span></a>
-                                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Akta Perkawinan</span></a>
-                                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Akta Kematian</span></a>
-                                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Akta Kelahiran</span></a>
-                                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Surat Keterangan
-                                        Pengangkatan Anak</span></a>
-                                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Surat Keterangan Pembatalan
-                                        Cerai</span></a>
-                                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Surat Keterangan Pembatalan
-                                        Perkawinan</span></a>
-                                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Surat Keterangan Kematian
-                                        untuk Orang Asing</span></a>
-                                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Surat Keterangan Tempat
-                                        Tinggal untuk Orang Asing</span></a>
+                                @foreach($layanans as $item)
+                                    <a href="{{ route('layanan.show', $item->slug) }}" class="{{ $item->slug == $layanan->slug ? 'active' : '' }}">
+                                        <i class="bi bi-arrow-right-circle"></i>
+                                        <span>{{ $item->judul_layanan }}</span>
+                                    </a>
+                                @endforeach
                             </div>
                         </div><!-- End Services List -->
 
                         <div class="service-box">
                             <h4>Lihat Form</h4>
                             <div class="download-catalog">
-                                <button id="myBtn" class="btn"><a><i class="bi bi-filetype-pdf"></i><span>Form Pengesahan Anak</span></a></button>
+                                <button id="myBtn" class="btn"><a><i class="bi bi-filetype-pdf"></i><span>Form {{ $layanan->judul_layanan }}</span></a></button>
                             </div>
                         </div><!-- End Services List -->
 
@@ -230,32 +216,7 @@
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <ul>
-                                            <li>Daftar antrian online, pendaftaran melalui petugas registrasi desa atau
-                                                pendaftaran pribadi mendesak tanpa daftar antrian (dengan rekom dari
-                                                Instansi)</li>
-                                            <li>Daftar antrian online atau melalui petugas registrasi desa</li>
-                                            <li>Penduduk WNI di wilayah NKRI:
-                                                <ol>
-                                                    <li>Kutipan akta kelahiran</li>
-                                                    <li>Kutipan akta perkawinan yang menerangkan terjadinya peristiwa
-                                                        perkawinan agama atau kepercayaan terhadap Tuhan Yang Maha Esa
-                                                        terjadi sebelum kelahiran anak</li>
-                                                    <li>KK orang tua</li>
-                                                    <li>KTP-el</li>
-                                                </ol>
-                                            </li>
-                                            <li>Penduduk Orang Asing di wilayah NKRI :
-                                                <ol>
-                                                    <li>Kutipan akta kelahiran</li>
-                                                    <li>Kutipan akta perkawinan yang menerangkan terjadinya peristiwa
-                                                        perkawinan agama atau kepercayaan terhadap Tuhan Yang Maha Esa
-                                                        terjadi sebelum kelahiran anak</li>
-                                                    <li>KK orang tua</li>
-                                                    <li>Dokumen Perjalanan bagi ayah atau ibu Orang Asing</li>
-                                                </ol>
-                                            </li>
-                                        </ul>
+                                        {!! $layanan->persyaratan !!}
                                     </div>
                                 </div>
                             </div>
@@ -269,20 +230,7 @@
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <ol>
-                                            <li>Daftar antrian online, pendaftaran melalui petugas registrasi desa atau
-                                                pendaftaran pribadi mendesak tanpa daftar antrian (dengan rekom dari
-                                                Instansi)</li>
-                                            <li>Mengisi Formulir permohonan</li>
-                                            <li>Mengajukan permohonan secara tertulis dengan dilengkapi persyaratan sesuai
-                                                dengan ketentuan lewat loket pelayanan.</li>
-                                            <li>Menerima dan memeriksa permohonan untuk disesuaikan dengan persyaratan yang
-                                                telah ditentukan.</li>
-                                            <li>Petugas operator memproses permohonan Akta Pengesahan Anak tersebut.</li>
-                                            <li>Pemeriksaan akhir hasil print out operator.</li>
-                                            <li>Penandatanganan Akta Pengesahan Anak oleh Kepala Dinas Kependudukan dan
-                                                Pencatatan Sipil Kabupaten Trenggalek.</li>
-                                        </ol>
+                                        {!! $layanan->mekanisme_prosedur !!}
                                     </div>
                                 </div>
                             </div>
@@ -296,9 +244,7 @@
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <p>Selambat – lambatnya dalam waktu 14 (empat belas) hari sejak diterimanya berkas
-                                            dan dinyatakan lengkap, pemohon dapat menerima Pencatatan Akta Pengesahan Anak.
-                                        </p>
+                                        <p>{!! $layanan->waktu_penyelesaian !!}</p>
                                     </div>
                                 </div>
                             </div>
@@ -313,7 +259,7 @@
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <p>Tidak dipungut biaya</p>
+                                        <p>{!! $layanan->biaya_tarif !!}</p>
                                     </div>
                                 </div>
                             </div>
@@ -328,7 +274,7 @@
                                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <p>Produk layanannya adalah kutipan Akta Pengesahan Anak</p>
+                                        <p>{!! $layanan->produk_pelayanan !!}</p>
                                     </div>
                                 </div>
                             </div>

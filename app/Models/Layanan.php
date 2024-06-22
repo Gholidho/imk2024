@@ -18,7 +18,12 @@ class Layanan extends Model
         'id',
         'icon',
         'judul_layanan',
-        'deskripsi'
+        'deskripsi',
+        'slug',
+        'persyaratan',
+        'mekanisme_prosedur',
+        'biaya_tarif',
+        'produk_pelayanan'
     ];
 
     public function judulLayanan()

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\LayananController;
 
 
 /*
@@ -65,12 +66,8 @@ Route::prefix('/profil')->group(function () {
 
 #routes layanan
 Route::prefix('/layanan')->group(function () {
-    Route::get('/', function () {
-        return view('layanan.cardview');
-    })->name('layanan');
-    Route::get('/akta-pengesahan-anak', function () {
-        return view('layanan.detail');
-    })->name('layanan.detail');
+    Route::get('/', [LayananController::class, 'index'])->name('layanan.index');
+    Route::get('/{slug}', [LayananController::class, 'show'])->name('layanan.show');
 });
 
 

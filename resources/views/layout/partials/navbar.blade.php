@@ -3,7 +3,7 @@
         <li><a href="{{ url('/') }}" class="{{ request()->is('/') ? 'active' : '' }}">Beranda</a></li>
         <li><a href="{{ route('profil.index') }}" class="{{ request()->is('profil') ? 'active' : '' }}">Profil</a></li>
         <li><a href="{{ url('/berita') }}" class="{{ request()->is('berita') ? 'active' : '' }}">Berita</a></li>
-        <li><a href="{{ route('layanan') }}" class="{{ request()->is('layanan') ? 'active' : '' }}">Layanan</a></li>
+        <li><a href="{{ url('/layanan') }}" class="{{ request()->is('layanan') ? 'active' : '' }}">Layanan</a></li>
         <li><a href="{{ route('publikasi') }}" class="{{ request()->is('publikasi') ? 'active' : '' }}">Publikasi</a>
         </li>
         <li class="dropdown"><a href="#"
