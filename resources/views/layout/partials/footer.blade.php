@@ -11,10 +11,13 @@
                 <p>NGEMPLAK, SUMBERGEDONG, KECAMATAN TRENGGALEK, KABUPATEN TRENGGALEK, PROVINSI JAWA TIMUR, KODE POS
                     66315</p>
                 <div class="social-links d-flex mt-4">
-                    <a href="mailto:disdukcapil.trenggalek@gmail.com"><i class="bi bi-envelope"></i></a>
-                    <a href="https://www.facebook.com/disdukcapil.trenggalek/"><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.instagram.com/disdukcapil.trenggalek/"><i class="bi bi-instagram"></i></a>
-                    <a href="https://www.youtube.com/channel/UCEEESG__YcRnf9qXKIxcIwQ"><i class="bi bi-youtube"></i></a>
+                    <a href="mailto:disdukcapil.trenggalek@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+                    <a href="https://www.facebook.com/disdukcapil.trenggalek/" target="_blank"><i
+                            class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/disdukcapil.trenggalek/" target="_blank"><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCEEESG__YcRnf9qXKIxcIwQ" target="_blank"><i
+                            class="bi bi-youtube"></i></a>
                 </div>
                 <div></div>
 

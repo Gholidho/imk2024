@@ -64,7 +64,7 @@
             });
         </script>
         <!-- Hero Section -->
-        <section id="hero" class="hero section">
+        <section id="hero" class="hero section" style="background-color: #f4f4f4;">
             <img src="img/trenggalek-bg.jpg" alt="foto-trenggalek" data-aos="fade-in">
             <div class="container">
                 <div class="row">
@@ -77,22 +77,15 @@
         </section><!-- /Hero Section -->
 
         <!-- Clients Section -->
-        <section id="clients" class="clients section">
-
+        <section id="clients" class="clients section" style="background-color: #f4f4f4;">
             <div class="container" data-aos="fade-up">
-
             </div>
-
             </div>
-
         </section><!-- /Clients Section -->
 
-        <!-- About Section -->
-        <section id="about" class="about section">
-
+        <section id="about" class="about section" style="background-color: #f4f4f4;">
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="row align-items-xl-center gy-5">
-
                     <div class="col-xl-5 content">
                         <h3>Tentang Dukcapil</h3>
                         <h2>Dukcapil Trenggalek</h2>
@@ -102,35 +95,25 @@
                         <a href="/profil/motto-visi-misi" class="read-more"><span>Baca Selengkapnya</span><i
                                 class="bi bi-arrow-right"></i></a>
                     </div>
-
                     <div class="col-xl-7">
                         <div class="row gy-4 icon-boxes">
-
                             <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                                 <div class="icon-box">
                                     <i class="bi bi-calendar-event"></i>
-                                    <h3>Jam Kerja </h3>
+                                    <h3>Jam Kerja</h3>
                                     <p>
                                     <table>
                                         <tr>
-                                            <td>
-                                                Senin - Kamis
-                                            </td>
-                                            <td>
-                                                07.00 - 12.00 WIB
-                                            </td>
+                                            <td>Senin - Kamis</td>
+                                            <td>07.00 - 12.00 WIB</td>
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <td>12.00 - 15.15 WIB</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                Jum'at
-                                            </td>
-                                            <td>
-                                                07.00 - 11.30 WIB
-                                            </td>
+                                            <td>Jum'at</td>
+                                            <td>07.00 - 11.30 WIB</td>
                                         </tr>
                                         <tr>
                                             <td></td>
@@ -139,28 +122,50 @@
                                     </table>
                                     </p>
                                 </div>
-                            </div> <!-- End Icon Box -->
-
+                            </div>
                             <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                                 <div class="icon-box">
                                     <i class="bi bi-map"></i>
                                     <h3>Lokasi</h3>
-                                    <p style="font-size: small">Jl. Brigjen Sutran No. 17 , Sumbergedong, Kec. Trenggalek.
-                                        Kab. Trenggalek , Jawa
-                                        Timur 66315. Telepon / Fax : 0355-791160 </p>
+                                    <p style="font-size: small">Jl. Brigjen Sutran No. 17, Sumbergedong, Kec. Trenggalek,
+                                        Kab. Trenggalek, Jawa Timur 66315. <br>Telepon / Fax : 0355-791160 </p>
                                 </div>
-                            </div> <!-- End Icon Box -->
-
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="icon-box">
+                                    <i class="bi bi-phone"></i>
+                                    <h3>Kontak</h3>
+                                    <p style="font-size: small">
+                                        Telepon: 0355-791160 <br>
+                                        Email: <a
+                                            href="mailto:disdukcapil.trenggalek@gmail.com">disdukcapil.trenggalek</a><br>
+                                        Facebook: <a href="https://www.facebook.com/disdukcapil.trenggalek/"
+                                            target="_blank">disdukcapil.trenggalek</a><br>
+                                        Instagram: <a href="https://www.instagram.com/disdukcapil.trenggalek/"
+                                            target="_blank">disdukcapil.trenggalek</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                                <div class="icon-box">
+                                    <i class="bi bi-card-list"></i>
+                                    <h3>Layanan</h3>
+                                    <p style="font-size: small">
+                                        - Pendaftaran Kartu Tanda Penduduk (KTP) <br>
+                                        - Pendaftaran Akta Kelahiran <br>
+                                        - Pendaftaran Akta Pernikahan <br>
+                                        - dan Masih Banyak Lagi >
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
+        </section>
 
-        </section><!-- /About Section -->
 
         <!-- Stats Section -->
-        <div class="section-title-stats"></div>
         <div class="section-title-stats">
             <h2>Statistik Kependudukan</h2>
         </div>
@@ -328,7 +333,7 @@
                     data-sort="original-order">
                     <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
                         <li data-filter=".filter-foto" class="filter-active">Poster</li>
-                        <li data-filter=".filter-vidio">Vidio</li>
+                        <li data-filter=".filter-vidio">Video</li>
                         {{-- <li data-filter=".filter-branding">Web</li> --}}
                     </ul><!-- End Portfolio Filters -->
 
