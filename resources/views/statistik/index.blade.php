@@ -162,7 +162,7 @@
                 <div class="row align-items-xl-center gy-5">
                     <div class="row gy-4 icon-boxes">
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                            <button id="myBtn" class="btn">
+                            <button class="btn myBtn" data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
                                 <div class="icon-box">
                                     <i class="fa-regular fa-calendar"></i>
                                     <h3>Usia</h3>
@@ -171,7 +171,7 @@
                             </button>
                         </div> <!-- End Icon Box -->
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                            <button id="myBtn" class="btn">
+                            <button class="btn myBtn" data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
                                 <div class="icon-box">
                                     <i class="fa-solid fa-venus-mars"></i>
                                     <h3>Jenis Kelamin</h3>
@@ -180,7 +180,7 @@
                             </button>
                         </div> <!-- End Icon Box -->
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                            <button id="myBtn" class="btn">
+                            <button class="btn myBtn" data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
                                 <div class="icon-box">
                                     <i class="fa-solid fa-school"></i>
                                     <h3>Pendidikan</h3>
@@ -189,7 +189,7 @@
                             </button>
                         </div> <!-- End Icon Box -->
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                            <button id="myBtn" class="btn">
+                            <button class="btn myBtn" data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
                                 <div class="icon-box">
                                     <i class="fa-solid fa-address-card"></i>
                                     <h3>Kepemilikan KIA</h3>
@@ -204,34 +204,30 @@
         <!-- Pop-up modal -->
         <div id="imageModal" class="modal">
             <span class="close">&times;</span>
-            <embed src="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview" class="modal-content" id="pdfContent" type="application/pdf" width="100%" height="600px"/>
+            <embed src="" class="modal-content" id="pdfContent" type="application/pdf" width="100%" height="600px"/>
         </div>
     </main>
     <script>
+        // Dapatkan modal
+        var modal = document.getElementById("imageModal");
+
+        // Dapatkan elemen <embed> dalam modal
+        var pdfContent = document.getElementById("pdfContent");
+
+        // Dapatkan elemen <span> yang menutup modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Dapatkan semua tombol dengan kelas myBtn
+        var btns = document.getElementsByClassName("myBtn");
+
         function initModal() {
-            // Dapatkan modal
-            var modal = document.getElementById("imageModal");
 
-            // Dapatkan tombol yang membuka modal
-            var btn = document.getElementById("myBtn");
-
-            // Dapatkan elemen <span> yang menutup modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // Ketika user mengklik tombol, buka modal 
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
-
-            // Ketika user mengklik <span> (x), tutup modal
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-
-            // Ketika user mengklik di luar modal, tutup modal
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
+            // Tambahkan event listener untuk setiap tombol
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].onclick = function() {
+                    var pdfLink = this.getAttribute("data-pdf");
+                    pdfContent.setAttribute("src", pdfLink);
+                    modal.style.display = "block";
                 }
             }
         }
@@ -239,20 +235,18 @@
         // Inisialisasi pertama kali
         document.addEventListener("DOMContentLoaded", initModal);
 
-        // Pantau perubahan DOM pada elemen tertentu
-        var targetNode = document.getElementById('service-content');
-        var observer = new MutationObserver(function(mutationsList, observer) {
-            for (var mutation of mutationsList) {
-                if (mutation.type === 'childList') {
-                    initModal();
-                }
-            }
-        });
+        // Ketika user mengklik <span> (x), tutup modal
+        span.onclick = function() {
+            modal.style.display = "none";
+            pdfContent.setAttribute("src", "");
+        }
 
-        observer.observe(targetNode, {
-            attributes: false,
-            childList: true,
-            subtree: false
-        });
+        // Ketika user mengklik di luar modal, tutup modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                pdfContent.setAttribute("src", "");
+            }
+        }
     </script>
 @endsection
