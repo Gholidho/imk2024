@@ -15,6 +15,10 @@
             height: 38px;
         }
 
+        .contact .info-item p{
+            font-size: 0.725rem;
+        }
+
         .social-icon a,
         .info-item a {
             color: #E84545;
@@ -293,15 +297,15 @@
                                                         <i class="bi bi-whatsapp"></i>
                                                         <h3>Sosial Media</h3>
                                                         <p class="social-icon"><a
-                                                                href="https://www.facebook.com/disdukcapil.trenggalek"><i
+                                                                href="https://www.facebook.com/disdukcapil.trenggalek" target="_blank"><i
                                                                     class="fab fa-facebook-f"></i>
                                                                 disdukcapil.trenggalek</a></p>
                                                         <p class="social-icon"><a
-                                                                href="https://www.instagram.com/disdukcapil.trenggalek"><i
+                                                                href="https://www.instagram.com/disdukcapil.trenggalek" target="_blank"><i
                                                                     class="fab fa-instagram"></i> disdukcapil.trenggalek</a>
                                                         </p>
                                                         <p class="social-icon"><a
-                                                                href="https://www.youtube.com/channel/UCEEESG__YcRnf9qXKIxcIwQ"><i
+                                                                href="https://www.youtube.com/channel/UCEEESG__YcRnf9qXKIxcIwQ" target="_blank"><i
                                                                     class="fab fa-youtube"></i> disdukcapil trenggalek</a>
                                                         </p>
                                                     </div>
@@ -320,7 +324,7 @@
                                                         <i class="bi bi-envelope"></i>
                                                         <h3>Alamat Email</h3>
                                                         <p><a
-                                                                href="mailto:disdukcapil.trenggalek@gmail.com">disdukcapil.trenggalek@gmail.com</a>
+                                                                href="mailto:disdukcapil.trenggalek@gmail.com" target="_blank">disdukcapil.trenggalek@gmail.com</a>
                                                         </p>
                                                     </div>
                                                 </div><!-- End Info Item -->
@@ -329,7 +333,7 @@
                                                     <div class="info-item" data-aos="fade" data-aos-delay="400">
                                                         <img src="img/lapor.png" alt="Alternative text for the image">
                                                         <h3>Laporan Pengaduan</h3>
-                                                        <p><a href="https://www.lapor.go.id/">Lapor.id</a></p><br>
+                                                        <p><a href="https://www.lapor.go.id/" target="_blank">Lapor.id</a></p><br>
                                                     </div>
                                                 </div><!-- End Info Item -->
 
@@ -365,8 +369,8 @@
                                                             <div class="country-code">+62</div>
                                                             <input type="text" id="phone"
                                                                 class="form-control phone-input" name="phone"
-                                                                placeholder="Nomor HP" required pattern="[0-9]+"
-                                                                oninvalid="this.setCustomValidity('Nomor HP hanya bisa diisi dengan angka')"
+                                                                placeholder="Nomor HP" required pattern="^\d{8,13}$" minlength="8" maxlength="13"
+                                                                oninvalid="this.setCustomValidity('Hanya Angka dengan Banyak digit 8-13')"
                                                                 oninput="this.setCustomValidity('')">
                                                         </div>
                                                     </div>
@@ -481,6 +485,36 @@
         </div>
         </section><!-- /Contact Section -->
     </main>
+    <script>
+        function adjustInfoItemHeight() {
+            // Get all the info-item elements
+            const infoItems = document.querySelectorAll('.info-item');
+            let maxHeight = 0;
+
+            // Reset heights to auto to recalculate properly
+            infoItems.forEach(item => {
+                item.style.height = 'auto';
+            });
+
+            // Calculate the maximum height
+            infoItems.forEach(item => {
+                const itemHeight = item.offsetHeight;
+                if (itemHeight > maxHeight) {
+                    maxHeight = itemHeight;
+                }
+            });
+
+            console.log(maxHeight);
+
+            // Set the height of all info-items to the maximum height
+            infoItems.forEach(item => {
+                item.style.height = maxHeight + 'px';
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", adjustInfoItemHeight);
+        window.addEventListener("resize", adjustInfoItemHeight);
+    </script>
 @endsection
 
 @section('scripts')
