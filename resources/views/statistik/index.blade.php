@@ -13,6 +13,7 @@
 
         .about .icon-box h3 {
             font-size: 20px;
+            margin-top: 1rem;
         }
 
         #about button {
@@ -148,12 +149,234 @@
             </nav>
         </div><!-- End Page Title -->
 
-        <section id="chart" class="chart section">
-            <div class="container section-title" data-aos="fade-up">
+        <section id="chart" class="chart section py-5">
+            <div class="container section-title text-center" data-aos="fade-up">
                 <h2>Jumlah Penduduk di Kabupaten Trenggalek Berdasarkan Kecamatan</h2>
+                <p class="text-muted">Filter data berdasarkan wilayah, jenis kelamin, dan tahun.</p>
             </div>
-            <h3>Chart di sini</h3>
+            <div class="container">
+                <div class="chart-container bg-white p-4 shadow-sm rounded mx-auto" style="max-width: 70%;">
+                    <div class="row mb-4">
+                        <div class="col-md-4 mb-3">
+                            <label for="wilayah" class="form-label">Wilayah:</label>
+                            <select id="wilayah" class="form-select form-select-sm">
+                                <option value="semua">Semua</option>
+                                <!-- Populate options with JavaScript if needed -->
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="jenisKelamin" class="form-label">Jenis Kelamin:</label>
+                            <select id="jenisKelamin" class="form-select form-select-sm">
+                                <option value="semua">Semua</option>
+                                <option value="laki">Laki-laki</option>
+                                <option value="perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="tahun" class="form-label">Tahun:</label>
+                            <select id="tahun" class="form-select form-select-sm">
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="{{ asset('js/statistik.js') }}"></script>
         </section>
+
+        <style>
+            .chart-container {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            @media (max-width: 1200px) {
+                .chart-container {
+                    max-width: 75%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .chart-container {
+                    max-width: 100%;
+                }
+            }
+
+            .form-select-sm {
+                font-size: 0.875rem;
+            }
+
+            .form-label {
+                font-size: 0.875rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+                color: #6c757d;
+            }
+        </style>
+
+        <section id="lineChartSection" class="line-chart section py-5" style="background-color: #f4f4f4">
+            <div class="container section-title text-center" data-aos="fade-up">
+                <h2>Laju Pertumbuhan Penduduk Trenggalek Berdasarkan Kecamatan</h2>
+                <p class="text-muted">Filter data berdasarkan wilayah, jenis kelamin</p>
+            </div>
+            <div class="container">
+                <div class="chart-container bg-white p-4 shadow-sm rounded mx-auto" style="max-width: 70%;">
+                    <div class="row mb-4">
+                        <div class="col-md-4 mb-3">
+                            <label for="lineWilayah" class="form-label">Wilayah:</label>
+                            <select id="lineWilayah" class="form-select form-select-sm">
+                                <option value="semua">Semua</option>
+                                <!-- Populate options with JavaScript if needed -->
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="lineJenisKelamin" class="form-label">Jenis Kelamin:</label>
+                            <select id="lineJenisKelamin" class="form-select form-select-sm">
+                                <option value="semua">Semua</option>
+                                <option value="laki">Laki-laki</option>
+                                <option value="perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const lineCtx = document.getElementById("lineChart").getContext("2d");
+                    let lineChart;
+
+                    const updateLineChart = () => {
+                        const wilayah = document.getElementById("lineWilayah").value;
+                        const jenisKelamin = document.getElementById("lineJenisKelamin").value;
+
+                        let filteredData = data;
+                        if (wilayah !== "semua") {
+                            filteredData = filteredData.filter((d) => d.kecamatan === wilayah);
+                        }
+
+                        const labels = ["2020", "2021", "2022", "2023"];
+                        let datasets = [];
+                        let yMin = Infinity;
+                        let yMax = -Infinity;
+
+                        if (jenisKelamin === "semua" || jenisKelamin === "laki") {
+                            const lakiData = filteredData.map((d) => d.laki).flat();
+                            datasets.push({
+                                label: "Laki-laki",
+                                borderColor: "blue",
+                                data: lakiData,
+                                fill: false,
+                            });
+                            yMin = Math.min(yMin, ...lakiData);
+                            yMax = Math.max(yMax, ...lakiData);
+                        }
+                        if (jenisKelamin === "semua" || jenisKelamin === "perempuan") {
+                            const perempuanData = filteredData.map((d) => d.perempuan).flat();
+                            datasets.push({
+                                label: "Perempuan",
+                                borderColor: "red",
+                                data: perempuanData,
+                                fill: false,
+                            });
+                            yMin = Math.min(yMin, ...perempuanData);
+                            yMax = Math.max(yMax, ...perempuanData);
+                        }
+                        if (jenisKelamin === "semua") {
+                            const totalData = filteredData.map((d) => d.total).flat();
+                            datasets.push({
+                                label: "Total",
+                                borderColor: "green",
+                                data: totalData,
+                                fill: false,
+                            });
+                            yMin = Math.min(yMin, ...totalData);
+                            yMax = Math.max(yMax, ...totalData);
+                        }
+
+                        if (wilayah === "semua" && (jenisKelamin === "laki" || jenisKelamin === "perempuan")) {
+                            const allData = filteredData.flatMap(d => jenisKelamin === "laki" ? d.laki : d.perempuan);
+                            yMin = Math.min(...allData);
+                            yMax = Math.max(...allData);
+                        }
+
+                        if (lineChart) {
+                            lineChart.destroy();
+                        }
+
+                        lineChart = new Chart(lineCtx, {
+                            type: "line",
+                            data: {
+                                labels,
+                                datasets,
+                            },
+                            options: {
+                                responsive: true,
+                                scales: {
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: "Tahun",
+                                        },
+                                    },
+                                    y: {
+                                        min: yMin - 100,
+                                        max: yMax + 100,
+                                        title: {
+                                            display: true,
+                                            text: "Jumlah",
+                                        },
+                                    },
+                                },
+                            },
+                        });
+                    };
+
+                    document
+                        .getElementById("lineWilayah")
+                        .addEventListener("change", updateLineChart);
+                    document
+                        .getElementById("lineJenisKelamin")
+                        .addEventListener("change", updateLineChart);
+
+                    // Populate wilayah options for line chart
+                    const lineWilayahSelect = document.getElementById("lineWilayah");
+                    data.forEach((d) => {
+                        const option = document.createElement("option");
+                        option.value = d.kecamatan;
+                        option.text = d.kecamatan;
+                        lineWilayahSelect.add(option);
+                    });
+
+                    // Initialize line chart
+                    updateLineChart();
+                });
+            </script>
+        </section>
+
         <section id="about" class="about section">
             <div class="container section-title" data-aos="fade-up">
                 <h2>Jumlah Penduduk di Kabupaten Trenggalek</h2>
@@ -162,7 +385,8 @@
                 <div class="row align-items-xl-center gy-5">
                     <div class="row gy-4 icon-boxes">
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                            <button class="btn myBtn" data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
+                            <button class="btn myBtn"
+                                data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
                                 <div class="icon-box">
                                     <i class="fa-regular fa-calendar"></i>
                                     <h3>Usia</h3>
@@ -171,7 +395,8 @@
                             </button>
                         </div> <!-- End Icon Box -->
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                            <button class="btn myBtn" data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
+                            <button class="btn myBtn"
+                                data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
                                 <div class="icon-box">
                                     <i class="fa-solid fa-venus-mars"></i>
                                     <h3>Jenis Kelamin</h3>
@@ -180,7 +405,8 @@
                             </button>
                         </div> <!-- End Icon Box -->
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                            <button class="btn myBtn" data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
+                            <button class="btn myBtn"
+                                data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
                                 <div class="icon-box">
                                     <i class="fa-solid fa-school"></i>
                                     <h3>Pendidikan</h3>
@@ -189,7 +415,8 @@
                             </button>
                         </div> <!-- End Icon Box -->
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                            <button class="btn myBtn" data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
+                            <button class="btn myBtn"
+                                data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
                                 <div class="icon-box">
                                     <i class="fa-solid fa-address-card"></i>
                                     <h3>Kepemilikan KIA</h3>
@@ -204,7 +431,8 @@
         <!-- Pop-up modal -->
         <div id="imageModal" class="modal">
             <span class="close">&times;</span>
-            <embed src="" class="modal-content" id="pdfContent" type="application/pdf" width="100%" height="600px"/>
+            <embed src="" class="modal-content" id="pdfContent" type="application/pdf" width="100%"
+                height="600px" />
         </div>
     </main>
     <script>

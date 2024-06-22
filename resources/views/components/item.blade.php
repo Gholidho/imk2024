@@ -2,7 +2,7 @@
 <style>
     .fixed-size {
         height: 175px;
-        width: 250px;
+        width: 100%;
         object-fit: cover;
         /* Agar gambar menyesuaikan ukuran tanpa terdistorsi */
     }
@@ -39,17 +39,20 @@
         color: blue;
     }
 </style>
+
 <div class="container-fluid px-1 py-1">
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column"
+        style="overflow-y: {{ count($berita) > 4 ? 'scroll' : 'hidden' }}; height: {{ count($berita) > 4 ? '60rem' : 'auto' }}">
         @foreach ($berita as $item)
-            <div class="d-flex flex-row" data-aos="fade-up" data-aos-delay="200" style="border-bottom: 1px solid lightgrey">
-                <div class="col-4">
+            <div class="d-flex flex-column
+        flex-md-row mt-1 mb-1" style="border-bottom: 1px solid lightgrey">
+                <div class="col-12 col-md-4 mt-2 mb-2">
                     <a href="{{ route('berita.detail', $item->id) }}">
                         <img class="img-fluid my-2 rounded fixed-size" src="{{ asset($item->tumbnail_berita) }}"
                             alt="Thumbnail">
                     </a>
                 </div>
-                <div class="col-8 d-flex flex-column py-2 px-3">
+                <div class="col-12 col-md-8 d-flex flex-column py-2 px-3 mt-2 mb-2">
                     <a href="{{ route('berita.detail', $item->id) }}" style="color: var(--branding-secondary-color2);">
                         <h5 class="judul-berita"><strong>{{ $item->judul }}</strong></h5>
                     </a>
@@ -95,18 +98,12 @@
                         style="color: var(--branding-secondary-color2);">
                         {!! $item->narasi_berita !!}
                     </span>
-                    <!-- Social Media Share Icons -->
                 </div>
             </div>
         @endforeach
     </div>
 
-    {{-- Paginasi --}}
-    <div class="d-flex justify-content-center mt-3">
-        {{-- Pagination code --}}
-    </div>
 </div>
-
 <script>
     $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
