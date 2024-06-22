@@ -158,7 +158,7 @@
                     <ol>
                         <li><a href="{{ '/' }}">Home</a></li>
                         <li><a href="{{ url('/layanan') }}">Layanan</a></li>
-                        <li class="current">Akta Pengesahan Anak</li>
+                        <li class="current">{{ $layanan->judul_layanan }}</li>
                     </ol>
                 </div>
             </nav>
