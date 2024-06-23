@@ -1,8 +1,8 @@
-<h3 style="text-align: center;color: var(--heading-color)">
+<h3 style="text-align: center;color: var(--heading-color); margin-bottom:1em">
     MAKLUMAT PELAYANAN<br>
     DISDUKCAPIL TRENGGALEK
 </h3>
-<hr class="solid">
+{{-- <hr class="solid"> --}}
 <p>
     Dengan ini kami menyatakan:
 <ol>

@@ -25,6 +25,31 @@
             border-radius: 50%;
         }
 
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            /* Adjust the width to provide some padding around the icon */
+            height: 40px;
+            /* Adjust the height to provide some padding around the icon */
+            top: 50%;
+            /* Center vertically */
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Optional: add a semi-transparent background */
+            border-radius: 50%;
+            /* Optional: make the button round */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Optional: darken on hover */
+        }
+
         .carousel-item {
             padding: 15px;
         }

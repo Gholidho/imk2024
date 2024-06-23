@@ -134,7 +134,6 @@
             text-decoration: none;
             cursor: pointer;
         }
-
     </style>
 @endsection
 
@@ -148,7 +147,7 @@
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
                             <h1 class="">{{ $layanan->judul_layanan }}</h1>
-                        <p class="mb-0">{{ $layanan->deskripsi }}</p>
+                            <p class="mb-0">{{ $layanan->deskripsi }}</p>
                         </div>
                     </div>
                 </div>
@@ -176,8 +175,9 @@
                         <div class="service-box">
                             <h4>Daftar Layanan</h4>
                             <div class="services-list">
-                                @foreach($layanans as $item)
-                                    <a href="{{ route('layanan.show', $item->slug) }}" class="{{ $item->slug == $layanan->slug ? 'active' : '' }}">
+                                @foreach ($layanans as $item)
+                                    <a href="{{ route('layanan.show', $item->slug) }}"
+                                        class="{{ $item->slug == $layanan->slug ? 'active' : '' }}">
                                         <i class="bi bi-arrow-right-circle"></i>
                                         <span>{{ $item->judul_layanan }}</span>
                                     </a>
@@ -188,15 +188,19 @@
                         <div class="service-box">
                             <h4>Lihat Form</h4>
                             <div class="download-catalog">
-                                <button id="myBtn" class="btn"><a><i class="bi bi-filetype-pdf"></i><span>Form {{ $layanan->judul_layanan }}</span></a></button>
+                                <button id="myBtn" class="btn"><a><i class="bi bi-filetype-pdf"></i><span>Form
+                                            {{ $layanan->judul_layanan }}</span></a></button>
                             </div>
                         </div><!-- End Services List -->
 
                         <div class="help-box d-flex flex-column justify-content-center align-items-center">
                             <i class="bi bi-headset help-icon"></i>
                             <h4>Ada pertanyaan?</h4>
-                            <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i>
-                                <span>0355791160</span>
+                            <p class="d-flex align-items-center mt-2 mb-0">
+                                <i class="bi bi-telephone me-2"></i>
+                                <a href="tel:0355791160" class="text-decoration-none">
+                                    <span>0355791160</span>
+                                </a>
                             </p>
                             <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a
                                     href="mailto:disdukcapil.trenggalek@gmail.com">disdukcapil.trenggalek@gmail.com</a></p>
@@ -251,8 +255,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFour">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">
+                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                         Biaya/Tarif
                                     </button>
                                 </h2>
@@ -287,11 +290,12 @@
             <!-- Pop-up modal -->
             <div id="imageModal" class="modal">
                 <span class="close">&times;</span>
-                <embed src="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview" class="modal-content" id="pdfContent" type="application/pdf" width="100%" height="600px"/>
+                <embed src="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview"
+                    class="modal-content" id="pdfContent" type="application/pdf" width="100%" height="600px" />
             </div>
 
         </section><!-- /Service Details Section -->
-        
+
     </main>
     <script>
         function initModal() {

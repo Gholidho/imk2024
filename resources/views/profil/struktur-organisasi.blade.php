@@ -114,7 +114,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 350px;
+        height: 400px;
         overflow-y: auto;
         text-align: center;
         padding: 5px;
@@ -158,10 +158,20 @@
         margin: auto;
     }
 
+    .center-card,
+    .card-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* Align items vertically */
+        height: 100%;
+        /* Ensure the card takes full height */
+    }
 
     @media screen and (max-width: 768px) {
         .card1-container {
-            display: grid;
+            display: flex;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             /* grid-gap: 20px; */
         }
