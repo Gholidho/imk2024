@@ -51,7 +51,7 @@
             display: none;
             position: fixed;
             z-index: 1500;
-            padding-top: 2em;
+            padding-top: 3em;
             left: 0;
             top: 0;
             width: 100%;
@@ -107,7 +107,7 @@
         .close {
             position: absolute;
             top: 0;
-            right: 50px;
+            right: 0.1em;
             color: #fff;
             font-size: 40px;
             font-weight: bold;
@@ -396,7 +396,7 @@
                     <div class="row gy-4 icon-boxes">
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
                             <button class="btn myBtn"
-                                data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
+                                data-pdf="https://drive.google.com/file/d/1k19ZwTNWbTll6wxrDmU78Ag491FgHS01/preview">
                                 <div class="icon-box">
                                     <i class="fa-regular fa-calendar"></i>
                                     <h3>Usia</h3>
@@ -406,7 +406,7 @@
                         </div> <!-- End Icon Box -->
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
                             <button class="btn myBtn"
-                                data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
+                                data-pdf="https://drive.google.com/file/d/1k19ZwTNWbTll6wxrDmU78Ag491FgHS01/preview">
                                 <div class="icon-box">
                                     <i class="fa-solid fa-venus-mars"></i>
                                     <h3>Jenis Kelamin</h3>
@@ -416,7 +416,7 @@
                         </div> <!-- End Icon Box -->
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
                             <button class="btn myBtn"
-                                data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
+                                data-pdf="https://drive.google.com/file/d/1k19ZwTNWbTll6wxrDmU78Ag491FgHS01/preview">
                                 <div class="icon-box">
                                     <i class="fa-solid fa-school"></i>
                                     <h3>Pendidikan</h3>
@@ -426,7 +426,7 @@
                         </div> <!-- End Icon Box -->
                         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
                             <button class="btn myBtn"
-                                data-pdf="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview">
+                                data-pdf="https://drive.google.com/file/d/1k19ZwTNWbTll6wxrDmU78Ag491FgHS01/preview">
                                 <div class="icon-box">
                                     <i class="fa-solid fa-address-card"></i>
                                     <h3>Kepemilikan KIA</h3>
@@ -441,8 +441,10 @@
         <!-- Pop-up modal -->
         <div id="imageModal" class="modal">
             <span class="close">&times;</span>
-            <embed src="" class="modal-content" id="pdfContent" type="application/pdf" width="100%"
-                height="600px" />
+            {{-- <embed src="" class="modal-content" id="pdfContent" type="application/pdf" width="100%"
+                height="600px" /> --}}
+            <iframe id="pdfContent" class="modal-content" type="application/pdf" width="100%"
+                height="95%"></iframe>
         </div>
     </main>
     <script>

@@ -3,6 +3,25 @@
 @section('container')
     <!-- Custom CSS -->
     <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
         .portfolio-info {
             position: relative;
             bottom: 0;

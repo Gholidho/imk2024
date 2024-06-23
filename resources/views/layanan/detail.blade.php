@@ -64,9 +64,10 @@
             display: none;
             position: fixed;
             z-index: 1500;
-            padding-top: 2em;
+            padding-top: 3em;
             left: 0;
             top: 0;
+            margin-bottom: 1em;
             width: 100%;
             height: 100%;
             overflow: auto;
@@ -120,7 +121,7 @@
         .close {
             position: absolute;
             top: 0;
-            right: 50px;
+            right: 0.1em;
             color: #fff;
             font-size: 40px;
             font-weight: bold;
@@ -290,9 +291,12 @@
             <!-- Pop-up modal -->
             <div id="imageModal" class="modal">
                 <span class="close">&times;</span>
-                <embed src="https://drive.google.com/file/d/1GfZ_osds7edJ9deGJsrzDmJbuCD0KPBR/preview"
-                    class="modal-content" id="pdfContent" type="application/pdf" width="100%" height="600px" />
+                {{-- <embed src="https://drive.google.com/file/d/1k19ZwTNWbTll6wxrDmU78Ag491FgHS01/preview"
+                    class="modal-content" id="pdfContent" type="application/pdf" width="100%" height="600px" /> --}}
+                <iframe src="https://drive.google.com/file/d/1k19ZwTNWbTll6wxrDmU78Ag491FgHS01/preview" id="pdfContent"
+                    class="modal-content" type="application/pdf" width="100%" height="95%"></iframe>
             </div>
+
 
         </section><!-- /Service Details Section -->
 
