@@ -163,6 +163,17 @@
                 max-width: 100%;
                 flex: 1 1 100%;
             }
+            
+
+            .chart.col-md-8{
+                min-height: 15rem;
+            }
+
+            #myChart, #linechart {
+                display: block;
+                width: 100% !important;
+                height: auto !important;
+            }
         }
 
         .form-select-sm {

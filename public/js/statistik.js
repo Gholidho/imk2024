@@ -262,6 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 datasets,
             },
             options: {
+                maintainAspectRatio: false,
                 responsive: true,
                 scales: {
                     x: { title: { display: true, text: "Kecamatan" } },
@@ -576,6 +577,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 datasets,
             },
             options: {
+                maintainAspectRatio: false,
                 responsive: true,
                 scales: {
                     x: {
