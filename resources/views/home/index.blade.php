@@ -3,12 +3,6 @@
 @section('container')
     <!-- Custom CSS -->
     <style>
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
         .row {
             display: flex;
             flex-wrap: wrap;
