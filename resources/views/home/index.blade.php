@@ -492,7 +492,8 @@
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="https://www.instagram.com/iqqqbaallll/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/iqqqbaallll/" target="_blank"><i
+                                        class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
@@ -509,7 +510,8 @@
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="https://www.instagram.com/adindaspm88/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/adindaspm88/" target="_blank"><i
+                                        class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
@@ -526,7 +528,8 @@
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/mschzhr/" target="_blank"><i
+                                        class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
@@ -543,7 +546,8 @@
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="https://www.instagram.com/panduwahyuaji_/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/panduwahyuaji_/" target="_blank"><i
+                                        class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
@@ -556,11 +560,12 @@
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
                         <div class="member-img">
-                            <img src="{{ asset('img/tester.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('img/team/idho.svg') }}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="https://www.instagram.com/gholidho_herda/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.instagram.com/gholidho_herda/" target="_blank"><i
+                                        class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>

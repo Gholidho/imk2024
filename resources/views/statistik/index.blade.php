@@ -182,6 +182,11 @@
                             </select>
                         </div>
                     </div>
+                    <div class="col-md-4 mb-3 d-flex align-items-end rounded-2">
+                        <a href="data.xlsx" download class="btn btn-primary">
+                            <span style="color: white" class="bi bi-cloud-arrow-down-fill"> Unduh Data</span>
+                        </a>
+                    </div>
                     <div class="row">
                         <div class="col-12">
                             <canvas id="myChart"></canvas>
@@ -255,6 +260,11 @@
                                 <option value="perempuan">Perempuan</option>
                             </select>
                         </div>
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex align-items-end rounded-2">
+                        <a href="data.xlsx" download class="btn btn-primary">
+                            <span style="color: white" class="bi bi-cloud-arrow-down-fill"> Unduh Data</span>
+                        </a>
                     </div>
                     <div class="row">
                         <div class="col-12">
