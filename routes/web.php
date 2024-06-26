@@ -116,5 +116,14 @@ Route::get('/search', [NewsController::class, 'search'])->name('news.search');
 Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
 Route::post('/comments/{parentId}/reply', [CommentController::class, 'reply'])->name('comments.reply');
 
+#route galeri
+Route::prefix('/galeri')->group(function () {
+    Route::get('/', function () {
+        return view('galeri.index');
+    })->name('galeri');
+});
+//Route::get('/galeri', function(){
+    //return view('index');
+//});
 
 //Route::get('/berita/search', [NewsController::class, 'search'])->name('berita.search');
