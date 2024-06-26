@@ -6,55 +6,54 @@
             width: auto;
             max-width: 600px;
             height : auto;
-            max-height: 600px; /* Atur tinggi gambar sesuai kebutuhan */
-            margin: 0 auto; /* Pusatkan gambar */
+            max-height: 600px; 
+            margin: 0 auto; 
         }
 
         .carousel-item {
-            transition: transform 0.6s ease, filter 0.6s ease; /* Animasi pergeseran dan efek gelap */
+            transition: transform 0.6s ease, filter 0.6s ease; 
         }
 
         .carousel-item.active img {
-            filter: brightness(100%); /* Gambar aktif dalam kondisi normal */
+            filter: brightness(100%); 
         }
 
         .carousel-item:not(.active) img {
-            filter: brightness(50%); /* Gambar tidak aktif lebih gelap */
+            filter: brightness(50%); 
         }
 
         .carousel-inner {
-            overflow: hidden; /* Pastikan overflow tersembunyi untuk menghindari scroll horizontal */
-            position: relative; /* Atur posisi relatif untuk menyediakan referensi yang memungkinkan untuk absolute */
-            width: 100%; /* Sesuaikan lebar */
+            overflow: hidden; 
+            position: relative; 
+            width: 100%; 
         }
         .carousel-control-prev-icon {
-            background-color: transparent; /* Hapus latar belakang default */
+            background-color: transparent; 
             filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(190deg) brightness(100%) contrast(100%);
-            /* Filter ini mengubah warna ikon menjadi putih. Ubah sesuai kebutuhan Anda */
+            
         }
 
-        /* Gaya untuk tombol Next */
         .carousel-control-next-icon {
-            background-color: transparent; /* Hapus latar belakang default */
+            background-color: transparent; 
             filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(190deg) brightness(100%) contrast(100%);
-            /* Filter ini mengubah warna ikon menjadi putih. Ubah sesuai kebutuhan Anda */
+           
         }
 
-        /* Ubah warna latar belakang tombol */
+        
         .carousel-control-prev, 
         .carousel-control-next {
-            background-color: rgba(0, 0, 0, 0.5); /* Ubah latar belakang tombol menjadi semi transparan */
-            border-radius: 50%; /* Membuat tombol menjadi lingkaran */
-            width: 40px; /* Sesuaikan ukuran tombol */
-            height: 40px; /* Sesuaikan ukuran tombol */
-            display: flex; /* Pusatkan ikon dalam tombol */
-            align-items: center; /* Pusatkan ikon secara vertikal */
-            justify-content: center; /* Pusatkan ikon secara horizontal */
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 50%; 
+            width: 40px; 
+            height: 40px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
         }
 
         .carousel-control-prev:hover,
         .carousel-control-next:hover {
-            background-color: rgba(0, 0, 0, 0.7); /* Ubah warna latar belakang tombol saat di-hover */
+            background-color: rgba(0, 0, 0, 0.7); 
         }
     </style>
 @endsection
@@ -83,13 +82,14 @@
         </div><!-- End Page Title -->
 
         <div class="container">
-            <div class=card>
+            <div class="card">
                 <div class="card-header color-secondary">
                 <div class="card-title">
                     <h4> <strong> Jempol Keren </strong> </h4>
                 </div>
                 </div>
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Carousel Pertama -->
+                    <div id="carouselJempolKeren" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="{{ asset('/img/galeri/anticidro_25032021.jpg') }}" class="d-block w-100" alt="klak">
@@ -104,16 +104,91 @@
                                 <img src="{{ asset('/img/galeri/pelitamahir_12072021.jpg') }}" class="d-block w-100" alt="unfound">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselJempolKeren" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="false"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselJempolKeren" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="false"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
             </div>
+            
+            <br>
+
+            <div class="card">
+                <div class="card-header color-secondary">
+                <div class="card-title">
+                    <h4> <strong> Anticidro </strong> </h4>
+                </div>
+                </div>
+                    <!-- Carousel Kedua -->
+                    <div id="carouselAnticidro" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ asset('/img/galeri/anticidro/anticidro_1.jpg') }}" class="d-block w-100" alt="klak">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('/img/galeri/anticidro/anticidro_0.jpg') }}" class="d-block w-100" alt="error">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('/img/galeri/anticidro/anticidro_2.jpg') }}" class="d-block w-100" alt="unknown">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('/img/galeri/anticidro/anticidro_3.jpg') }}" class="d-block w-100" alt="unfound">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAnticidro" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselAnticidro" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+            </div>
+
+            <br>
+
+            <div class="card">
+                <div class="card-header color-secondary">
+                <div class="card-title">
+                    <h4> <strong> Paling Oke </strong> </h4>
+                </div>
+                </div>
+                    <!-- Carousel Ketiga -->
+                    <div id="carouselPalingoke" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ asset('/img/galeri/palingoke/palingoke_1.jpg') }}" class="d-block w-100" alt="klak">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('/img/galeri/palingoke/palingoke_2.jpg') }}" class="d-block w-100" alt="error">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('/img/galeri/palingoke/palingoke3.jpg') }}" class="d-block w-100" alt="unknown">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('/img/galeri/anticidro/anticidro_3.jpg') }}" class="d-block w-100" alt="unfound">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPalingoke" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPalingoke" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    
+            </div>
+            <br>
+
+
         </div>
     </main>
 @endsection
@@ -122,19 +197,17 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
          document.addEventListener('DOMContentLoaded', function () {
-        var carouselElement = document.querySelector('#carouselExampleControls');
-        if (carouselElement) {
-            // Inisialisasi carousel dengan Bootstrap
+        var carouselElements = document.querySelectorAll('.carousel');
+        carouselElements.forEach(function(carouselElement) {
             var carousel = new bootstrap.Carousel(carouselElement, {
-                interval: 2000, // Waktu pergeseran otomatis, bisa disesuaikan
+                interval: 2000, 
                 ride: 'carousel'
             });
 
-            // Tambahkan event listener untuk debugging
             carouselElement.addEventListener('slide.bs.carousel', function (event) {
                 console.log('Carousel item ' + event.to + ' is now visible');
             });
-        }
+        });
     });
     </script>
 @endsection
