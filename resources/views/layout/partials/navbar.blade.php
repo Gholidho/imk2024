@@ -15,6 +15,8 @@
                 <li><a href="{{ url('/faq') }}" class="{{ request()->is('faq') ? 'active' : '' }}">FAQ</a></li>
                 <li><a href="{{ route('pengaduan') }}"
                         class="{{ request()->is('pengaduan') ? 'active' : '' }}">Pengaduan</a></li>
+                <li><a href="{{ route('galeri') }}"
+                        class="{{ request ()->is('galeri') ? 'active' : '' }}">Galeri</a></li>
             </ul>
         </li>
         <li><a href="{{ route('kontak') }}" class="{{ request()->is('kontak') ? 'active' : '' }}">Kontak</a></li>

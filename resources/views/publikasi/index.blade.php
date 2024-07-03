@@ -186,7 +186,7 @@
                 <div class="container">
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
-                            <h1 class="">Publikasi/Unduhan</h1>
+                            <h1 class="">Publikasi</h1>
                             <p class="mb-0">Dokumen-dokumen terkait pelaksanaan layanan Dukcapil Trenggalek</p>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
             <nav class="breadcrumbs">
                 <div class="container">
                     <ol>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li class="current">Publikasi</li>
                     </ol>
                 </div>
@@ -221,7 +221,7 @@
                         <li data-filter=".filter-lakip">LAKIP</li>
                         <li data-filter=".filter-renstra">Rencana Strategis</li>
                         <li data-filter=".filter-kinerja">Perjanjian Kinerja</li>
-                        <li data-filter=".filter-konsultasi">Laporan Forum Konsultasi Publik</li>
+                        <li data-filter=".filter-konsultasi">LFKP</li>
                         <li data-filter=".filter-ikm">Laporan Survei IKM</li>
                     </ul><!-- End Portfolio Filters -->
 
