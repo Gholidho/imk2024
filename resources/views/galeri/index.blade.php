@@ -55,6 +55,11 @@
         .carousel-control-next:hover {
             background-color: rgba(0, 0, 0, 0.7); 
         }
+
+        .carousel-control-next, .carousel-control-prev{
+            top: 50%;
+            bottom: 50%;
+        }
     </style>
 @endsection
 
@@ -64,23 +69,25 @@
         <!-- Page Title -->
         <div class="page-title" data-aos="fade">
             <div class="heading">
-                <nav class="breadcrumbs">
-                    <div class="container">
-                        <ol>
-                            <li class="upper"><a href="index.html">Home</a></li>
-                            <li class="current">Galeri</li>
-                        </ol>
-                        <div class="row d-flex justify-content-center text-center">
-                            <div class="col-lg-8">
-                                <h1 class="">GALERI</h1>
-                                <p class="mb-0">Dokumentasi kegiatan pelayanan yang telah dilaksanakan oleh Dinas Kependudukan Kabupaten Trenggalek</p>
-                            </div>
+                <div class="container">
+                    <div class="row d-flex justify-content-center text-center">
+                        <div class="col-lg-8">
+                            <h1 class="">GALERI</h1>
+                            <p class="mb-0">Dokumentasi kegiatan pelayanan yang telah dilaksanakan oleh Dinas Kependudukan Kabupaten Trenggalek</p>
                         </div>
                     </div>
-                </nav>
+                </div>
             </div>
+            <nav class="breadcrumbs">
+                <div class="container">
+                    <ol>
+                        <li class="upper"><a href="/">Home</a></li>
+                        <li class="current">Galeri</li>
+                    </ol>
+                </div>
+            </nav>
         </div><!-- End Page Title -->
-
+<br>
         <div class="container">
             <div class="card">
                 <div class="card-header color-secondary">

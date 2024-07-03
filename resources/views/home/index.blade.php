@@ -130,7 +130,7 @@
                         <p>Lembaga pemerintah yang bertanggung jawab atas administrasi kependudukan di Kabupaten Trenggalek,
                             Jawa Timur. Melalui layanannya, Dukcapil memfasilitasi pendaftaran dan penerbitan dokumen
                             kependudukan bagi penduduk setempat.</p>
-                        <a href="/profil/motto-visi-misi" class="read-more"><span>Baca Selengkapnya</span><i
+                        <a href="{{ route('profil.index') }}" class="read-more"><span>Baca Selengkapnya</span><i
                                 class="bi bi-arrow-right"></i></a>
                     </div>
                     <div class="col-xl-7">
